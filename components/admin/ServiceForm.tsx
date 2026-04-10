@@ -270,6 +270,9 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
         checklist: form.checklist.filter((s) => s.trim()),
         iconBoxes: form.iconBoxes.filter((b) => b.title.trim()),
         faqs: form.faqs.filter((f) => f.question.trim()),
+        workProcess: form.workProcess.filter((p) => p.title.trim()),
+        testimonials: form.testimonials.filter((t) => t.name.trim()),
+        mechanics: form.mechanics.filter((m) => m.name.trim()),
       };
       await onSubmit(cleanedForm);
     } catch (err) {

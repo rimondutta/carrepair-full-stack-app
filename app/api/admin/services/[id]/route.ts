@@ -2,6 +2,8 @@ import { NextRequest } from 'next/server';
 import { connectDB } from '@/lib/mongodb';
 import Service from '@/models/Service';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
+import { validateService } from '@/lib/validation';
+import slugify from 'slugify';
 
 export async function PATCH(
   request: NextRequest,
@@ -12,6 +14,19 @@ export async function PATCH(
 
     const { id } = await params;
     const body = await request.json();
+
+    // Validate input if it contains service-defining fields
+    if (body.title || body.category) {
+      const { valid, errors } = validateService(body);
+      if (!valid) {
+        return apiError(errors.join(', '), 400);
+      }
+    }
+
+    // Auto-update slug if title is changed
+    if (body.title) {
+      body.slug = slugify(body.title, { lower: true, strict: true });
+    }
 
     const service = await Service.findByIdAndUpdate(id, body, { returnDocument: 'after' });
 

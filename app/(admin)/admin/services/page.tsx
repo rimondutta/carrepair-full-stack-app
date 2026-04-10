@@ -58,6 +58,9 @@ export default function ServicesPage() {
       body: JSON.stringify(data),
     });
     const result = await res.json();
+    if (!res.ok) {
+      throw new Error(result.error || 'Failed to create service');
+    }
     setServices((prev) => [result?.data?.service, ...prev].filter(Boolean));
     setShowForm(false);
   };
@@ -70,6 +73,9 @@ export default function ServicesPage() {
       body: JSON.stringify(data),
     });
     const result = await res.json();
+    if (!res.ok) {
+      throw new Error(result.error || 'Failed to update service');
+    }
     setServices((prev) =>
       prev.map((s) => (s._id === editingService._id ? result?.data?.service ?? s : s))
     );
