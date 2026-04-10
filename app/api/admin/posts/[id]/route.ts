@@ -4,6 +4,7 @@ import Post from '@/models/Post';
 import slugify from 'slugify';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validatePost } from '@/lib/validation';
+import { revalidatePath } from 'next/cache';
 
 export async function GET(
   request: NextRequest,
@@ -68,6 +69,10 @@ export async function PATCH(
       return apiError('Post not found', 404);
     }
 
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${post.slug}`);
+    revalidatePath('/');
+
     return apiSuccess({ post });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Internal server error';
@@ -88,6 +93,10 @@ export async function DELETE(
     if (!post) {
       return apiError('Post not found', 404);
     }
+
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${post.slug}`);
+    revalidatePath('/');
 
     return apiSuccess({ message: 'Post deleted successfully' });
   } catch (error: unknown) {

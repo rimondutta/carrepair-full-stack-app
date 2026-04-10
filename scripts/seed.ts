@@ -26,16 +26,19 @@ async function seed() {
     console.log('Connected to MongoDB');
 
     // 1. Seed Admin User
+    const adminEmail = process.env.ADMIN_EMAIL || 'admin@autorepair.com';
+    const adminPassword = process.env.ADMIN_PASSWORD || 'Admin@123';
+
     const existingAdmin = await User.findOne({ role: 'superadmin' });
     if (!existingAdmin) {
-      const hashedPassword = await bcrypt.hash('Admin@123', 10);
+      const hashedPassword = await bcrypt.hash(adminPassword, 10);
       await User.create({
         name: 'Admin',
-        email: 'admin@autorepair.com',
+        email: adminEmail,
         password: hashedPassword,
         role: 'superadmin',
       });
-      console.log('Superadmin user created (admin@autorepair.com / Admin@123)');
+      console.log(`Superadmin user created (${adminEmail} / ${adminPassword})`);
     }
 
     // 2. Seed Services from JSON

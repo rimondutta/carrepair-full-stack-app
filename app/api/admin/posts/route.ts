@@ -4,6 +4,7 @@ import Post from '@/models/Post';
 import slugify from 'slugify';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validatePost } from '@/lib/validation';
+import { revalidatePath } from 'next/cache';
 
 export async function GET() {
   try {
@@ -49,6 +50,9 @@ export async function POST(request: NextRequest) {
     }
 
     const post = await Post.create(body);
+
+    revalidatePath('/blog');
+    revalidatePath('/');
 
     return apiSuccess({ post }, 201);
   } catch (error: unknown) {

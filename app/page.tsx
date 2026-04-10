@@ -14,6 +14,8 @@ import { connectDB } from "@/lib/mongodb";
 import Service from "@/models/Service";
 import Post from "@/models/Post";
 
+export const revalidate = 3600; // revalidate at most every hour
+
 export default async function Home() {
   await connectDB();
   

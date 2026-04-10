@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Explore our collection of expert automotive repair guides, maintenance tips, and industry insights from the master technicians at Care Plus Dubai.",
 };
 
+export const revalidate = 3600; // revalidate at most every hour
+
 export default async function BlogListingPage() {
   await connectDB();
   const posts = await Post.find({ status: "published" }).sort({ publishedAt: -1 }).lean();

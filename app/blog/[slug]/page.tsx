@@ -10,6 +10,8 @@ interface Props {
   params: { slug: string };
 }
 
+export const revalidate = 3600; // revalidate at most every hour
+
 export async function generateStaticParams() {
   await connectDB();
   const posts = await Post.find({ status: "published" }).select("slug").lean();

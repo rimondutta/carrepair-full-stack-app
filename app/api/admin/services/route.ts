@@ -4,6 +4,7 @@ import Service from '@/models/Service';
 import slugify from 'slugify';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validateService } from '@/lib/validation';
+import { revalidatePath } from 'next/cache';
 
 export async function GET() {
   try {
@@ -39,6 +40,9 @@ export async function POST(request: NextRequest) {
     }
 
     const service = await Service.create(body);
+
+    revalidatePath('/services');
+    revalidatePath('/');
 
     return apiSuccess({ service }, 201);
   } catch (error: unknown) {

@@ -4,6 +4,7 @@ import Service from '@/models/Service';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validateService } from '@/lib/validation';
 import slugify from 'slugify';
+import { revalidatePath } from 'next/cache';
 
 export async function PATCH(
   request: NextRequest,
@@ -34,6 +35,10 @@ export async function PATCH(
       return apiError('Service not found', 404);
     }
 
+    revalidatePath('/services');
+    revalidatePath(`/services/${service.slug}`);
+    revalidatePath('/');
+
     return apiSuccess({ service });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Internal server error';
@@ -54,6 +59,10 @@ export async function DELETE(
     if (!service) {
       return apiError('Service not found', 404);
     }
+
+    revalidatePath('/services');
+    revalidatePath(`/services/${service.slug}`);
+    revalidatePath('/');
 
     return apiSuccess({ message: 'Service deleted successfully' });
   } catch (error: unknown) {

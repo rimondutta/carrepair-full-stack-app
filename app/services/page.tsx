@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description: "Expert car repair services including engine repair, tire change, denting repair, ceramic coating and more. Certified mechanics, 6-month guarantee.",
 };
 
+export const revalidate = 3600; // revalidate at most every hour
+
 const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: "Services" }

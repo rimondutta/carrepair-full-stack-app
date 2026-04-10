@@ -11,6 +11,8 @@ interface Props {
   params: { slug: string };
 }
 
+export const revalidate = 3600; // revalidate at most every hour
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   await connectDB();
