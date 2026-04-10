@@ -47,7 +47,8 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
     });
 
     if (!res.ok) {
-      throw new Error('Failed to update post');
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.error || 'Failed to update post');
     }
 
     setTimeout(() => {

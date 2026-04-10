@@ -44,14 +44,13 @@ export async function POST(request: NextRequest) {
       body.publishedAt = new Date();
     }
 
-    // Map Author string to object
-    if (body.author && typeof body.author === 'string') {
-      body.author = {
-        name: body.author,
-        role: 'Admin',
-        image: '/assets/admin-avatar.png'
-      };
-    }
+    // Map Author string to object (Default to 'Admin' if empty)
+    const authorName = typeof body.author === 'string' && body.author.trim() ? body.author : 'Admin';
+    body.author = {
+      name: authorName,
+      role: 'Admin',
+      image: '/assets/admin-avatar.png'
+    };
 
     // Map Content string to array of objects
     if (body.content && typeof body.content === 'string') {

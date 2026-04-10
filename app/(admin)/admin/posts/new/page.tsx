@@ -15,7 +15,8 @@ export default function NewPostPage() {
     });
 
     if (!res.ok) {
-      throw new Error('Failed to create post');
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.error || 'Failed to create post');
     }
 
     setTimeout(() => {
