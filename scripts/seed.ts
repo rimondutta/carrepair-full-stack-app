@@ -2,6 +2,15 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import path from 'path';
 import fs from 'fs';
+import dns from 'dns';
+import { loadEnvConfig } from '@next/env';
+
+// Force node to use Google DNS for SRV queries to bypass local router issues
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
+// Load environment variables from .env*.local files
+const projectDir = process.cwd();
+loadEnvConfig(projectDir);
 
 // Import models
 import User from '../models/User';
