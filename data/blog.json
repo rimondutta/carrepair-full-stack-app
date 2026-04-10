@@ -1,0 +1,88 @@
+[
+  {
+    "slug": "complete-guide-luxury-car-maintenance-dubai",
+    "title": "The Complete Guide to Luxury Car Maintenance in Dubai",
+    "excerpt": "Driving a luxury vehicle in Dubai's extreme heat requires special care. Learn the essential tips to keep your car performing at its best.",
+    "date": "2024-03-15",
+    "author": {
+      "name": "Arjun Sharma",
+      "role": "Chief Master Technician"
+    },
+    "category": "Maintenance",
+    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Dubai represents a unique environment for high-performance vehicles. The combination of intense heat, sand, and high-speed highways creates a demanding scenario for even the most robust luxury cars."
+      },
+      {
+        "type": "heading",
+        "text": "1. Cooling System Vigilance"
+      },
+      {
+        "type": "paragraph",
+        "text": "Your car's cooling system is its first line of defense against the UAE sun. We recommend a complete coolant flush and pressure test every 12 months, ideally before the peak summer months begin."
+      },
+      {
+        "type": "heading",
+        "text": "2. High-Grade Lubricants"
+      },
+      {
+        "type": "paragraph",
+        "text": "Heat causes oil to break down faster. For luxury European brands like BMW, Mercedes, and Porsche, using fully synthetic lubricants with the correct viscosity is non-negotiable."
+      }
+    ]
+  },
+  {
+    "slug": "why-regular-wheel-alignment-matters",
+    "title": "Why Regular Wheel Alignment is Critical for Your Tires",
+    "excerpt": "Misaligned wheels can lead to rapid tire wear and decreased fuel efficiency. Discover why precision alignment is a must-have service.",
+    "date": "2024-03-20",
+    "author": {
+      "name": "Sarah Miller",
+      "role": "Service Manager"
+    },
+    "category": "Tires & Wheels",
+    "image": "https://images.unsplash.com/photo-1549399500-dc12983790e6?auto=format&fit=crop&q=80&w=1200",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Wheel alignment is often overlooked until the steering wheel vibrates or the car starts pulling to one side. By then, significant tire damage may have already occurred."
+      },
+      {
+        "type": "heading",
+        "text": "The Benefits of Precision Alignment"
+      },
+      {
+        "type": "paragraph",
+        "text": "Correct alignment ensures that your tires make optimal contact with the road. This results in smoother handling, shorter braking distances, and significantly longer tire life."
+      }
+    ]
+  },
+  {
+    "slug": "engine-diagnostics-modern-auto-repair",
+    "title": "The Role of Computerized Diagnostics in Modern Auto Repair",
+    "excerpt": "Modern cars are complex computers on wheels. Learn how our advanced scanning technology pinpoints issues with surgical precision.",
+    "date": "2024-03-25",
+    "author": {
+      "name": "Mark Thompson",
+      "role": "Diagnostic Specialist"
+    },
+    "category": "Technology",
+    "image": "https://images.unsplash.com/photo-1486006396113-ad75047b2559?auto=format&fit=crop&q=80&w=1200",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Gone are the days of 'guess and check' mechanics. Today's vehicles feature hundreds of sensors that monitor everything from fuel injection timing to tire pressure."
+      },
+      {
+        "type": "heading",
+        "text": "Surgery-Level Precision"
+      },
+      {
+        "type": "paragraph",
+        "text": "Our diagnostic tools interface directly with your car's ECU, allowing us to see real-time data and historical fault codes. This saves you time and money by avoiding unnecessary parts replacements."
+      }
+    ]
+  }
+]

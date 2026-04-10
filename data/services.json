@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Engine Repair Services",
+    "slug": "engine-repair",
+    "category": "engine-mechanical",
+    "shortDescription": "When you bring your vehicle to Care Plus Auto Repairing, you can rest easy knowing that your vehicle is in professional hands...",
+    "description": "Our certified technicians perform deep analysis utilizing automated diagnostic tooling. We can rebuild, replace, and tune critical engine components to factory standards.",
+    "icon": "Settings2",
+    "isActive": true,
+    "duration": "2-5 Days",
+    "price": "From $299",
+    "image": "/assets/asset 12.jpeg",
+    "detailedContent": [
+      "When you bring your vehicle to Care Plus Auto Repairing, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure that your experience with us is pleasant and efficient. Our mechanics are factory trained and highly experienced, ensuring every major or minor problem is successfully resolved using genuine parts and computer diagnostics protocols.",
+      "Care Plus Auto Repairing was established to help families secure dependable repair structures. As a standing RMI member, our network of trusted franchisees continually provides 100% genuine servicing protocols ensuring total life cycle management across millions of vehicle platforms globally."
+    ],
+    "checklist": [
+      "Ceramic Coating Services",
+      "Tire Disc Blade Changing",
+      "Battery Check & Repair",
+      "Oil Change Services",
+      "Engine Repair Services",
+      "Club 360 Class Facility",
+      "Tanning/Red-Light Therapy",
+      "Guest Passes & Bottled Water"
+    ],
+    "iconBoxes": [
+      {
+        "iconName": "Activity",
+        "title": "Quality Check Facility",
+        "description": "Care Plus Auto Repairing is a member of the RMI. As a member, our center abides by the Code of Conduct."
+      },
+      {
+        "iconName": "Store",
+        "title": "Retail Motor Industry",
+        "description": "We are proud members of the Retail Motor Industry Organisation (RMI), ensuring standard excellence."
+      },
+      {
+        "iconName": "Settings",
+        "title": "Expert Servicing",
+        "description": "Our staff is highly experienced so you can trust us with your machine's next maintenance phase."
+      },
+      {
+        "iconName": "Cpu",
+        "title": "Modern Technology",
+        "description": "Care Plus Auto Repairing uses modern technology and laser equipment for all repairs and diagnostics."
+      },
+      {
+        "iconName": "Droplets",
+        "title": "Maintenance Facility",
+        "description": "High pressure cleaning systems combined with premium chemicals for internal and external maintenance."
+      },
+      {
+        "iconName": "Wrench",
+        "title": "Advanced Engineering",
+        "description": "Precision engineering involving physical machines that handle extreme force and movement."
+      }
+    ],
+    "mechanics": [
+      {
+        "name": "DAVID BRANDON",
+        "role": "Engine Specialist"
+      },
+      {
+        "name": "KATHERINE LEGGE",
+        "role": "Design Engineer"
+      },
+      {
+        "name": "FERNANDO ALONSO",
+        "role": "Engine Specialist"
+      },
+      {
+        "name": "MARIO ANDRETTI",
+        "role": "Design Engineer"
+      },
+      {
+        "name": "TOM KRISTENSEN",
+        "role": "Engine Specialist"
+      },
+      {
+        "name": "EMILY ROBINSON",
+        "role": "Design Engineer"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Tire Change & Repair",
+    "slug": "tire-change",
+    "category": "tires-wheels",
+    "shortDescription": "Complete puncture diagnostics, patching, replacement, and computerized laser alignment balancing.",
+    "description": "Don't let a flat slow you down. We offer complete wheel diagnostics, nitrogen inflation, balancing, and premium branded replacements for all vehicle models.",
+    "icon": "Circle",
+    "isActive": false,
+    "duration": "1 Hour",
+    "price": "From $49",
+    "image": "/assets/asset 13.jpeg",
+    "detailedContent": [
+      "Don't let a flat slow you down. Our complete tire service includes puncture diagnostics, premium patching, and computerized laser alignment balancing to ensure your safety on the road.",
+      "We stock all major tire brands and use state-of-the-art equipment to handle everything from standard tire swaps to low-profile performance wheel mounting."
+    ],
+    "checklist": [
+      "Wheel Alignment Check",
+      "Puncture Repair Protocols",
+      "High-Speed Balancing",
+      "Nitrogen Inflation Info",
+      "Tire Pressure Monitoring",
+      "Rim Restoration Services"
+    ],
+    "iconBoxes": [
+      {
+        "iconName": "Activity",
+        "title": "Precision Balancing",
+        "description": "We use laser-guided balancing machines to eliminate steering vibrations and ensure even tire wear."
+      },
+      {
+        "iconName": "Settings",
+        "title": "OEM Alignment",
+        "description": "Our computerized alignment system matches your vehicle's factory specifications for optimal handling."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Car Denting Repair",
+    "slug": "car-denting",
+    "category": "body-denting",
+    "shortDescription": "Advanced paintless dent removal protocols mapping exact surface tensions to reverse collision damages seamlessly.",
+    "description": "We use pulling arrays and suction modules to un-dent vehicles without compromising original paint layers saving thousands in repainting costs.",
+    "icon": "Hammer",
+    "isActive": true,
+    "duration": "4-8 Hours",
+    "price": "From $150",
+    "image": "/assets/asset 14.jpeg"
+  },
+  {
+    "id": "4",
+    "title": "Battery Check & Repair",
+    "slug": "battery-check",
+    "category": "electrical",
+    "shortDescription": "Alternator load testing, terminal corrosion cleaning, and battery replacement featuring 48-month warranty cells.",
+    "description": "Systematic multimeter checks across relays, starters, and battery cores. We prevent getting stranded by replacing dying arrays proactively.",
+    "icon": "Battery",
+    "isActive": true,
+    "duration": "30 Min",
+    "price": "From $89",
+    "image": "/assets/asset 15.jpeg"
+  },
+  {
+    "id": "5",
+    "title": "Tire Disc Blade Changing",
+    "slug": "disc-blade",
+    "category": "tires-wheels",
+    "shortDescription": "Ceramic and metallic brake pad swaps alongside warped rotor resurfacing protocols.",
+    "description": "A vehicle that can't stop is a danger to everyone. We replace worn pads and bleed hydraulic brake fluids to ensure maximum stopping power.",
+    "icon": "Disc",
+    "isActive": false,
+    "duration": "2 Hours",
+    "price": "From $120",
+    "image": "/assets/asset 66.jpeg"
+  },
+  {
+    "id": "8",
+    "title": "Alignment Fixing",
+    "slug": "alignment-fixing",
+    "category": "engine-mechanical",
+    "shortDescription": "Camber, caster, and toe adjustments optimizing driving performance and tire lifespan.",
+    "description": "Laser-guided chassis realignment fixing steering pulls and uneven tire wear patterns saving you money in the long run.",
+    "icon": "AlignCenter",
+    "isActive": false,
+    "duration": "1.5 Hours",
+    "price": "From $95",
+    "image": "/assets/asset 38.jpeg"
+  },
+  {
+    "id": "9",
+    "title": "Car Repairing",
+    "slug": "car-repairing",
+    "category": "body-denting",
+    "shortDescription": "Comprehensive chassis welding, quarter panel swaps, and major collision frame pulling.",
+    "description": "Our heavy-duty repair bay handles structural vehicle damage using computerized frame straightening equipment.",
+    "icon": "Wrench",
+    "isActive": true,
+    "duration": "Varies",
+    "price": "Estimate Only",
+    "image": "/assets/asset 64.jpeg"
+  },
+  {
+    "id": "10",
+    "title": "Windshield Replacement",
+    "slug": "windshield-replacement",
+    "category": "glass-windshield",
+    "shortDescription": "OEM-equivalent shattered glass replacements featuring heated wiper elements and ADAS recalibrations.",
+    "description": "Safety starts with visibility. We remove cracked windshields and seal new ones using premium urethanes ready to drive in 1 hour.",
+    "icon": "Aperture",
+    "isActive": false,
+    "duration": "2 Hours",
+    "price": "From $250",
+    "image": "/assets/asset 43.jpeg"
+  }
+]

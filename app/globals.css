@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D70006;
+  --color-bgDark: #110E10;
+  --color-bgDark2: #1B1B1B;
+  --color-bgDark3: #222222;
+  --color-textMuted: #999999;
+  --color-textLight: #DEDEDE;
+
+  --font-heading: var(--font-bai-jamjuree), sans-serif;
+  --font-body: var(--font-montserrat), sans-serif;
+
+  --animate-spin-slow: spin-slow 8s linear infinite;
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-ripple: ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  --animate-fadeInUp: fadeInUp 0.8s ease-out forwards;
+  --animate-slideInLeft: slideInLeft 0.8s ease-out forwards;
+  --animate-slideInRight: slideInRight 0.8s ease-out forwards;
+  --animate-rotateInDownRight: rotateInDownRight 0.8s ease-out forwards;
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rotateInDownRight {
+  from { opacity: 0; transform: rotate(-45deg) translate(20px, -20px); }
+  to { opacity: 1; transform: rotate(0deg) translate(0, 0); }
+}
+
+::selection {
+  background-color: #D70006;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #110E10; 
+}
+::-webkit-scrollbar-thumb {
+  background: #222222; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D70006; 
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #110E10;
+  color: #DEDEDE;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-montserrat), sans-serif;
+  overflow-x: hidden;
+}
+
+.heading-font {
+  font-family: var(--font-bai-jamjuree), sans-serif;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}
