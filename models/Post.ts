@@ -54,6 +54,10 @@ const PostSchema = new Schema<IPost>(
   }
 );
 
+// Add indices for performance
+PostSchema.index({ status: 1 });
+PostSchema.index({ publishedAt: -1 });
+
 PostSchema.pre('save', async function () {
   if (this.isModified('title') && this.title) {
     this.slug = slugify(this.title, { lower: true, strict: true });

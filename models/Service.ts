@@ -102,6 +102,10 @@ const ServiceSchema = new Schema<IService>(
   }
 );
 
+// Add indices for performance
+ServiceSchema.index({ isActive: 1 });
+ServiceSchema.index({ category: 1 });
+
 ServiceSchema.pre('save', async function () {
   if (this.isModified('title') && this.title) {
     this.slug = slugify(this.title, { lower: true, strict: true });

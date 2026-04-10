@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -10,21 +11,21 @@ const slides = [
     subtitle: "BEST AUTOMOBILE MAINTENANCE WORKSHOP",
     title: "Car Repair and Maintenance Services",
     description: "We provide comprehensive diagnostic, repair, and maintenance services utilizing advanced workshop equipment to get you back on the road safely.",
-    bgClass: "bg-[url('/assets/asset%2062.jpeg')] bg-cover bg-center",
+    image: "/assets/asset 62.jpeg",
   },
   {
     id: 2,
     subtitle: "PREMIUM CAR CARE EXPERTS",
     title: "Professional Auto Service For Premium Performance",
     description: "Our certified master mechanics deliver dealership-quality service at honest prices, from routine oil changes to complete engine overhauls.",
-    bgClass: "bg-[url('/assets/asset%2063.jpeg')] bg-cover bg-center",
+    image: "/assets/asset 63.jpeg",
   },
   {
     id: 3,
     subtitle: "CERTIFIED MECHANICS",
     title: "Complete Car Checkup & Diagnostic Services",
     description: "Don't let minor issues become major repairs. Schedule a comprehensive multipoint inspection with our advanced diagnostic tooling.",
-    bgClass: "bg-[url('/assets/asset%2064.jpeg')] bg-cover bg-center",
+    image: "/assets/asset 64.jpeg",
   },
 ];
 
@@ -48,8 +49,16 @@ export default function HeroSlider() {
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               isActive ? "opacity-100 z-10" : "opacity-0 z-0"
-            } ${slide.bgClass}`}
+            }`}
           >
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="object-cover"
+              priority={index === 0}
+              quality={90}
+            />
             {/* Dark overlay for images */}
             <div className="absolute inset-0 bg-black/60 z-0"></div>
             
