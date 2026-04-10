@@ -34,6 +34,29 @@ export async function POST(request: NextRequest) {
       notes: body.notes,
     });
 
+    // Notify Admin via Telegram
+    try {
+      const isContactForm = !body.vehicleMake && !body.vehicleModel;
+      const vehicleInfo = !isContactForm ? `\n<b>Vehicle:</b> ${body.vehicleYear || ''} ${body.vehicleMake || ''} ${body.vehicleModel || ''}` : '';
+      const timeInfo = body.preferredTime ? `\n<b>Time:</b> ${body.preferredTime}` : '';
+
+      const message = `
+<b>${isContactForm ? '✉️ New Contact' : '🚀 New Booking'} Received!</b>
+
+<b>Customer:</b> ${body.customerName}
+<b>Phone:</b> ${body.phone}
+<b>Service:</b> ${body.serviceType}${vehicleInfo}
+<b>Date:</b> ${body.preferredDate}${timeInfo}
+
+<b>Notes:</b> ${body.notes || 'No special notes.'}
+      `.trim();
+      
+      const { sendTelegramMessage } = await import('@/lib/telegram');
+      await sendTelegramMessage(message);
+    } catch (err) {
+      console.error('[Telegram Notify Failed]', err);
+    }
+
     return apiSuccess({ message: 'Booking created successfully', booking }, 201);
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Internal server error';
