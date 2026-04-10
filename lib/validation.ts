@@ -75,6 +75,14 @@ export function validatePost(data: Record<string, unknown>): ValidationResult {
     errors.push('Title must be 200 characters or fewer');
   }
 
+  if (!isNonEmpty(data.content)) {
+    errors.push('Content is required');
+  }
+
+  if (!isNonEmpty(data.author)) {
+    errors.push('Author name is required');
+  }
+
   if (data.excerpt && !maxLength(data.excerpt as string, 500)) {
     errors.push('Excerpt must be 500 characters or fewer');
   }

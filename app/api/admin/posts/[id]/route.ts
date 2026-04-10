@@ -63,6 +63,23 @@ export async function PATCH(
       }
     }
 
+    // Map Author string to object
+    if (body.author && typeof body.author === 'string') {
+      body.author = {
+        name: body.author,
+        role: 'Admin',
+        image: '/assets/admin-avatar.png'
+      };
+    }
+
+    // Map Content string to array of objects
+    if (body.content && typeof body.content === 'string') {
+      body.content = body.content.split('\n\n').map((para: string) => ({
+        type: 'paragraph',
+        text: para.trim()
+      })).filter((c: any) => c.text.length > 0);
+    }
+
     const post = await Post.findByIdAndUpdate(id, body, { returnDocument: 'after' });
 
     if (!post) {

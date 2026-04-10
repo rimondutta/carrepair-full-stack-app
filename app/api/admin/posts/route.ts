@@ -44,9 +44,21 @@ export async function POST(request: NextRequest) {
       body.publishedAt = new Date();
     }
 
-    // Handle tags as comma-separated string
-    if (typeof body.tags === 'string') {
-      body.tags = body.tags.split(',').map((tag: string) => tag.trim()).filter(Boolean);
+    // Map Author string to object
+    if (body.author && typeof body.author === 'string') {
+      body.author = {
+        name: body.author,
+        role: 'Admin',
+        image: '/assets/admin-avatar.png'
+      };
+    }
+
+    // Map Content string to array of objects
+    if (body.content && typeof body.content === 'string') {
+      body.content = body.content.split('\n\n').map((para: string) => ({
+        type: 'paragraph',
+        text: para.trim()
+      })).filter((c: any) => c.text.length > 0);
     }
 
     const post = await Post.create(body);
