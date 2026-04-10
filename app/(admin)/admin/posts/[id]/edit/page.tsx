@@ -29,7 +29,7 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
       try {
         const res = await fetch(`/api/admin/posts/${id}`);
         const data = await res.json();
-        setPost(data.post);
+        setPost(data.data?.post || data.post); // Handle both for safety
       } catch (error) {
         console.error('Failed to fetch post:', error);
       } finally {

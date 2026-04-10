@@ -50,17 +50,27 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
 
   useEffect(() => {
     if (initialData) {
+      // Un-pack Author if it's an object
+      const authorName = typeof initialData.author === 'object' && initialData.author !== null
+        ? (initialData.author as any).name
+        : initialData.author || '';
+
+      // Un-pack Content if it's an array
+      const contentText = Array.isArray(initialData.content)
+        ? initialData.content.map((c: any) => c.text).join('\n\n')
+        : initialData.content || '';
+
       setForm({
         title: initialData.title || '',
         slug: initialData.slug || '',
         excerpt: initialData.excerpt || '',
-        content: initialData.content || '',
+        content: contentText,
         coverImage: initialData.coverImage || '',
         category: initialData.category || '',
         tags: Array.isArray(initialData.tags)
           ? initialData.tags.join(', ')
           : initialData.tags || '',
-        author: initialData.author || '',
+        author: authorName,
         status: initialData.status || 'draft',
       });
     }
