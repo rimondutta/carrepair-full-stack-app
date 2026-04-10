@@ -16,9 +16,15 @@ export default function AdminLayout({
   const isLoginPage = pathname === '/admin/login';
 
   const pageTitle = useMemo(() => {
-    const segment = pathname.split('/').pop() || '';
-    if (segment === 'dashboard') return 'Overview';
-    return segment.charAt(0).toUpperCase() + segment.slice(1);
+    const segments = pathname.split('/').filter(Boolean);
+    const lastSegment = segments[segments.length - 1] || '';
+    const parentSegment = segments[segments.length - 2] || '';
+
+    if (lastSegment === 'dashboard') return 'Overview';
+    if (lastSegment === 'new') return `Add New ${parentSegment.slice(0, -1).charAt(0).toUpperCase() + parentSegment.slice(1, -1)}`;
+    if (lastSegment === 'edit') return `Edit ${parentSegment.slice(0, -1).charAt(0).toUpperCase() + parentSegment.slice(1, -1)}`;
+    
+    return lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1);
   }, [pathname]);
 
   if (isLoginPage) {

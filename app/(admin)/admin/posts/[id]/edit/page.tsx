@@ -58,27 +58,21 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
 
   if (loading) {
     return (
-      <>
-        <Header title="Edit Post" />
-        <main className="p-8">
-          <div className="flex items-center justify-center h-64">
-            <div className="animate-spin w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full" />
-          </div>
-        </main>
-      </>
+      <main className="p-8">
+        <div className="flex items-center justify-center h-64">
+          <div className="animate-spin w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full" />
+        </div>
+      </main>
     );
   }
 
   return (
-    <>
-      <Header title="Edit Post" />
-      <main className="p-8">
-        {post ? (
-          <PostForm initialData={post} onSubmit={handleSubmit} isEditing />
-        ) : (
-          <p className="text-gray-500">Post not found</p>
-        )}
-      </main>
-    </>
+    <main className="p-8">
+      {post ? (
+        <PostForm initialData={post} onSubmit={handleSubmit} isEditing />
+      ) : (
+        <p className="text-gray-500">Post not found</p>
+      )}
+    </main>
   );
 }

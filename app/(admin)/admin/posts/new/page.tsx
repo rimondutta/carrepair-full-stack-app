@@ -25,11 +25,8 @@ export default function NewPostPage() {
   };
 
   return (
-    <>
-      <Header title="New Post" />
-      <main className="p-8">
-        <PostForm onSubmit={handleSubmit} />
-      </main>
-    </>
+    <main className="p-8">
+      <PostForm onSubmit={handleSubmit} />
+    </main>
   );
 }
