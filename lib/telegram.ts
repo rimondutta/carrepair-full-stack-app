@@ -1,7 +1,8 @@
 import { logger } from './logger';
 
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+// Clean environment variables (remove surrounding quotes if they exist)
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN?.replace(/^["'](.+)["']$/, '$1').replace(/["']/g, '');
+const CHAT_ID = process.env.TELEGRAM_CHAT_ID?.replace(/^["'](.+)["']$/, '$1').replace(/["']/g, '');
 
 /**
  * Escapes HTML special characters for Telegram HTML mode.
@@ -20,6 +21,11 @@ export async function sendTelegramMessage(text: string) {
     return { success: false, error: 'Telegram configuration missing' };
   }
 
+  // Mask token for logging: "1234...abcd"
+  const maskedToken = BOT_TOKEN.length > 10 
+    ? `${BOT_TOKEN.substring(0, 4)}...${BOT_TOKEN.substring(BOT_TOKEN.length - 4)}`
+    : '***';
+
   try {
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
     const response = await fetch(url, {
@@ -35,7 +41,12 @@ export async function sendTelegramMessage(text: string) {
     const data = await response.json();
 
     if (!response.ok) {
-      logger.error('[Telegram Error]', data);
+      logger.error('[Telegram Error]', {
+        status: response.status,
+        description: data.description,
+        tokenUsed: maskedToken,
+        chatId: CHAT_ID
+      });
       return { success: false, error: data.description };
     }
 
