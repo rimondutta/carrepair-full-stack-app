@@ -5,12 +5,22 @@ import ServiceCTABanner from "../../../components/services/ServiceCTABanner";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { ServiceService } from "@/services/serviceService";
+import { connectDB } from "@/lib/mongodb";
+import Service from "@/models/Service";
 
 interface Props {
   params: { slug: string };
 }
 
 export const revalidate = 3600; // revalidate at most every hour
+
+export async function generateStaticParams() {
+  await connectDB();
+  const services = await Service.find({ isActive: true }).select("slug").lean();
+  return services.map((s) => ({
+    slug: s.slug,
+  }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
