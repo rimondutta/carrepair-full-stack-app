@@ -64,15 +64,15 @@ export function apiError(message: string, status: number = 500) {
  * 2. Error Catching & Formatting
  * 3. Standardized Logging
  */
-export function apiHandler(
-  handler: (req: NextRequest, ...args: any[]) => Promise<NextResponse>,
+export function apiHandler<T extends unknown[]>(
+  handler: (req: NextRequest, ...args: T) => Promise<NextResponse>,
   options: {
     maxRequests?: number;
     windowMs?: number;
     requireAuth?: boolean;
   } = {}
 ) {
-  return async (req: NextRequest, ...args: any[]): Promise<NextResponse> => {
+  return async (req: NextRequest, ...args: T): Promise<NextResponse> => {
     const { maxRequests = 30, windowMs = 60 * 1000 } = options;
 
     try {
@@ -113,9 +113,9 @@ export function apiHandler(
  * @deprecated Use apiHandler for better scalability and features.
  */
 export function withErrorHandler(
-  handler: (...args: any[]) => Promise<NextResponse>
+  handler: (...args: unknown[]) => Promise<NextResponse>
 ) {
-  return async (...args: any[]): Promise<NextResponse> => {
+  return async (...args: unknown[]): Promise<NextResponse> => {
     try {
       return await handler(...args);
     } catch (error: unknown) {

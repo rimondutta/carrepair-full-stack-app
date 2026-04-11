@@ -82,7 +82,7 @@ export class BookingService {
       limit = 20 
     } = options;
 
-    const filter: Record<string, any> = {};
+    const filter: any = {}; // Using any here internally for MongoDB complex query building
 
     if (status && status !== 'all') {
       filter.status = status;
