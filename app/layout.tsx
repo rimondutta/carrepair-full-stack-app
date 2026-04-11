@@ -20,29 +20,44 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: {
     template: "%s | Care Plus Auto Repairing",
-    default: "Care Plus Auto Repairing | Expert Car Repair and Maintenance",
+    default: "Care Plus Auto Repairing | Expert Car Repair & Maintenance",
   },
-  description: "Care Plus Auto Repairing is the premier automobile maintenance workshop offering expert car repair, engine tuning, and premium glass repair services. Trusted by 10k+ vehicle owners.",
+  description: "Care Plus Auto Repairing is the premier automobile maintenance workshop in Dubai offering expert car repair, engine tuning, and premium glass services. Trusted by 10k+ vehicle owners.",
+  keywords: ["Car Repair Dubai", "Auto Repairing", "Engine Tuning", "Dent Removal", "Ceramic Coating", "Car Maintenance"],
+  category: "Automotive",
   metadataBase: new URL("https://careplusauto.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Care Plus Auto Repairing | Premium Car Maintenance",
-    description: "Expert automobile maintenance workshop providing all types of premium car repair and restoration services.",
+    description: "Expert automobile maintenance workshop providing all types of premium car repair and restoration services in Dubai.",
     url: "https://careplusauto.vercel.app",
     siteName: "Care Plus Auto Repairing",
     locale: "en_US",
     type: "website",
+    images: [{
+      url: "/logo/care-plus-logo.png",
+      width: 800,
+      height: 600,
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Care Plus Auto Repairing | Expert Car Services",
     description: "High-end automobile maintenance and repair services for luxury and daily precision vehicles.",
+    images: ["/logo/care-plus-logo.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/logo/care-plus-logo.png",

@@ -1,9 +1,15 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import ContactHeroBanner from "@/components/contact/ContactHeroBanner";
 import ContactInfoStrip from "@/components/contact/ContactInfoStrip";
-import ContactMainSection from "@/components/contact/ContactMainSection";
-import ContactMapSection from "@/components/contact/ContactMapSection";
 import ContactCTABanner from "@/components/contact/ContactCTABanner";
+
+const ContactMainSection = dynamic(() => import("@/components/contact/ContactMainSection"), {
+  loading: () => <div className="h-96 animate-pulse bg-white/5 rounded-3xl" />,
+});
+const ContactMapSection = dynamic(() => import("@/components/contact/ContactMapSection"), {
+  loading: () => <div className="h-[450px] animate-pulse bg-white/5" />,
+});
 
 export const metadata: Metadata = {
   title: "Contact Us | Care Plus Auto Repairing",

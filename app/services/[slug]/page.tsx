@@ -2,11 +2,9 @@ import PageHeroBanner from "../../../components/services/PageHeroBanner";
 import ServiceDetails from "../../../components/services/ServiceDetails";
 import ServiceSidebar from "../../../components/services/ServiceSidebar";
 import ServiceCTABanner from "../../../components/services/ServiceCTABanner";
-import { connectDB } from "@/lib/mongodb";
-import Service from "@/models/Service";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { redisUtils } from "@/lib/redis";
+import { ServiceService } from "@/services/serviceService";
 
 interface Props {
   params: { slug: string };
@@ -16,18 +14,7 @@ export const revalidate = 3600; // revalidate at most every hour
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const CACHE_KEY = `service:slug:${slug}`;
-  
-  // 1. Try Cache hit
-  let service = await redisUtils.get<any>(CACHE_KEY);
-  
-  if (!service) {
-    await connectDB();
-    service = await Service.findOne({ slug, isActive: true }).lean();
-    if (service) {
-      redisUtils.set(CACHE_KEY, service, 3600);
-    }
-  }
+  const { service } = await ServiceService.getServiceBySlug(slug);
   
   if (!service) {
     return {
@@ -43,21 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DynamicServicePage({ params }: Props) {
   const { slug } = await params;
-  const CACHE_KEY = `service:slug:${slug}`;
-  
-  // 1. Try Cache hit
-  let service = await redisUtils.get<any>(CACHE_KEY);
-  
-  if (!service) {
-    // 2. Cache miss: DB Hit
-    await connectDB();
-    service = await Service.findOne({ slug, isActive: true }).lean();
-    
-    // 3. Set Cache asynchronously
-    if (service) {
-      redisUtils.set(CACHE_KEY, service, 3600);
-    }
-  }
+  const { service } = await ServiceService.getServiceBySlug(slug);
 
   if (!service) {
     notFound();

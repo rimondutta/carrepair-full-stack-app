@@ -26,11 +26,8 @@ export default async function BlogSectionWrapper() {
   const initialLimit = 6;
   const limitedPosts = (posts || []).slice(0, initialLimit);
   
-  // Efficiently serialize Mongo documents
-  const serializedPosts = limitedPosts.map(post => ({
-    ...post,
-    _id: typeof post._id === 'object' ? post._id.toString() : post._id,
-  }));
+  // Efficiently serialize Mongo documents for Client Components
+  const serializedPosts = JSON.parse(JSON.stringify(limitedPosts || []));
 
   return <BlogSection posts={serializedPosts} />;
 }

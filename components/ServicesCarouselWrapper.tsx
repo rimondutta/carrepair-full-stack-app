@@ -23,11 +23,8 @@ export default async function ServicesCarouselWrapper() {
   const initialLimit = 8;
   const limitedServices = (services || []).slice(0, initialLimit);
   
-  // Efficiently serialize Mongo documents
-  const serializedServices = limitedServices.map(service => ({
-    ...service,
-    _id: typeof service._id === 'object' ? service._id.toString() : service._id,
-  }));
+  // Efficiently serialize Mongo documents for Client Components
+  const serializedServices = JSON.parse(JSON.stringify(limitedServices || []));
 
   return <ServicesCarousel services={serializedServices} />;
 }

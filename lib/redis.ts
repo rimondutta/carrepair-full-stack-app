@@ -44,8 +44,15 @@ export function getRedisClient(): Redis | null {
       },
     });
 
-    client.on('error', (err) => {
-      logger.error('[Redis Error]', err);
+    client.on('error', (err: any) => {
+      // If we get an authentication error, disable Redis for this session
+      if (err.message?.includes('NOAUTH') || err.message?.includes('WRONGPASS')) {
+        logger.error('[Redis] Authentication failed. Disabling Redis caching.', err.message);
+        cached.conn = null;
+        client.disconnect();
+      } else {
+        logger.error('[Redis Error]', err);
+      }
     });
 
     client.on('connect', () => {

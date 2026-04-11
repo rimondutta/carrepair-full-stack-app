@@ -39,6 +39,12 @@ const BookingSchema = new Schema<IBooking>(
   }
 );
 
+// Add indices for performance
+BookingSchema.index({ status: 1 });
+BookingSchema.index({ preferredDate: -1 });
+BookingSchema.index({ email: 1 });
+BookingSchema.index({ createdAt: -1 });
+
 const Booking: Model<IBooking> =
   mongoose.models.Booking || mongoose.model<IBooking>('Booking', BookingSchema);
 

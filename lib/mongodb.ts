@@ -61,9 +61,16 @@ export async function connectDB(): Promise<typeof mongoose> {
 
   try {
     cached.conn = await cached.promise;
-  } catch (e) {
+  } catch (e: any) {
     cached.promise = null;
-    logger.error('[MongoDB] Connection failed:', e);
+    
+    // Explicitly check for Whitelist/Connectivity errors to help user
+    if (e.message?.includes('ECONNREFUSED') || e.message?.includes('querySrv')) {
+      logger.error('[MongoDB] FATAL: Connection refused. Please check if your local IP is WHITELISTED in MongoDB Atlas (Network Access).');
+    } else {
+      logger.error('[MongoDB] Connection failed:', e);
+    }
+    
     throw e;
   }
 

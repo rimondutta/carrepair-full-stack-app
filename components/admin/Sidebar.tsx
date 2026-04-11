@@ -51,11 +51,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Zap size={22} className="text-white fill-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-white tracking-tight leading-none">AutoFix Pro</h1>
+            <h1 className="text-lg font-bold text-white tracking-tight leading-none">Care Plus</h1>
             <p className="text-[10px] uppercase font-black tracking-widest text-slate-500 mt-1">Admin Dashboard</p>
           </div>
         </Link>
-        <button 
+        <button
           onClick={onClose}
           className="lg:hidden p-2 hover:bg-slate-800 rounded-lg text-slate-400"
         >
@@ -74,8 +74,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               onClick={onClose}
               className={`
                 flex items-center justify-between group px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200
-                ${isActive 
-                  ? 'bg-[#FFF0F0] text-[#EB0005] border-l-4 border-[#EB0005] rounded-r-xl rounded-l-none' 
+                ${isActive
+                  ? 'bg-[#FFF0F0] text-[#EB0005] border-l-4 border-[#EB0005] rounded-r-xl rounded-l-none'
                   : 'hover:bg-slate-800/50 hover:text-white border-l-4 border-transparent'}
               `}
             >
