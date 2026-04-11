@@ -21,6 +21,23 @@ export const authConfig = {
       }
       return session;
     },
+    authorized({ auth, request: { nextUrl } }) {
+      const isLoggedIn = !!auth?.user;
+      const isAdminRoute = nextUrl.pathname.startsWith('/admin');
+      const isAdminApiRoute = nextUrl.pathname.startsWith('/api/admin');
+      const isLoginRoute = nextUrl.pathname === '/admin/login';
+
+      if (isAdminRoute && !isLoginRoute) {
+        if (isLoggedIn) return true;
+        return false; // Redirect to login page
+      } else if (isAdminApiRoute) {
+        if (isLoggedIn) return true;
+        return Response.json({ error: 'Unauthorized' }, { status: 401 });
+      } else if (isLoginRoute && isLoggedIn) {
+        return Response.redirect(new URL('/admin/dashboard', nextUrl));
+      }
+      return true;
+    },
   },
   pages: {
     signIn: '/admin/login',

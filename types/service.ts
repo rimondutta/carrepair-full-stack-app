@@ -7,6 +7,7 @@ export type ServiceCategory =
   | 'glass-windshield';
 
 export interface Service {
+  _id?: string;
   id: string;
   title: string;
   slug: string;

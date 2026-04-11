@@ -84,7 +84,7 @@ export default function RootLayout({
               "telephone": "+971-XXXX-XXXX",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "9 19dStreet - 3 St - Al Qouz Ind.third",
+                "streetAddress": "9 19d Street - 3 St - Al Qouz Ind. 3",
                 "addressLocality": "Dubai",
                 "addressRegion": "Dubai",
                 "addressCountry": "AE"

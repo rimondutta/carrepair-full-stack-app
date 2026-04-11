@@ -12,7 +12,7 @@ const navItems = [
     icon: <LayoutDashboard size={20} />,
   },
   {
-    label: 'Bookings',
+    label: 'Work Orders',
     href: '/admin/bookings',
     icon: <Calendar size={20} />,
   },
@@ -51,7 +51,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Zap size={22} className="text-white fill-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-white tracking-tight leading-none">Care Plus</h1>
+            <h1 className="text-lg font-bold text-white tracking-tight leading-none">AutoFix Pro</h1>
             <p className="text-[10px] uppercase font-black tracking-widest text-slate-500 mt-1">Admin Dashboard</p>
           </div>
         </Link>
@@ -75,17 +75,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               className={`
                 flex items-center justify-between group px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200
                 ${isActive 
-                  ? 'bg-red-600/10 text-red-500' 
-                  : 'hover:bg-slate-800/50 hover:text-white'}
+                  ? 'bg-[#FFF0F0] text-[#EB0005] border-l-4 border-[#EB0005] rounded-r-xl rounded-l-none' 
+                  : 'hover:bg-slate-800/50 hover:text-white border-l-4 border-transparent'}
               `}
             >
               <div className="flex items-center gap-3.5">
-                <span className={`transition-colors ${isActive ? 'text-red-500' : 'group-hover:text-red-500'}`}>
+                <span className={`transition-colors ${isActive ? 'text-[#EB0005]' : 'group-hover:text-[#EB0005]'}`}>
                   {item.icon}
                 </span>
                 {item.label}
               </div>
-              {isActive && <ChevronRight size={14} className="text-red-500" />}
+              {isActive && <ChevronRight size={14} className="text-[#EB0005]" />}
             </Link>
           );
         })}
@@ -95,7 +95,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <div className="p-4 bg-slate-900/50 border-t border-slate-800">
         <button
           onClick={() => signOut({ callbackUrl: '/admin/login' })}
-          className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-red-600 hover:text-white transition-all duration-300 group"
+          className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-[#EB0005] hover:text-white transition-all duration-300 group"
         >
           <LogOut size={20} className="group-hover:rotate-12 transition-transform" />
           Logout Session

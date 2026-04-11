@@ -60,9 +60,9 @@ export function apiError(message: string, status: number = 500) {
  * Eliminates repetitive try/catch blocks in every route.
  */
 export function withErrorHandler(
-  handler: (...args: any[]) => Promise<NextResponse>
+  handler: (...args: unknown[]) => Promise<NextResponse>
 ) {
-  return async (...args: any[]): Promise<NextResponse> => {
+  return async (...args: unknown[]): Promise<NextResponse> => {
     try {
       return await handler(...args);
     } catch (error: unknown) {

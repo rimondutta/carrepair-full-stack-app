@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import dns from 'dns';
+import { logger } from './logger';
 
 const MONGODB_URI = process.env.MONGODB_URI!;
 
@@ -36,7 +37,7 @@ export async function connectDB(): Promise<typeof mongoose> {
       dns.setServers(['8.8.8.8', '8.8.4.4']);
     }
   } catch (err) {
-    console.warn('[MongoDB] Failed to set custom DNS servers:', err);
+    logger.warn('[MongoDB] Failed to set custom DNS servers:', err);
   }
 
   if (!cached.promise) {
@@ -53,9 +54,7 @@ export async function connectDB(): Promise<typeof mongoose> {
     cached.promise = mongoose
       .connect(MONGODB_URI, opts)
       .then((mongooseInstance) => {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('[MongoDB] Connected successfully');
-        }
+        logger.log('[MongoDB] Connected successfully');
         return mongooseInstance;
       });
   }
@@ -64,7 +63,7 @@ export async function connectDB(): Promise<typeof mongoose> {
     cached.conn = await cached.promise;
   } catch (e) {
     cached.promise = null;
-    console.error('[MongoDB] Connection failed:', e);
+    logger.error('[MongoDB] Connection failed:', e);
     throw e;
   }
 

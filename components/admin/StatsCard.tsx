@@ -7,24 +7,24 @@ interface StatsCardProps {
 }
 
 const colorMap = {
-  red: 'from-rose-50 to-rose-100/50 border-rose-200',
+  red: 'bg-[#EB0005] border-transparent text-white',
   yellow: 'from-amber-50 to-amber-100/50 border-amber-200',
   blue: 'from-blue-50 to-blue-100/50 border-blue-200',
-  green: 'from-emerald-50 to-emerald-100/50 border-emerald-200',
+  green: 'from-[#FFF0F0] to-[#FFF0F0] border-[#EB0005]/20',
 };
 
 const iconBgMap = {
-  red: 'bg-rose-500 text-white',
+  red: 'bg-white text-[#EB0005]',
   yellow: 'bg-amber-500 text-white',
   blue: 'bg-blue-500 text-white',
-  green: 'bg-emerald-500 text-white',
+  green: 'bg-[#EB0005] text-white',
 };
 
 const textColorMap = {
-  red: 'text-rose-600',
+  red: 'text-white',
   yellow: 'text-amber-600',
   blue: 'text-blue-600',
-  green: 'text-emerald-600',
+  green: 'text-[#EB0005]',
 };
 
 export default function StatsCard({ title, value, description, color, icon }: StatsCardProps) {
@@ -34,12 +34,12 @@ export default function StatsCard({ title, value, description, color, icon }: St
     >
       <div className="flex items-center justify-between relative z-10">
         <div>
-          <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">{title}</p>
+          <p className={`text-[10px] font-black uppercase tracking-[0.2em] ${color === 'red' ? 'text-white/80' : 'text-slate-500'}`}>{title}</p>
           <div className="mt-4 flex items-baseline gap-2">
             <p className={`text-4xl font-black tracking-tight ${textColorMap[color]}`}>{value}</p>
           </div>
           {description && (
-            <p className="text-xs text-slate-500 mt-2 font-semibold flex items-center gap-1.5 whitespace-nowrap">
+            <p className={`text-xs mt-2 font-semibold flex items-center gap-1.5 whitespace-nowrap ${color === 'red' ? 'text-white/90' : 'text-slate-500'}`}>
               <span className={`w-1 h-1 rounded-full ${iconBgMap[color]}`} />
               {description}
             </p>

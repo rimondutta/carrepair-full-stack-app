@@ -3,29 +3,13 @@
 import Link from "next/link";
 import { Calendar, User, ArrowRight } from "lucide-react";
 
-interface BlogCardProps {
-  post: {
-    slug: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    author: {
-      name: string;
-      role: string;
-    };
-    category: string;
-    image: string;
-  };
-}
-
-export default function BlogCard({ post }: any) {
+export default function BlogCard({ post }: { post: any }) {
   const title = post.title;
   const excerpt = post.excerpt;
   const image = post.coverImage || post.image;
   const date = post.publishedAt || post.date || new Date().toISOString();
   const authorName = post.author?.name || "Admin";
   const category = post.category || "Automotive";
-  const slug = post.slug;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", { 
     month: "long", 

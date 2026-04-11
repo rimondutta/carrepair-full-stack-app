@@ -49,7 +49,12 @@ async function seed() {
     // Clear existing services to avoid duplicates and ensure fresh data
     await Service.deleteMany({});
 
-    const formattedServices = servicesData.map((s: any) => ({
+    const formattedServices = servicesData.map((s: { 
+      title: string; slug: string; category: string; description: string; 
+      shortDescription: string; price: string; duration: string; icon: string; 
+      image: string; isActive?: boolean; detailedContent?: string[]; 
+      checklist?: string[]; iconBoxes?: unknown[]; mechanics?: unknown[]; faqs?: unknown[];
+    }) => ({
       title: s.title,
       slug: s.slug,
       category: s.category,
@@ -78,7 +83,11 @@ async function seed() {
     // Clear existing posts
     await Post.deleteMany({});
 
-    const formattedPosts = blogData.map((p: any) => ({
+    const formattedPosts = blogData.map((p: {
+      title: string; slug: string; content: string; excerpt: string;
+      image: string; category: string; author: string; date: string;
+      tags?: string[];
+    }) => ({
       title: p.title,
       slug: p.slug,
       content: p.content,

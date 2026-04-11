@@ -96,7 +96,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 // ─── Input Styles ─────────────────────────────────────────────────────────────
 
 const inputCls =
-  'w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500/20 focus:border-red-500 outline-none transition-all text-slate-900 placeholder:text-slate-300 text-sm';
+  'w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-slate-900 placeholder:text-slate-300 text-sm';
 const labelCls = 'block text-[11px] font-black text-slate-500 uppercase tracking-widest mb-1.5';
 
 // ─── Main Component ───────────────────────────────────────────────────────────
@@ -341,7 +341,7 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
             <textarea name="description" value={form.description} onChange={handleField} rows={4} className={inputCls} placeholder="Detailed description of the service..." />
           </div>
           <div className="flex items-center gap-2">
-            <input type="checkbox" name="isActive" id="isActive" checked={form.isActive} onChange={handleField} className="w-4 h-4 text-red-600 rounded border-gray-300 focus:ring-red-500" />
+            <input type="checkbox" name="isActive" id="isActive" checked={form.isActive} onChange={handleField} className="w-4 h-4 text-[#EB0005] rounded border-gray-300 focus:ring-[#EB0005]" />
             <label htmlFor="isActive" className="text-sm font-medium text-gray-700">Active (visible on site)</label>
           </div>
         </div>
@@ -366,7 +366,7 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
             )}
           </div>
         ))}
-        <button type="button" onClick={() => addArrayItem('detailedContent')} className="flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-700 transition-colors mt-1">
+        <button type="button" onClick={() => addArrayItem('detailedContent')} className="flex items-center gap-1.5 text-xs font-bold text-[#EB0005] hover:text-[#A80003] transition-colors mt-1">
           <Plus size={14} /> Add Paragraph
         </button>
       </Section>
@@ -383,13 +383,13 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
               placeholder={`Feature ${i + 1}...`}
             />
             {form.checklist.length > 1 && (
-              <button type="button" onClick={() => removeArrayItem('checklist', i)} className="text-red-400 hover:text-red-600 transition-colors">
+              <button type="button" onClick={() => removeArrayItem('checklist', i)} className="text-rose-400 hover:text-[#EB0005] transition-colors">
                 <Trash2 size={16} />
               </button>
             )}
           </div>
         ))}
-        <button type="button" onClick={() => addArrayItem('checklist')} className="flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-700 transition-colors mt-1">
+        <button type="button" onClick={() => addArrayItem('checklist')} className="flex items-center gap-1.5 text-xs font-bold text-[#EB0005] hover:text-[#A80003] transition-colors mt-1">
           <Plus size={14} /> Add Feature
         </button>
       </Section>
@@ -414,13 +414,13 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
               </div>
             </div>
             {form.iconBoxes.length > 1 && (
-              <button type="button" onClick={() => removeIconBox(i)} className="absolute top-3 right-3 text-red-400 hover:text-red-600 transition-colors">
+              <button type="button" onClick={() => removeIconBox(i)} className="absolute top-3 right-3 text-rose-400 hover:text-[#EB0005] transition-colors">
                 <Trash2 size={15} />
               </button>
             )}
           </div>
         ))}
-        <button type="button" onClick={addIconBox} className="flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-700 transition-colors">
+        <button type="button" onClick={addIconBox} className="flex items-center gap-1.5 text-xs font-bold text-[#EB0005] hover:text-[#A80003] transition-colors">
           <Plus size={14} /> Add Icon Box
         </button>
       </Section>
@@ -439,7 +439,7 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
               <textarea value={faq.answer} onChange={(e) => updateFaq(i, 'answer', e.target.value)} rows={2} className={`${inputCls} resize-none`} placeholder="Provide a clear, helpful answer..." />
             </div>
             {form.faqs.length > 1 && (
-              <button type="button" onClick={() => removeFaq(i)} className="absolute top-3 right-3 text-red-400 hover:text-red-600 transition-colors">
+              <button type="button" onClick={() => removeFaq(i)} className="absolute top-3 right-3 text-rose-400 hover:text-[#EB0005] transition-colors">
                 <Trash2 size={15} />
               </button>
             )}
@@ -579,7 +579,7 @@ export default function ServiceForm({ initialData, onSubmit, onCancel, isEditing
         <button
           type="submit"
           disabled={loading}
-          className="px-8 py-3 bg-red-600 shadow-lg shadow-red-600/20 text-white rounded-xl font-bold hover:bg-red-700 hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:translate-y-0"
+          className="px-8 py-3 bg-[#EB0005] shadow-lg shadow-[#EB0005]/20 text-white rounded-xl font-bold hover:bg-[#A80003] hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:translate-y-0"
         >
           {loading ? 'Saving...' : isEditing ? 'Update Service' : 'Add Service'}
         </button>

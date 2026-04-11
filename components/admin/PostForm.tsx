@@ -114,7 +114,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
         <div
           className={`mb-6 p-4 rounded-lg text-sm font-medium ${
             message.type === 'success'
-              ? 'bg-green-50 text-green-700 border border-green-200'
+              ? 'bg-[#FFF0F0] text-[#EB0005] border border-[#EB0005]/20'
               : 'bg-red-50 text-red-700 border border-red-200'
           }`}
         >
@@ -131,7 +131,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="title"
             value={form.title}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900"
             placeholder="Enter post title"
           />
         </div>
@@ -144,7 +144,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="slug"
             value={form.slug}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900"
             placeholder="auto-generated-slug"
           />
         </div>
@@ -160,7 +160,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             onChange={handleChange}
             maxLength={200}
             rows={2}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900 resize-none"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900 resize-none"
             placeholder="Brief description of the post"
           />
         </div>
@@ -173,7 +173,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             value={form.content}
             onChange={handleChange}
             rows={12}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900 resize-y"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900 resize-y"
             placeholder="Write your post content here..."
           />
         </div>
@@ -186,7 +186,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="coverImage"
             value={form.coverImage}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900"
             placeholder="https://example.com/image.jpg"
           />
           {form.coverImage && (
@@ -212,7 +212,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="category"
             value={form.category}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900"
             placeholder="e.g. Maintenance Tips"
           />
         </div>
@@ -225,7 +225,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="tags"
             value={form.tags}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900"
             placeholder="oil change, maintenance, tips"
           />
         </div>
@@ -238,7 +238,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="author"
             value={form.author}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900"
             placeholder="Author name"
           />
         </div>
@@ -250,7 +250,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
             name="status"
             value={form.status}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all text-gray-900 bg-white"
+            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900 bg-white"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -270,7 +270,7 @@ export default function PostForm({ initialData, onSubmit, isEditing = false }: P
         <button
           onClick={() => handleSubmit('published')}
           disabled={loading}
-          className="px-6 py-2.5 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors disabled:opacity-50"
+          className="px-6 py-2.5 bg-[#EB0005] text-white rounded-lg font-medium hover:bg-[#A80003] transition-colors disabled:opacity-50"
         >
           {loading ? 'Publishing...' : 'Publish'}
         </button>

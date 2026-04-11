@@ -56,7 +56,7 @@ export default function PostsPage() {
           </div>
           <Link
             href="/admin/posts/new"
-            className="px-6 py-3 bg-red-600 shadow-lg shadow-red-600/20 text-white rounded-xl font-bold hover:bg-red-700 hover:-translate-y-0.5 transition-all flex items-center gap-2"
+            className="px-6 py-3 bg-[#EB0005] shadow-lg shadow-[#EB0005]/20 text-white rounded-xl font-bold hover:bg-[#A80003] hover:-translate-y-0.5 transition-all flex items-center gap-2"
           >
             <Plus size={18} />
             New Post
@@ -67,7 +67,7 @@ export default function PostsPage() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           {loading ? (
             <div className="flex items-center justify-center h-64">
-              <div className="animate-spin w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full" />
+              <div className="animate-spin w-8 h-8 border-4 border-[#EB0005] border-t-transparent rounded-full" />
             </div>
           ) : (
             <div className="overflow-x-auto">
@@ -111,7 +111,7 @@ export default function PostsPage() {
                             </Link>
                             <button
                               onClick={() => setDeleteId(post._id)}
-                              className="text-red-600 hover:text-red-800 text-xs font-medium transition-colors"
+                              className="text-[#EB0005] hover:text-[#A80003] text-xs font-medium transition-colors"
                             >
                               Delete
                             </button>

@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import { IBooking } from '@/models/Booking';
+import { logger } from './logger';
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -14,7 +15,7 @@ const transporter = nodemailer.createTransport({
 export const sendBookingConfirmation = async (booking: IBooking) => {
   // Check if SMTP is configured
   if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.warn('SMTP credentials not configured. Email not sent.');
+    logger.warn('SMTP credentials not configured. Email not sent.');
     return;
   }
 
@@ -65,14 +66,14 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`Confirmation email sent to: ${email}`);
+    logger.log(`Confirmation email sent to: ${email}`);
   } catch (error) {
-    console.error(' Failed to send confirmation email:', error);
+    logger.error(' Failed to send confirmation email:', error);
   }
 };
 export const sendBookingCancellation = async (booking: IBooking) => {
   if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.warn('SMTP credentials not configured. Email not sent.');
+    logger.warn('SMTP credentials not configured. Email not sent.');
     return;
   }
 
@@ -121,15 +122,15 @@ export const sendBookingCancellation = async (booking: IBooking) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`Cancellation email sent to: ${email}`);
+    logger.log(`Cancellation email sent to: ${email}`);
   } catch (error) {
-    console.error('Failed to send cancellation email:', error);
+    logger.error('Failed to send cancellation email:', error);
   }
 };
 
 export const sendBookingCompletion = async (booking: IBooking) => {
   if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.warn('SMTP credentials not configured. Email not sent.');
+    logger.warn('SMTP credentials not configured. Email not sent.');
     return;
   }
 
@@ -176,8 +177,8 @@ export const sendBookingCompletion = async (booking: IBooking) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`Completion email sent to: ${email}`);
+    logger.log(`Completion email sent to: ${email}`);
   } catch (error) {
-    console.error('Failed to send completion email:', error);
+    logger.error('Failed to send completion email:', error);
   }
 };

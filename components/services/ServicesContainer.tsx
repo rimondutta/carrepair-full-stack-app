@@ -3,9 +3,9 @@
 import { useState } from "react";
 import ServiceFilterBar from "./ServiceFilterBar";
 import ServiceGrid from "./ServiceGrid";
-import { ServiceCategory } from "../../types/service";
+import { ServiceCategory, Service } from "../../types/service";
 
-export default function ServicesContainer({ initialServices }: { initialServices: any[] }) {
+export default function ServicesContainer({ initialServices }: { initialServices: Service[] }) {
   const [activeCategory, setActiveCategory] = useState<ServiceCategory>("all");
 
   const resultsCount = activeCategory === "all" 

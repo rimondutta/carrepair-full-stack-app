@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
 
   // Image optimization — whitelist domains for external images
   images: {
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: 'https',

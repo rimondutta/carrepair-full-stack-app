@@ -64,7 +64,7 @@ export default function ServiceGrid({ services, activeCategory }: ServiceGridPro
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[15px] mb-16">
-            {currentServices.map((service: any, index: number) => (
+            {currentServices.map((service: Service, index: number) => (
               <ServiceCard 
                 key={service._id || service.slug || index} 
                 service={{
