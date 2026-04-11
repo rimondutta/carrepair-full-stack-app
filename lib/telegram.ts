@@ -1,14 +1,22 @@
-/**
- * Telegram Bot API Utility
- * Sends automated notifications to admin for business events.
- */
+import { logger } from './logger';
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
+/**
+ * Escapes HTML special characters for Telegram HTML mode.
+ */
+export function escapeHTML(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 export async function sendTelegramMessage(text: string) {
   if (!BOT_TOKEN || !CHAT_ID) {
-    console.warn('[Telegram] Skipping notification: Credentials not configured.');
+    logger.warn('[Telegram] Skipping notification: Credentials not configured.');
     return { success: false, error: 'Telegram configuration missing' };
   }
 
@@ -27,13 +35,13 @@ export async function sendTelegramMessage(text: string) {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error('[Telegram Error]', data);
+      logger.error('[Telegram Error]', data);
       return { success: false, error: data.description };
     }
 
     return { success: true, data };
   } catch (error) {
-    console.error('[Telegram Exception]', error);
+    logger.error('[Telegram Exception]', error);
     return { success: false, error: 'Connection failed' };
   }
 }

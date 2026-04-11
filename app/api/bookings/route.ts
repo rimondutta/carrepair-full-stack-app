@@ -4,6 +4,7 @@ import Booking from '@/models/Booking';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validateBooking } from '@/lib/validation';
 import { checkRateLimit } from '@/lib/rateLimit';
+import { sendTelegramMessage, escapeHTML } from '@/lib/telegram';
 
 export async function POST(request: NextRequest) {
   try {
@@ -37,21 +38,30 @@ export async function POST(request: NextRequest) {
     // Notify Admin via Telegram
     try {
       const isContactForm = !body.vehicleMake && !body.vehicleModel;
-      const vehicleInfo = !isContactForm ? `\n<b>Vehicle:</b> ${body.vehicleYear || ''} ${body.vehicleMake || ''} ${body.vehicleModel || ''}` : '';
-      const timeInfo = body.preferredTime ? `\n<b>Time:</b> ${body.preferredTime}` : '';
+      
+      // Sanitize all dynamic inputs for Telegram HTML mode
+      const safeName = escapeHTML(body.customerName);
+      const safePhone = escapeHTML(body.phone);
+      const safeService = escapeHTML(body.serviceType);
+      const safeNotes = escapeHTML(body.notes || 'No special notes.');
+      
+      const vehicleInfo = !isContactForm 
+        ? `\n<b>Vehicle:</b> ${escapeHTML(body.vehicleYear || '')} ${escapeHTML(body.vehicleMake || '')} ${escapeHTML(body.vehicleModel || '')}` 
+        : '';
+        
+      const timeInfo = body.preferredTime ? `\n<b>Time:</b> ${escapeHTML(body.preferredTime)}` : '';
 
       const message = `
 <b>${isContactForm ? '✉️ New Contact' : '🚀 New Booking'} Received!</b>
 
-<b>Customer:</b> ${body.customerName}
-<b>Phone:</b> ${body.phone}
-<b>Service:</b> ${body.serviceType}${vehicleInfo}
-<b>Date:</b> ${body.preferredDate}${timeInfo}
+<b>Customer:</b> ${safeName}
+<b>Phone:</b> ${safePhone}
+<b>Service:</b> ${safeService}${vehicleInfo}
+<b>Date:</b> ${escapeHTML(body.preferredDate)}${timeInfo}
 
-<b>Notes:</b> ${body.notes || 'No special notes.'}
+<b>Notes:</b> ${safeNotes}
       `.trim();
       
-      const { sendTelegramMessage } = await import('@/lib/telegram');
       await sendTelegramMessage(message);
     } catch (err) {
       console.error('[Telegram Notify Failed]', err);
