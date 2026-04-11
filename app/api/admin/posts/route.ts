@@ -5,6 +5,7 @@ import slugify from 'slugify';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validatePost } from '@/lib/validation';
 import { revalidatePath } from 'next/cache';
+import { redisUtils } from '@/lib/redis';
 
 export async function GET() {
   try {
@@ -64,6 +65,9 @@ export async function POST(request: NextRequest) {
 
     revalidatePath('/blog');
     revalidatePath('/');
+    
+    // Invalidate Redis Cache
+    redisUtils.del('posts:public');
 
     return apiSuccess({ post }, 201);
   } catch (error: unknown) {

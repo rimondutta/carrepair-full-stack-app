@@ -5,6 +5,7 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Facebook, Twitter, Linkedin } from "@/components/services/SocialIcons";
 import { connectDB } from "@/lib/mongodb";
 import Post from "@/models/Post";
+import { redisUtils } from "@/lib/redis";
 
 interface Props {
   params: { slug: string };
@@ -22,8 +23,19 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  await connectDB();
-  const post = await Post.findOne({ slug, status: "published" }).lean();
+  const CACHE_KEY = `post:slug:${slug}`;
+  
+  // 1. Try Cache hit
+  let post = await redisUtils.get<any>(CACHE_KEY);
+  
+  if (!post) {
+    await connectDB();
+    post = await Post.findOne({ slug, status: "published" }).lean();
+    if (post) {
+      redisUtils.set(CACHE_KEY, post, 3600);
+    }
+  }
+  
   if (!post) return {};
 
   return {
@@ -40,11 +52,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  await connectDB();
+  const CACHE_KEY = `post:slug:${slug}`;
   
-  const post = await Post.findOne({ slug, status: "published" }).lean();
+  // 1. Try Cache hit
+  let post = await redisUtils.get<any>(CACHE_KEY);
+  
+  if (!post) {
+    // 2. Cache miss: DB Hit
+    await connectDB();
+    post = await Post.findOne({ slug, status: "published" }).lean();
+    
+    // 3. Set Cache asynchronously
+    if (post) {
+      redisUtils.set(CACHE_KEY, post, 3600);
+    }
+  }
+
   if (!post) notFound();
 
+  // For related/recent posts, we can use the "posts:public" cache if it exists, 
+  // but here we filter by $ne slug, so we'll do a fresh query for now or ignore for simplicity.
+  await connectDB();
   const recentPosts = await Post.find({ slug: { $ne: slug }, status: "published" })
     .sort({ publishedAt: -1 })
     .limit(3)

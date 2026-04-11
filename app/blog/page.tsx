@@ -3,6 +3,7 @@ import BlogHero from "@/components/blog/BlogHero";
 import BlogCard from "@/components/blog/BlogCard";
 import { connectDB } from "@/lib/mongodb";
 import Post from "@/models/Post";
+import { redisUtils } from "@/lib/redis";
 
 export const metadata: Metadata = {
   title: "Inside Care Plus | Automotive Blog & Expert Guides",
@@ -12,9 +13,23 @@ export const metadata: Metadata = {
 export const revalidate = 3600; // revalidate at most every hour
 
 export default async function BlogListingPage() {
-  await connectDB();
-  const posts = await Post.find({ status: "published" }).sort({ publishedAt: -1 }).lean();
-  const serializedPosts = JSON.parse(JSON.stringify(posts));
+  const CACHE_KEY = 'posts:public';
+  
+  // 1. Try Cache hit
+  let posts = await redisUtils.get<any[]>(CACHE_KEY);
+  
+  if (!posts) {
+    // 2. Cache miss: DB Hit
+    await connectDB();
+    posts = await Post.find({ status: "published" }).sort({ publishedAt: -1 }).lean();
+    
+    // 3. Set Cache asynchronously
+    if (posts && posts.length > 0) {
+      redisUtils.set(CACHE_KEY, posts, 3600);
+    }
+  }
+  
+  const serializedPosts = JSON.parse(JSON.stringify(posts || []));
 
   return (
     <main className="min-h-screen bg-[#110E10]">

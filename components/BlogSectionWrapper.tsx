@@ -1,20 +1,35 @@
 import { connectDB } from "@/lib/mongodb";
 import Post from "@/models/Post";
 import BlogSection from "./BlogSection";
+import { redisUtils } from "@/lib/redis";
 
 export default async function BlogSectionWrapper() {
-  await connectDB();
-  const posts = await Post.find({ status: "published" })
-    .sort({ publishedAt: -1 })
-    .limit(6)
-    .lean();
+  const CACHE_KEY = 'posts:public';
+  
+  // 1. Try Cache hit (reuse public list)
+  let posts = await redisUtils.get<any[]>(CACHE_KEY);
+  
+  if (!posts) {
+    // 2. Cache miss: DB Hit
+    await connectDB();
+    posts = await Post.find({ status: "published" })
+      .sort({ publishedAt: -1 })
+      .limit(6)
+      .lean();
+    
+    // 3. Set Cache asynchronously (for first 6 since it's most common)
+    if (posts && posts.length > 0) {
+      redisUtils.set(CACHE_KEY, posts, 3600);
+    }
+  }
+
+  const initialLimit = 6;
+  const limitedPosts = (posts || []).slice(0, initialLimit);
   
   // Efficiently serialize Mongo documents
-  const serializedPosts = posts.map(post => ({
+  const serializedPosts = limitedPosts.map(post => ({
     ...post,
-    _id: post._id.toString(),
-    createdAt: post.createdAt?.toISOString(),
-    updatedAt: post.updatedAt?.toISOString(),
+    _id: typeof post._id === 'object' ? post._id.toString() : post._id,
   }));
 
   return <BlogSection posts={serializedPosts} />;

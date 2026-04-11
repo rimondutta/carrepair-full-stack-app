@@ -7,6 +7,7 @@ import ServiceFAQ from "../../components/services/ServiceFAQ";
 import ServiceGuarantee from "../../components/services/ServiceGuarantee";
 import { connectDB } from "@/lib/mongodb";
 import Service from "@/models/Service";
+import { redisUtils } from "@/lib/redis";
 
 export const metadata: Metadata = {
   title: "Our Services | Care Plus Auto Repairing",
@@ -21,12 +22,24 @@ const breadcrumbs = [
 ];
 
 export default async function ServicesPage() {
-  await connectDB();
-  const services = await Service.find({ isActive: true }).lean();
+  const CACHE_KEY = 'services:public';
   
-  // Transform MongoDB results to match the frontend expected type if necessary
-  // Standardizing the output to plain objects
-  const serializedServices = JSON.parse(JSON.stringify(services));
+  // 1. Try Cache hit
+  let services = await redisUtils.get<any[]>(CACHE_KEY);
+  
+  if (!services) {
+    // 2. Cache miss: DB Hit
+    await connectDB();
+    services = await Service.find({ isActive: true }).lean();
+    
+    // 3. Set Cache asynchronously
+    if (services && services.length > 0) {
+      redisUtils.set(CACHE_KEY, services, 3600);
+    }
+  }
+  
+  // Serialize MongoDB document
+  const serializedServices = JSON.parse(JSON.stringify(services || []));
 
   return (
     <div className="bg-[#110E10] min-h-screen">

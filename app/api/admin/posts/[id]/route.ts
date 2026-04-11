@@ -5,6 +5,7 @@ import slugify from 'slugify';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validatePost } from '@/lib/validation';
 import { revalidatePath } from 'next/cache';
+import { redisUtils } from '@/lib/redis';
 
 export async function GET(
   request: NextRequest,
@@ -89,6 +90,10 @@ export async function PATCH(
     revalidatePath('/blog');
     revalidatePath(`/blog/${post.slug}`);
     revalidatePath('/');
+    
+    // Invalidate Redis Cache
+    redisUtils.del('posts:public');
+    redisUtils.del(`post:slug:${post.slug}`);
 
     return apiSuccess({ post });
   } catch (error: unknown) {
@@ -114,6 +119,10 @@ export async function DELETE(
     revalidatePath('/blog');
     revalidatePath(`/blog/${post.slug}`);
     revalidatePath('/');
+    
+    // Invalidate Redis Cache
+    redisUtils.del('posts:public');
+    redisUtils.del(`post:slug:${post.slug}`);
 
     return apiSuccess({ message: 'Post deleted successfully' });
   } catch (error: unknown) {

@@ -5,6 +5,7 @@ import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validateService } from '@/lib/validation';
 import slugify from 'slugify';
 import { revalidatePath } from 'next/cache';
+import { redisUtils } from '@/lib/redis';
 
 export async function PATCH(
   request: NextRequest,
@@ -38,6 +39,9 @@ export async function PATCH(
     revalidatePath('/services');
     revalidatePath(`/services/${service.slug}`);
     revalidatePath('/');
+    
+    // Invalidate Redis Cache
+    redisUtils.del('services:public');
 
     return apiSuccess({ service });
   } catch (error: unknown) {
@@ -63,6 +67,9 @@ export async function DELETE(
     revalidatePath('/services');
     revalidatePath(`/services/${service.slug}`);
     revalidatePath('/');
+    
+    // Invalidate Redis Cache
+    redisUtils.del('services:public');
 
     return apiSuccess({ message: 'Service deleted successfully' });
   } catch (error: unknown) {
