@@ -10,7 +10,22 @@ const transporter = nodemailer.createTransport({
     user: process.env.SMTP_USER?.replace(/"/g, '').replace(/'/g, ''),
     pass: process.env.SMTP_PASS?.replace(/"/g, '').replace(/'/g, ''),
   },
+  // Add connection timeout for better reliability in serverless
+  connectionTimeout: 10000, 
+  greetingTimeout: 10000,
+  socketTimeout: 10000,
 });
+
+// Verify connection configuration on startup (in dev)
+if (process.env.NODE_ENV === 'development') {
+  transporter.verify((error) => {
+    if (error) {
+      logger.error('[SMTP Connection Error]', error);
+    } else {
+      logger.log('[SMTP] Server is ready to take our messages');
+    }
+  });
+}
 
 /**
  * Responsive Email Layout Wrapper

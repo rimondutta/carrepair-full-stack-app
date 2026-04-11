@@ -3,6 +3,7 @@ import { connectDB } from '@/lib/mongodb';
 import Booking from '@/models/Booking';
 import { sendBookingConfirmation, sendBookingCancellation, sendBookingCompletion } from '@/lib/mail';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
+import { logger } from '@/lib/logger';
 
 export async function PATCH(
   request: NextRequest,
@@ -24,13 +25,19 @@ export async function PATCH(
       return apiError('Booking not found', 404);
     }
 
-    // Trigger auto email on status change (fire-and-forget)
-    if (body.status === 'confirmed') {
-      sendBookingConfirmation(booking);
-    } else if (body.status === 'cancelled') {
-      sendBookingCancellation(booking);
-    } else if (body.status === 'completed') {
-      sendBookingCompletion(booking);
+    // Trigger auto email on status change (Awaited for reliability)
+    try {
+      if (body.status === 'confirmed') {
+        await sendBookingConfirmation(booking);
+      } else if (body.status === 'cancelled') {
+        await sendBookingCancellation(booking);
+      } else if (body.status === 'completed') {
+        await sendBookingCompletion(booking);
+      }
+    } catch (emailError) {
+      logger.error('[Status Email Delay/Failure]', emailError);
+      // We don't return an error here because the DB update WAS successful,
+      // but we log it so we know the email failed.
     }
 
     return apiSuccess({ booking });

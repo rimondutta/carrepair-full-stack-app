@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server';
 import { connectDB } from '@/lib/mongodb';
 import Booking from '@/models/Booking';
+import Notification from '@/models/Notification';
 import { apiSuccess, apiError } from '@/lib/apiResponse';
 import { validateBooking } from '@/lib/validation';
 import { checkRateLimit } from '@/lib/rateLimit';
@@ -35,6 +36,19 @@ export async function POST(request: NextRequest) {
       vehicleYear: body.vehicleYear,
       notes: body.notes,
     });
+
+    // Notify Admin via Internal Notification system
+    try {
+      const isContactForm = !body.vehicleMake && !body.vehicleModel;
+      await Notification.create({
+        title: isContactForm ? '✉️ New Contact Message' : '🚀 New Service Booking',
+        message: `${body.customerName} requested ${body.serviceType}`,
+        type: 'success',
+        link: '/admin/bookings',
+      });
+    } catch (notifErr) {
+      logger.error('[Internal Notify Failed]', notifErr);
+    }
 
     // Notify Admin via Telegram
     try {
