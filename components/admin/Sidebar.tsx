@@ -72,7 +72,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Zap size={22} className="text-white fill-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-white tracking-tight leading-none">Abdur Rehman</h1>
+            <h1 className="text-lg font-bold text-white tracking-tight leading-none">Auto Repair</h1>
             <p className="text-[10px] uppercase font-black tracking-widest text-slate-500 mt-1">Admin Dashboard</p>
           </div>
         </Link>

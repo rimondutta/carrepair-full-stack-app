@@ -10,7 +10,7 @@ export default function HelpPage() {
           Admin User Manual
         </h1>
         <p className="text-gray-500 mt-2">
-          Welcome to the Abdur Rehman Admin Dashboard. This guide will help you understand how to manage your website effectively.
+          Welcome to the Abdur Rehman Auto Garage Admin Dashboard. This guide will help you understand how to manage your website effectively.
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function HelpPage() {
             5. Update Sitemap (SEO)
           </h2>
           <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-            The sitemap helps search engines like Google discover your pages. 
+            The sitemap helps search engines like Google discover your pages.
           </p>
           <ul className="list-disc list-inside text-sm text-gray-600 space-y-2 ml-4">
             <li>Whenever you add a entirely new Service or write a completely new Blog Post, click the <strong>Update Sitemap</strong> button in the bottom left sidebar.</li>

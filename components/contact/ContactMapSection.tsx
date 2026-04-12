@@ -2,7 +2,7 @@ import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 export default function ContactMapSection() {
   const address = "24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates";
-  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.1!2d-122.19!3d47.48!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI4JzM3LjQiTiAxMjLCsDExJzI0LjAiVw!5e0!3m2!1sen!2sus!4v1234567890`;
+  const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
   return (
