@@ -46,10 +46,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       setIsUpdatingSitemap(true);
       const res = await fetch('/api/admin/sitemap', { method: 'POST' });
       const data = await res.json();
-      if (res.ok) alert('✅ Sitemap updated successfully! Google will receive the latest data.');
-      else alert('❌ Failed to update sitemap: ' + data.error);
+      if (res.ok) alert('Sitemap updated successfully! Google will receive the latest data.');
+      else alert('Failed to update sitemap: ' + data.error);
     } catch (err) {
-      alert('❌ Failed to connect to server.');
+      alert('Failed to connect to server.');
     } finally {
       setIsUpdatingSitemap(false);
     }
