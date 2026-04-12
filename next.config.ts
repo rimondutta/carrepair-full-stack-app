@@ -60,6 +60,7 @@ const nextConfig: NextConfig = {
               "img-src * data: blob:",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self'",
+              "frame-src 'self' https://maps.google.com https://www.google.com",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",
