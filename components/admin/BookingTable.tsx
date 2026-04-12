@@ -26,7 +26,7 @@ export default function BookingTable({ bookings, onStatusChange, onDelete, showA
     <div className="overflow-x-auto">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-gray-200">
+          <tr className="border-b border-gray-200 whitespace-nowrap">
             <th className="text-left py-3 px-4 font-semibold text-gray-600 uppercase tracking-wider text-xs">Customer</th>
             <th className="text-left py-3 px-4 font-semibold text-gray-600 uppercase tracking-wider text-xs">Email</th>
             <th className="text-left py-3 px-4 font-semibold text-gray-600 uppercase tracking-wider text-xs">Phone</th>
@@ -47,7 +47,7 @@ export default function BookingTable({ bookings, onStatusChange, onDelete, showA
             </tr>
           ) : (
             bookings.map((booking) => (
-              <tr key={booking._id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+              <tr key={booking._id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors whitespace-nowrap">
                 <td className="py-4 px-4 font-bold text-slate-900">{booking.customerName}</td>
                 <td className="py-4 px-4 text-slate-600 font-medium">{booking.email}</td>
                 <td className="py-4 px-4 text-slate-600 font-medium">{booking.phone}</td>

@@ -154,7 +154,7 @@ export default function ServicesPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-slate-50/50">
+                  <tr className="border-b border-slate-200 bg-slate-50/50 whitespace-nowrap">
                     <th className="text-left py-4 px-4 font-black text-slate-500 uppercase tracking-widest text-[10px]">Service Title</th>
                     <th className="text-left py-4 px-4 font-black text-slate-500 uppercase tracking-widest text-[10px]">Description</th>
                     <th className="text-left py-4 px-4 font-black text-slate-500 uppercase tracking-widest text-[10px]">Price</th>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
                     </tr>
                   ) : (
                     services.map((service) => (
-                      <tr key={service._id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                      <tr key={service._id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors whitespace-nowrap">
                         <td className="py-4 px-4 font-bold text-slate-900">{service.title || service.name}</td>
                         <td className="py-4 px-4 text-slate-600 font-medium max-w-xs truncate">
                           {service.description || '—'}

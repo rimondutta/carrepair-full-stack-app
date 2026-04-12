@@ -114,10 +114,10 @@ export default function Header({ title, onMenuClick }: HeaderProps) {
 
       <div className="flex items-center gap-2 lg:gap-6">
         {/* Search */}
-        <div className="relative" ref={searchRef}>
-          <div className={`flex items-center transition-all duration-300 ${isSearchOpen ? 'w-64 md:w-80' : 'w-10'}`}>
+        <div className="static sm:relative" ref={searchRef}>
+          <div className={`flex items-center transition-all duration-300 ${isSearchOpen ? 'absolute left-4 right-4 top-1/2 -translate-y-1/2 sm:relative sm:top-auto sm:translate-y-0 sm:left-auto sm:right-auto sm:w-64 md:w-80 z-[60]' : 'w-10'}`}>
             {isSearchOpen ? (
-              <div className="w-full flex items-center bg-gray-100 rounded-xl px-3 py-1.5 border border-gray-200 group focus-within:border-[var(--color-primary)]/30 focus-within:bg-white transition-all shadow-sm">
+              <div className="w-full flex items-center bg-white sm:bg-gray-100 rounded-xl px-3 py-1.5 border border-gray-200 group focus-within:border-[var(--color-primary)]/30 focus-within:bg-white transition-all shadow-md sm:shadow-sm">
                 <Search size={18} className="text-gray-400" />
                 <input 
                   autoFocus
@@ -143,7 +143,7 @@ export default function Header({ title, onMenuClick }: HeaderProps) {
 
           {/* Search Results Dropdown */}
           {isSearchOpen && (searchQuery || isSearching) && (
-            <div className="absolute top-full right-0 mt-2 w-72 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-300">
+            <div className="absolute top-full left-4 right-4 sm:left-auto sm:right-0 mt-2 sm:w-72 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-300">
               <div className="p-3 border-b border-gray-50 bg-gray-50/50">
                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Search Results</p>
               </div>
@@ -188,7 +188,7 @@ export default function Header({ title, onMenuClick }: HeaderProps) {
         </div>
 
         {/* Notifications */}
-        <div className="relative" ref={notifRef}>
+        <div className="static sm:relative" ref={notifRef}>
           <button 
             onClick={() => setIsNotifOpen(!isNotifOpen)}
             className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-all relative"
@@ -204,7 +204,7 @@ export default function Header({ title, onMenuClick }: HeaderProps) {
 
           {/* Notifications Dropdown */}
           {isNotifOpen && (
-            <div className="absolute top-full right-0 mt-2 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-300">
+            <div className="absolute top-full left-4 right-4 sm:left-auto sm:right-0 mt-2 sm:w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-300">
               <div className="p-4 border-b border-gray-50 flex items-center justify-between bg-gray-50/50">
                 <div className="flex items-center gap-2">
                   <h3 className="font-black text-xs uppercase tracking-widest text-gray-900">Notifications</h3>

@@ -73,7 +73,7 @@ export default function PostsPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-slate-50/50">
+                  <tr className="border-b border-slate-200 bg-slate-50/50 whitespace-nowrap">
                     <th className="text-left py-4 px-4 font-black text-slate-500 uppercase tracking-widest text-[10px]">Story Title</th>
                     <th className="text-left py-4 px-4 font-black text-slate-500 uppercase tracking-widest text-[10px]">Category</th>
                     <th className="text-left py-4 px-4 font-black text-slate-500 uppercase tracking-widest text-[10px]">Status</th>
@@ -90,7 +90,7 @@ export default function PostsPage() {
                     </tr>
                   ) : (
                     posts.map((post) => (
-                      <tr key={post._id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                      <tr key={post._id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors whitespace-nowrap">
                         <td className="py-4 px-4 font-bold text-slate-900 max-w-xs truncate">{post.title}</td>
                         <td className="py-4 px-4 text-slate-600 font-medium">{post.category || '—'}</td>
                         <td className="py-4 px-4">

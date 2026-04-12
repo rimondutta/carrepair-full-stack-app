@@ -165,7 +165,7 @@ export default function DashboardPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-gray-50 border-b border-gray-200 text-left">
+                  <tr className="bg-gray-50 border-b border-gray-200 text-left whitespace-nowrap">
                     <th className="py-3 px-4 font-semibold text-gray-600">Customer</th>
                     <th className="py-3 px-4 font-semibold text-gray-600">Service</th>
                     <th className="py-3 px-4 font-semibold text-gray-600">Status</th>
@@ -173,7 +173,7 @@ export default function DashboardPage() {
                 </thead>
                 <tbody>
                   {recentBookings.map((b) => (
-                    <tr key={b._id} className="border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors">
+                    <tr key={b._id} className="border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors whitespace-nowrap">
                       <td className="py-3 px-4 font-bold text-slate-900">{b.customerName}</td>
                       <td className="py-3 px-4 text-slate-600 font-medium">{b.serviceType}</td>
                       <td className="py-3 px-4"><StatusBadge status={b.status} /></td>
@@ -193,14 +193,14 @@ export default function DashboardPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-gray-50 border-b border-gray-200 text-left">
+                  <tr className="bg-gray-50 border-b border-gray-200 text-left whitespace-nowrap">
                     <th className="py-3 px-4 font-semibold text-gray-600">Title</th>
                     <th className="py-3 px-4 font-semibold text-gray-600">Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {recentPosts.map((p) => (
-                    <tr key={p._id} className="border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors">
+                    <tr key={p._id} className="border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors whitespace-nowrap">
                       <td className="py-3 px-4 font-bold text-slate-900 truncate max-w-[200px]">{p.title}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
@@ -225,7 +225,7 @@ export default function DashboardPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-gray-50 border-b border-gray-200 text-left">
+                  <tr className="bg-gray-50 border-b border-gray-200 text-left whitespace-nowrap">
                     <th className="py-3 px-4 font-semibold text-gray-600">Service Name</th>
                     <th className="py-3 px-4 font-semibold text-gray-600">Rate</th>
                     <th className="py-3 px-4 font-semibold text-gray-600">Status</th>
@@ -233,7 +233,7 @@ export default function DashboardPage() {
                 </thead>
                 <tbody>
                   {recentServices.map((s) => (
-                    <tr key={s._id} className="border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors">
+                    <tr key={s._id} className="border-b border-gray-100 last:border-0 hover:bg-slate-50 transition-colors whitespace-nowrap">
                       <td className="py-3 px-4 font-bold text-slate-900">{s.title}</td>
                       <td className="py-3 px-4 text-slate-600 font-bold">${s.price?.toString() || '0.00'}</td>
                       <td className="py-3 px-4">
