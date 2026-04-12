@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { signOut } from 'next-auth/react';
 import { useState } from 'react';
-import { X, LayoutDashboard, Calendar, FileText, Settings, LogOut, Zap, ChevronRight, Globe, RefreshCw } from 'lucide-react';
+import { X, LayoutDashboard, Calendar, FileText, Settings, LogOut, Zap, ChevronRight, Globe, RefreshCw, HelpCircle } from 'lucide-react';
 
 const navItems = [
   {
@@ -26,6 +26,11 @@ const navItems = [
     label: 'Services',
     href: '/admin/services',
     icon: <Settings size={20} />,
+  },
+  {
+    label: 'Help & Manual',
+    href: '/admin/help',
+    icon: <HelpCircle size={20} />,
   },
 ];
 
