@@ -58,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2 pl-6">
               <MapPin className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">9 19dStreet - 3 St - Al Qouz Ind.third - Dubai - United Arab Emirates</span>
+              <span className="font-medium tracking-wider">24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates</span>
             </div>
           </div>
 
@@ -87,8 +87,8 @@ export default function Navbar() {
             <div className="relative h-12 w-auto min-w-[200px] md:h-16 lg:h-20 transition-transform duration-300 group-hover:scale-105">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/logo/care-plus-logo.png" 
-                alt="Care Plus Logo" 
+                src="/logo/abdur-rehman-auto-garage.png" 
+                alt="Abdur Rehman Auto Garage Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
@@ -123,8 +123,8 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col justify-center leading-tight">
                 <span className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-0.5">Need Help?</span>
-                <a href="tel:+971 52 803 1110" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
-                  +971 52 803 1110
+                <a href="tel:+971567253107" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
+                  +971 56 725 3107
                 </a>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="text-white/40 text-[10px] uppercase font-bold tracking-widest">Call Now</span>
-                <span className="text-white font-bold text-xl">+971 52 803 1110</span>
+                <span className="text-white font-bold text-xl">+971 56 725 3107</span>
               </div>
             </div>
           </div>

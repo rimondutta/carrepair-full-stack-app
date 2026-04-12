@@ -29,7 +29,7 @@ export default function FooterCTA() {
           </div>
           <div>
             <h2 className="text-white heading-font text-3xl md:text-5xl font-bold uppercase mb-2">
-              Give a Call to Care Plus Auto Repairing
+              Give a Call to Abdur Rehman Auto Garage
             </h2>
             <p className="text-white/90 text-lg md:text-xl font-medium">
               If any car related issues are bothering you
@@ -53,7 +53,7 @@ export default function FooterCTA() {
             <div>
               <p className="text-[var(--color-bgDark)] font-bold mb-0.5 md:mb-1 text-[10px] md:text-sm uppercase whitespace-nowrap">We are Available 24x7</p>
               <h3 className="text-xl md:text-3xl font-bold text-[var(--color-primary)] heading-font leading-none tracking-tight">
-                +971 52 803 1110
+                +971 56 725 3107
               </h3>
             </div>
           </div>

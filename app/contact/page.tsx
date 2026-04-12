@@ -12,8 +12,8 @@ const ContactMapSection = dynamic(() => import("@/components/contact/ContactMapS
 });
 
 export const metadata: Metadata = {
-  title: "Contact Us | Care Plus Auto Repairing",
-  description: "Get in touch with Care Plus Auto Repairing. Call us, email us, or visit our workshop at 9 19dStreet - 3 St - Al Qouz Ind.third - Dubai - United Arab Emirates. Professional car maintenance services.",
+  title: "Contact Us | Abdur Rehman Auto Garage",
+  description: "Get in touch with Abdur Rehman Auto Garage. Call us, email us, or visit our workshop at 24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates. Professional car maintenance services.",
 };
 
 export default function ContactPage() {

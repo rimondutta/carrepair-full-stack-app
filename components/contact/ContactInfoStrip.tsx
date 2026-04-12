@@ -57,9 +57,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Phone className="w-8 h-8" />}
             label="CALL US ANYTIME"
-            value="+971 52 803 1110"
+            value="+971 56 725 3107"
             sub="Monâ€“Sat 9:00am â€“ 7:00pm"
-            href="tel:+971 52 803 1110"
+            href="tel:+971567253107"
             delay={0}
             showDivider={true}
           />
@@ -77,8 +77,8 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<MapPin className="w-8 h-8" />}
             label="VISIT OUR LOCATION"
-            value="9 19dStreet - 3 St"
-            sub="Al Qouz Ind.third - Dubai - United Arab Emirates"
+            value="24B Street - Al Qouz Ind.first"
+            sub="Al Quoz - Dubai - United Arab Emirates"
             delay={200}
             showDivider={false}
           />

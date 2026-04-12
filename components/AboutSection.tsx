@@ -75,7 +75,7 @@ export default function AboutSection() {
               }`}
             >
               <p>
-                From simple maintenance to complete engine rebuilds, Care Plus Auto Repairing provides elite-level car servicing that prioritizes quality, precision, and longevity. We believe every vehicle deserves meticulous attention and premium parts. Our workshop is equipped with the latest automotive technology, allowing us to perform deep diagnostics and complex repairs with absolute accuracy.
+                From simple maintenance to complete engine rebuilds, Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage provides elite-level car servicing that prioritizes quality, precision, and longevity. We believe every vehicle deserves meticulous attention and premium parts. Our workshop is equipped with the latest automotive technology, allowing us to perform deep diagnostics and complex repairs with absolute accuracy.
               </p>
               <p>
                 Our journey began with a simple mission: to provide transparent, reliable, and high-quality automotive care that vehicle owners can trust. Over the years, we have built a reputation for excellence by consistently delivering results that exceed expectations. Whether it’s a modern performance car or a reliable family SUV, we treat every machine with the respect it deserves.

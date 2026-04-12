@@ -27,9 +27,9 @@ export default function ContactInfoPanel() {
   }, []);
 
   const contactRows = [
-    { icon: <Phone size={18} />, label: "Phone", value: "+971 52 803 1110", href: "tel:+971 52 803 1110" },
+    { icon: <Phone size={18} />, label: "Phone", value: "+971 56 725 3107", href: "tel:+971567253107" },
     { icon: <Mail size={18} />, label: "Email", value: "info@careplus.com", href: "mailto:info@careplus.com" },
-    { icon: <MapPin size={18} />, label: "Address", value: "9 19dStreet - 3 St - Al Qouz Ind.third - Dubai - United Arab Emirates", href: undefined },
+    { icon: <MapPin size={18} />, label: "Address", value: "24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates", href: undefined },
   ];
 
   return (
@@ -56,7 +56,7 @@ export default function ContactInfoPanel() {
         </h2>
         
         <p className="text-[#999] text-base leading-relaxed mb-8">
-          When you bring your vehicle to Care Plus Auto Repairing, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure your experience is pleasant and efficient.
+          When you bring your vehicle to Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure your experience is pleasant and efficient.
         </p>
 
         <div className="flex flex-col gap-6">

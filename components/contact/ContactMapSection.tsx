@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 export default function ContactMapSection() {
-  const address = "9 19dStreet - 3 St - Al Qouz Ind.third - Dubai - United Arab Emirates";
+  const address = "24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates";
   const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.1!2d-122.19!3d47.48!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI4JzM3LjQiTiAxMjLCsDExJzI0LjAiVw!5e0!3m2!1sen!2sus!4v1234567890`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
@@ -21,7 +21,7 @@ export default function ContactMapSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Care Plus Auto Repairing Location"
+          title="Abdur Rehman Auto Garage Location"
           className="w-full h-full"
         />
       </div>
@@ -31,7 +31,7 @@ export default function ContactMapSection() {
         <div className="bg-[#1B1B1B] border border-[#2e2e2e] p-8 shadow-2xl relative animate-in slide-in-from-left duration-700">
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D70006]"></div>
           
-          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">Care Plus Auto Repairing</h3>
+          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">Abdur Rehman Auto Garage</h3>
           
           <div className="flex flex-col gap-4">
             <div className="flex items-start gap-4">
@@ -41,7 +41,7 @@ export default function ContactMapSection() {
             
             <div className="flex items-center gap-4">
               <Phone className="text-[#D70006] w-5 h-5" />
-              <p className="text-[#999] text-sm">+971 52 803 1110</p>
+              <p className="text-[#999] text-sm">+971 56 725 3107</p>
             </div>
             
             <div className="flex items-center gap-4">

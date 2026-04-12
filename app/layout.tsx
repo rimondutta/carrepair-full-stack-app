@@ -19,10 +19,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Care Plus Auto Repairing",
-    default: "Care Plus Auto Repairing | Expert Car Repair & Maintenance",
+    template: "%s | Abdur Rehman Auto Garage",
+    default: "Abdur Rehman Auto Garage | Expert Car Repair & Maintenance",
   },
-  description: "Care Plus Auto Repairing is the premier automobile maintenance workshop in Dubai offering expert car repair, engine tuning, and premium glass services. Trusted by 10k+ vehicle owners.",
+  description: "Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage is a premier automobile maintenance workshop in Dubai offering expert car repair, engine tuning, etc.",
   keywords: ["Car Repair Dubai", "Auto Repairing", "Engine Tuning", "Dent Removal", "Ceramic Coating", "Car Maintenance"],
   category: "Automotive",
   metadataBase: new URL("https://careplusauto.vercel.app"),
@@ -30,23 +30,23 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Care Plus Auto Repairing | Premium Car Maintenance",
+    title: "Abdur Rehman Auto Garage | Premium Car Maintenance",
     description: "Expert automobile maintenance workshop providing all types of premium car repair and restoration services in Dubai.",
     url: "https://careplusauto.vercel.app",
-    siteName: "Care Plus Auto Repairing",
+    siteName: "Abdur Rehman Auto Garage",
     locale: "en_US",
     type: "website",
     images: [{
-      url: "/logo/care-plus-logo.png",
+      url: "/logo/abdur-rehman-auto-garage.png",
       width: 800,
       height: 600,
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Care Plus Auto Repairing | Expert Car Services",
+    title: "Abdur Rehman Auto Garage | Expert Car Services",
     description: "High-end automobile maintenance and repair services for luxury and daily precision vehicles.",
-    images: ["/logo/care-plus-logo.png"],
+    images: ["/logo/abdur-rehman-auto-garage.png"],
   },
   robots: {
     index: true,
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo/care-plus-logo.png",
-    shortcut: "/logo/care-plus-logo.png",
-    apple: "/logo/care-plus-logo.png",
+    icon: "/logo/abdur-rehman-auto-garage.png",
+    shortcut: "/logo/abdur-rehman-auto-garage.png",
+    apple: "/logo/abdur-rehman-auto-garage.png",
   },
 };
 
@@ -77,7 +77,7 @@ export default function RootLayout({
       className={`${baiJamjuree.variable} ${montserrat.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
     >
-      <body 
+      <body
         className="min-h-full flex flex-col bg-[#110E10] text-[#DEDEDE]"
         suppressHydrationWarning
       >
@@ -92,14 +92,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
-              "name": "Care Plus Auto Repairing",
-              "image": "https://careplusauto.vercel.app/logo/care-plus-logo.png",
+              "name": "Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage",
+              "image": "https://careplusauto.vercel.app/logo/abdur-rehman-auto-garage.png",
               "@id": "https://careplusauto.vercel.app",
               "url": "https://careplusauto.vercel.app",
-              "telephone": "+971-XXXX-XXXX",
+              "telephone": "+971567253107",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "9 19d Street - 3 St - Al Qouz Ind. 3",
+                "streetAddress": "24B Street - Al Qouz Ind.first - Al Quoz",
                 "addressLocality": "Dubai",
                 "addressRegion": "Dubai",
                 "addressCountry": "AE"

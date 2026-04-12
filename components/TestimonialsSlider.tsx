@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     name: "Omar Al-Fayed",
     city: "Dubai, UAE",
-    quote: "I've visited numerous auto maintenance shops in the Emirates, but Care Plus Auto Repairing exceeds all expectations. Their attention to detail on my luxury sedan was phenomenal. True experts.",
+    quote: "I've visited numerous auto maintenance shops in the Emirates, but Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage exceeds all expectations. Their attention to detail on my luxury sedan was phenomenal. True experts.",
     rating: 5,
     image: "/assets/asset 35.png"
   },
@@ -56,7 +56,7 @@ export default function TestimonialsSlider() {
              </span>
              <h2 className="text-white heading-font text-4xl md:text-5xl font-bold uppercase leading-tight">
                 What Our Clients <br />
-                <span className="text-[var(--color-primary)] italic">Say About</span> Care Plus Auto Repairing...
+                <span className="text-[var(--color-primary)] italic">Say About</span> Abdur Rehman Auto Garage...
              </h2>
           </div>
           <Link 

@@ -4,7 +4,7 @@
     "title": "Engine Repair Services",
     "slug": "engine-repair",
     "category": "engine-mechanical",
-    "shortDescription": "When you bring your vehicle to Care Plus Auto Repairing, you can rest easy knowing that your vehicle is in professional hands...",
+    "shortDescription": "When you bring your vehicle to Abdur Rehman Auto Garage, you can rest easy knowing that your vehicle is in professional hands...",
     "description": "Our certified technicians perform deep analysis utilizing automated diagnostic tooling. We can rebuild, replace, and tune critical engine components to factory standards.",
     "icon": "Settings2",
     "isActive": true,
@@ -12,8 +12,8 @@
     "price": "From $299",
     "image": "/assets/asset 12.jpeg",
     "detailedContent": [
-      "When you bring your vehicle to Care Plus Auto Repairing, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure that your experience with us is pleasant and efficient. Our mechanics are factory trained and highly experienced, ensuring every major or minor problem is successfully resolved using genuine parts and computer diagnostics protocols.",
-      "Care Plus Auto Repairing was established to help families secure dependable repair structures. As a standing RMI member, our network of trusted franchisees continually provides 100% genuine servicing protocols ensuring total life cycle management across millions of vehicle platforms globally."
+      "When you bring your vehicle to Abdur Rehman Auto Garage, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure that your experience with us is pleasant and efficient. Our mechanics are factory trained and highly experienced, ensuring every major or minor problem is successfully resolved using genuine parts and computer diagnostics protocols.",
+      "Abdur Rehman Auto Garage was established to help families secure dependable repair structures. As a standing RMI member, our network of trusted franchisees continually provides 100% genuine servicing protocols ensuring total life cycle management across millions of vehicle platforms globally."
     ],
     "checklist": [
       "Ceramic Coating Services",
@@ -29,7 +29,7 @@
       {
         "iconName": "Activity",
         "title": "Quality Check Facility",
-        "description": "Care Plus Auto Repairing is a member of the RMI. As a member, our center abides by the Code of Conduct."
+        "description": "Abdur Rehman Auto Garage is a member of the RMI. As a member, our center abides by the Code of Conduct."
       },
       {
         "iconName": "Store",
@@ -44,7 +44,7 @@
       {
         "iconName": "Cpu",
         "title": "Modern Technology",
-        "description": "Care Plus Auto Repairing uses modern technology and laser equipment for all repairs and diagnostics."
+        "description": "Abdur Rehman Auto Garage uses modern technology and laser equipment for all repairs and diagnostics."
       },
       {
         "iconName": "Droplets",

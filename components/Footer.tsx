@@ -46,8 +46,8 @@ export default function Footer() {
             <Link href="/" className="mb-6 group inline-flex h-12 md:h-16 lg:h-20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/logo/care-plus-logo.png" 
-                alt="Care Plus Logo" 
+                src="/logo/abdur-rehman-auto-garage.png" 
+                alt="Abdur Rehman Auto Garage Logo" 
                 className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                 <MapPin className="text-[var(--color-primary)] w-5 h-5 shrink-0 mt-1" />
                 <p className="text-[var(--color-textLight)] text-sm">
                   <strong className="block text-white mb-1">VISIT OUR LOCATION</strong>
-                  9 19dStreet - 3 St - Al Qouz Ind.third - Dubai - United Arab Emirates
+                  24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function Footer() {
             className="text-[var(--color-textMuted)] text-sm text-center md:text-left"
             suppressHydrationWarning
           >
-            &copy; {currentYear || '2026'} Care Plus Auto Repairing. All Rights Reserved. | Developed by <a href="https://rimondutta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[var(--color-primary)] transition-colors underline underline-offset-4 decoration-[var(--color-primary)]/30">Rimon Dutta</a>
+            &copy; {currentYear || '2026'} Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage. All Rights Reserved. | Developed by <a href="https://rimondutta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[var(--color-primary)] transition-colors underline underline-offset-4 decoration-[var(--color-primary)]/30">Rimon Dutta</a>
           </p>
           
           <div className="flex items-center gap-4">
@@ -192,7 +192,7 @@ export default function Footer() {
 
       <div className="fixed bottom-6 right-4 md:right-6 z-[100]">
         <a 
-          href="tel:+971528031110" 
+          href="tel:+971567253107" 
           className="group flex items-center flex-row-reverse bg-white/10 backdrop-blur-xl border border-white/20 p-1.5 md:p-2 pl-5 md:pl-6 rounded-[2rem] shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),_0_8px_32px_rgba(0,0,0,0.6)] hover:bg-white/20 hover:shadow-[0_8px_40px_rgba(215,0,6,0.4)] hover:-translate-y-1 transition-all duration-500 overflow-hidden relative"
           aria-label="Call Us Now"
         >

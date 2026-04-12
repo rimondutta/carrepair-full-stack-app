@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!service) {
     return {
-      title: "Service Not Found | Care Plus Auto Repairing",
+      title: "Service Not Found | Abdur Rehman Auto Garage",
     };
   }
 
   return {
-    title: `${service.title} | Care Plus Auto Repairing`,
+    title: `${service.title} | Abdur Rehman Auto Garage`,
     description: service.shortDescription,
   };
 }
@@ -88,7 +88,7 @@ export default async function DynamicServicePage({ params }: Props) {
             "description": serializedService.shortDescription || serializedService.description,
             "provider": {
               "@type": "AutoRepair",
-              "name": "Care Plus Auto Repairing",
+              "name": "Abdur Rehman Auto Garage",
               "url": "https://careplusauto.vercel.app",
               "address": {
                 "@type": "PostalAddress",
