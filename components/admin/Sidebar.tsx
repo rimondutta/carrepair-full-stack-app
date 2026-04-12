@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { signOut } from 'next-auth/react';
-import { X, LayoutDashboard, Calendar, FileText, Settings, LogOut, Zap, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { X, LayoutDashboard, Calendar, FileText, Settings, LogOut, Zap, ChevronRight, Globe, RefreshCw } from 'lucide-react';
 
 const navItems = [
   {
@@ -38,6 +39,21 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
+  const [isUpdatingSitemap, setIsUpdatingSitemap] = useState(false);
+
+  const handleUpdateSitemap = async () => {
+    try {
+      setIsUpdatingSitemap(true);
+      const res = await fetch('/api/admin/sitemap', { method: 'POST' });
+      const data = await res.json();
+      if (res.ok) alert('✅ Sitemap updated successfully! Google will receive the latest data.');
+      else alert('❌ Failed to update sitemap: ' + data.error);
+    } catch (err) {
+      alert('❌ Failed to connect to server.');
+    } finally {
+      setIsUpdatingSitemap(false);
+    }
+  };
 
   return (
     <aside className={`
@@ -92,7 +108,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </nav>
 
       {/* Bottom Profile / Logout */}
-      <div className="p-4 bg-slate-900/50 border-t border-slate-800">
+      <div className="p-4 bg-slate-900/50 border-t border-slate-800 space-y-2">
+        <button
+          onClick={handleUpdateSitemap}
+          disabled={isUpdatingSitemap}
+          className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-slate-800 hover:text-white disabled:opacity-50 transition-all duration-300 group"
+        >
+          {isUpdatingSitemap ? (
+            <RefreshCw size={20} className="animate-spin text-blue-400" />
+          ) : (
+            <Globe size={20} className="group-hover:text-blue-400 transition-colors" />
+          )}
+          Update Sitemap
+        </button>
         <button
           onClick={() => signOut({ callbackUrl: '/admin/login' })}
           className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-[#EB0005] hover:text-white transition-all duration-300 group"

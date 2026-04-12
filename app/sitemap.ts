@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
-import services from '../data/services.json';
-import blogData from '../data/blog.json';
+import { ServiceService } from '@/services/serviceService';
+import { PostService } from '@/services/postService';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://careplusauto.vercel.app';
 
   // Base routes
@@ -18,21 +18,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }));
 
-  // Service routes
-  const serviceRoutes = services.map((service) => ({
-    url: `${baseUrl}/services/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
+  try {
+    const [servicesRes, postsRes] = await Promise.all([
+      ServiceService.getActiveServices(),
+      PostService.getPublishedPosts()
+    ]);
 
-  // Blog routes
-  const blogRoutes = blogData.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: 'monthly' as const,
-    priority: 0.5,
-  }));
+    const serviceRoutes = (servicesRes.services || []).map((service: any) => ({
+      url: `${baseUrl}/services/${service.slug || service._id}`,
+      lastModified: new Date(service.updatedAt || new Date()),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }));
 
-  return [...routes, ...serviceRoutes, ...blogRoutes];
+    const blogRoutes = (postsRes.posts || []).map((post: any) => ({
+      url: `${baseUrl}/blog/${post.slug || post._id}`,
+      lastModified: new Date(post.updatedAt || post.publishedAt || new Date()),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }));
+
+    return [...routes, ...serviceRoutes, ...blogRoutes];
+  } catch (error) {
+    console.error('Failed to generate dynamic sitemap routes:', error);
+    // Return base routes so sitemap still functions if DB is down
+    return routes;
+  }
 }
