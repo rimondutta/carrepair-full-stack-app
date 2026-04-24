@@ -44,7 +44,7 @@ export default function AboutSection() {
             </div>
 
             {/* Dot pattern decor */}
-            <div className="absolute -top-8 -left-8 w-32 h-32 bg-[radial-gradient(#D70006_2px,transparent_2px)] [background-size:16px_16px] opacity-20 -z-10"></div>
+            <div className="absolute -top-8 -left-8 w-32 h-32 bg-[radial-gradient(#1D4884_2px,transparent_2px)] [background-size:16px_16px] opacity-20 -z-10"></div>
           </div>
 
           {/* Right Column: Content */}
@@ -66,7 +66,7 @@ export default function AboutSection() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
               }`}
             >
-              Emergency Tyre Services When You Need Them <span className="text-[var(--color-primary)] italic font-medium">Most</span>
+              Your Trusted MOT &amp; Car Repair Station in <span className="text-[var(--color-primary)] italic font-medium">Wembley</span>
             </h2>
 
             <div 
@@ -75,13 +75,13 @@ export default function AboutSection() {
               }`}
             >
               <p>
-                From a simple puncture to complete tyre replacements on the roadside, Tyreman24 provides rapid emergency tyre services that prioritize your safety and punctuality. We believe every stranded motorist deserves immediate, professional attention and premium quality tyres. Our mobile units are equipped with the latest automotive technology, allowing us to perform quick and safe replacements wherever you are.
+                ARJUN CAR MOT STATION is Wembley&apos;s trusted destination for MOT testing, car servicing, and all aspects of vehicle repair. Located at UNIT 29, Abbey Industrial Estate, we use the latest diagnostic equipment and quality parts to keep your vehicle roadworthy and safe.
               </p>
               <p>
-                Our journey began with a simple mission: to provide transparent, reliable, and high-quality 24/7 roadside assistance that London drivers can trust. Over the years, we have built a reputation for excellence by consistently delivering rapid response times and prioritizing tyre quality.
+                Our fully qualified technicians are experienced across all makes and models. Whether you need a routine service, an MOT test, brake replacement, engine diagnostics, or any mechanical repair — we deliver quality workmanship at honest, competitive prices with no hidden charges.
               </p>
               <p>
-                Our certified technicians utilize state-of-the-art mobile fitting equipment to ensure flawless balancing and fitting, guaranteeing a smooth ride. We don't just replace tyres; we ensure your complete safety so you can get back on the road with absolute confidence.
+                We believe every driver in Wembley and the surrounding areas deserves a garage they can genuinely trust. That&apos;s why we keep you informed throughout the entire repair process and never carry out work without your approval. Your safety and satisfaction are always our top priority.
               </p>
             </div>
 

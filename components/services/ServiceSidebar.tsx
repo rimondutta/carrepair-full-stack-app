@@ -39,10 +39,10 @@ export default async function ServiceSidebar({ currentSlug }: ServiceSidebarProp
       </div>
 
       {/* Widget 2: Contact/CTA Box */}
-      <div className="rounded-xl overflow-hidden relative border border-[#D70006]/50 p-10 flex flex-col items-center justify-center text-center">
+      <div className="rounded-xl overflow-hidden relative border border-[#1D4884]/50 p-10 flex flex-col items-center justify-center text-center">
         
         {/* Deep Red CSS Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#7A0004] to-[#D70006]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7A0004] to-[#1D4884]"></div>
         
         {/* Diagonal Line Stripes Effect */}
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 20px)" }}></div>
@@ -61,8 +61,8 @@ export default async function ServiceSidebar({ currentSlug }: ServiceSidebarProp
             Need Help? Call Us Now
           </span>
           
-          <a href="tel:+447728738148" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors">
-            +44 772 873 8148
+          <a href="tel:+447440164792" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors">
+            +44 744 016 4792
           </a>
         </div>
       </div>

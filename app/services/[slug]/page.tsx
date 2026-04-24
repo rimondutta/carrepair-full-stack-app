@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!service) {
     return {
-      title: "Service Not Found | Tyreman24",
+      title: "Service Not Found | Arjun Car MOT Station",
     };
   }
 
   return {
-    title: `${service.title} | Tyreman24`,
+    title: `${service.title} | Arjun Car MOT Station`,
     description: service.shortDescription,
   };
 }
@@ -88,13 +88,13 @@ export default async function DynamicServicePage({ params }: Props) {
             "description": serializedService.shortDescription || serializedService.description,
             "provider": {
               "@type": "AutoRepair",
-              "name": "Tyreman24",
+              "name": "Arjun Car MOT Station",
               "url": "https://careplusauto.vercel.app",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "9 19dStreet - 3 St - Al Qouz Ind.third",
-                "addressLocality": "Dubai",
-                "addressRegion": "Dubai",
+                "addressLocality": "Wembley",
+                "addressRegion": "Wembley",
                 "addressCountry": "AE"
               }
             },

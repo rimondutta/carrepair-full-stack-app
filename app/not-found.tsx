@@ -53,7 +53,7 @@ export default function NotFound() {
 
         <div className="mt-16 pt-8 border-t border-[#222]">
           <p className="text-[#555] text-xs uppercase tracking-widest">
-            Tyreman24 &copy; {new Date().getFullYear()}
+            Arjun Car MOT Station &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>

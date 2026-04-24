@@ -27,9 +27,9 @@ export default function ContactInfoPanel() {
   }, []);
 
   const contactRows = [
-    { icon: <Phone size={18} />, label: "Phone", value: "+44 772 873 8148", href: "tel:+447728738148" },
-    { icon: <Mail size={18} />, label: "Email", value: "info@tyreman24.co.uk", href: "mailto:info@tyreman24.co.uk" },
-    { icon: <MapPin size={18} />, label: "Address", value: "14 Brick Ln, London E1 6RF, United Kingdom", href: undefined },
+    { icon: <Phone size={18} />, label: "Phone", value: "+44 744 016 4792", href: "tel:+447440164792" },
+    { icon: <Mail size={18} />, label: "Email", value: "info@arjuncarmotwembley.co.uk", href: "mailto:info@arjuncarmotwembley.co.uk" },
+    { icon: <MapPin size={18} />, label: "Address", value: "UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant, Wembley HA0 1ZD, United Kingdom", href: undefined },
   ];
 
   return (
@@ -42,12 +42,12 @@ export default function ContactInfoPanel() {
       >
         <div className="flex items-center gap-3 mb-4">
           <div className="flex">
-            <div className="w-1.5 h-3 bg-[#D70006] transform -skew-x-12"></div>
-            <div className="w-1.5 h-3 bg-[#D70006] transform -skew-x-12 mx-0.5 opacity-60"></div>
-            <div className="w-1.5 h-3 bg-[#D70006] transform -skew-x-12 opacity-30"></div>
+            <div className="w-1.5 h-3 bg-[#1D4884] transform -skew-x-12"></div>
+            <div className="w-1.5 h-3 bg-[#1D4884] transform -skew-x-12 mx-0.5 opacity-60"></div>
+            <div className="w-1.5 h-3 bg-[#1D4884] transform -skew-x-12 opacity-30"></div>
           </div>
-          <span className="text-[#D70006] text-xs font-bold uppercase tracking-widest heading-font flex items-center gap-4">
-            CONTACT <div className="w-12 h-px bg-[#D70006]"></div>
+          <span className="text-[#1D4884] text-xs font-bold uppercase tracking-widest heading-font flex items-center gap-4">
+            CONTACT <div className="w-12 h-px bg-[#1D4884]"></div>
           </span>
         </div>
 
@@ -56,19 +56,19 @@ export default function ContactInfoPanel() {
         </h2>
         
         <p className="text-[#999] text-base leading-relaxed mb-8">
-          When you bring your vehicle to Tyreman24, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure your experience is pleasant and efficient.
+          When you bring your vehicle to Arjun Car MOT Station, you can rest easy knowing that your vehicle is in professional hands. We take every possible step to ensure your experience is pleasant and efficient.
         </p>
 
         <div className="flex flex-col gap-6">
           {contactRows.map((row, idx) => (
             <div key={idx} className="flex items-center gap-5 group">
-              <div className="w-12 h-12 rounded-full bg-[#D70006]/10 border border-[#D70006]/20 flex items-center justify-center text-[#D70006] transition-all duration-300 group-hover:bg-[#D70006] group-hover:text-white group-hover:scale-110">
+              <div className="w-12 h-12 rounded-full bg-[#1D4884]/10 border border-[#1D4884]/20 flex items-center justify-center text-[#1D4884] transition-all duration-300 group-hover:bg-[#1D4884] group-hover:text-white group-hover:scale-110">
                 {row.icon}
               </div>
               <div className="flex flex-col">
                 <span className="text-white/40 text-[10px] font-black uppercase tracking-widest heading-font">{row.label}</span>
                 {row.href ? (
-                  <a href={row.href} className="text-white text-lg font-bold hover:text-[#D70006] transition-colors">{row.value}</a>
+                  <a href={row.href} className="text-white text-lg font-bold hover:text-[#1D4884] transition-colors">{row.value}</a>
                 ) : (
                   <span className="text-white text-lg font-bold">{row.value}</span>
                 )}
@@ -86,7 +86,7 @@ export default function ContactInfoPanel() {
         <div className="flex items-center gap-4 mb-6">
           <h3 className="text-white text-xl font-bold uppercase heading-font tracking-wider">OPENING HOURS</h3>
           <div className="h-px flex-1 bg-[#2e2e2e]"></div>
-          <div className="w-12 h-px bg-[#D70006]"></div>
+          <div className="w-12 h-px bg-[#1D4884]"></div>
         </div>
 
         <div className="flex flex-col border-t border-[#2e2e2e]">
@@ -96,11 +96,11 @@ export default function ContactInfoPanel() {
               <div 
                 key={row.day} 
                 className={`flex justify-between items-center py-4 px-4 border-b border-[#2e2e2e] font-bold transition-all duration-300 ${
-                  isToday ? "bg-[#D70006]/5 border-l-4 border-l-[#D70006]" : ""
+                  isToday ? "bg-[#1D4884]/5 border-l-4 border-l-[#1D4884]" : ""
                 }`}
               >
-                <span className={isToday ? "text-[#D70006]" : "text-white"}>{row.day}</span>
-                <span className={row.isClosed ? "text-[#D70006]" : "text-[#999]"}>{row.time}</span>
+                <span className={isToday ? "text-[#1D4884]" : "text-white"}>{row.day}</span>
+                <span className={row.isClosed ? "text-[#1D4884]" : "text-[#999]"}>{row.time}</span>
               </div>
             );
           })}
@@ -115,7 +115,7 @@ export default function ContactInfoPanel() {
         <div className="flex items-center gap-4 mb-6">
           <h3 className="text-white text-xl font-bold uppercase heading-font tracking-wider">STAY CONNECTED</h3>
           <div className="h-px flex-1 bg-[#2e2e2e]"></div>
-          <div className="w-12 h-px bg-[#D70006]"></div>
+          <div className="w-12 h-px bg-[#1D4884]"></div>
         </div>
 
         <div className="flex items-center gap-4">
@@ -158,7 +158,7 @@ export default function ContactInfoPanel() {
             <a 
               key={idx} 
               href={social.href} 
-              className="w-12 h-12 border border-[#2e2e2e] flex items-center justify-center text-white transition-all duration-300 hover:bg-[#D70006] hover:border-[#D70006] hover:-translate-y-1 hover:shadow-lg hover:shadow-[#D70006]/20"
+              className="w-12 h-12 border border-[#2e2e2e] flex items-center justify-center text-white transition-all duration-300 hover:bg-[#1D4884] hover:border-[#1D4884] hover:-translate-y-1 hover:shadow-lg hover:shadow-[#1D4884]/20"
             >
               {social.icon}
             </a>

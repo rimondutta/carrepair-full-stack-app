@@ -47,9 +47,9 @@ const getEmailLayout = (content: string) => `
   <div style="padding: 20px 10px; background-color: #f4f4f4;">
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; border: 1px solid #dddddd;">
       <!-- Header -->
-      <div style="background-color: #EB0005; padding: 20px; text-align: center; color: #ffffff;">
-        <h1 style="margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 24px;">Tyreman24</h1>
-        <p style="margin: 5px 0 0; font-size: 14px; opacity: 0.8;">Auto AC Electrical & Mechanical Repairing Garage</p>
+      <div style="background-color: #1D4884; padding: 20px; text-align: center; color: #ffffff;">
+        <h1 style="margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 24px;">Arjun Car MOT Station</h1>
+        <p style="margin: 5px 0 0; font-size: 14px; opacity: 0.8;">MOT Testing & Car Repair - Wembley, London</p>
       </div>
       
       <!-- Body -->
@@ -59,8 +59,8 @@ const getEmailLayout = (content: string) => `
       
       <!-- Footer -->
       <div style="background-color: #f9f9f9; padding: 20px; text-align: center; color: #999999; font-size: 12px; border-top: 1px solid #eeeeee;">
-        <p style="margin: 0;">14 Brick Ln Ind.first - Al Quoz - Dubai - UAE</p>
-        <p style="margin: 5px 0 0;">© ${new Date().getFullYear()} Tyreman24. All rights reserved.</p>
+        <p style="margin: 0;">UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant, Wembley HA0 1ZD, United Kingdom</p>
+        <p style="margin: 5px 0 0;">© ${new Date().getFullYear()} Arjun Car MOT Station. All rights reserved.</p>
       </div>
     </div>
   </div>
@@ -84,15 +84,15 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
   });
 
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"Tyreman24" <noreply@abdurrehman.com>',
+    from: process.env.SMTP_FROM || '"Arjun Car MOT Station" <noreply@arjuncarmotwembley.co.uk>',
     to: email,
-    subject: `Booking Confirmed: ${serviceType} - Tyreman24`,
+    subject: `Booking Confirmed: ${serviceType} - Arjun Car MOT Station`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
         Great news! Your booking request for <strong>${serviceType}</strong> has been <strong>confirmed</strong>.
       </p>
-      <div style="background-color: #f9f9f9; border-left: 4px solid #EB0005; padding: 15px; margin: 25px 0;">
+      <div style="background-color: #f9f9f9; border-left: 4px solid #1D4884; padding: 15px; margin: 25px 0;">
         <p style="margin: 0; color: #333;"><strong>Service:</strong> ${serviceType}</p>
         <p style="margin: 5px 0 0; color: #333;"><strong>Date:</strong> ${formattedDate}</p>
         ${booking.preferredTime ? `<p style="margin: 5px 0 0; color: #333;"><strong>Time:</strong> ${booking.preferredTime}</p>` : ''}
@@ -101,7 +101,7 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
         Our team of expert mechanics is ready to provide top-notch care for your vehicle. If you have any questions or need to reschedule, please contact us immediately.
       </p>
       <div style="text-align: center; margin-top: 35px;">
-        <a href="tel:+447728738148" class="mobile-full" style="background-color: #EB0005; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +44 772 873 8148</a>
+        <a href="tel:+447440164792" class="mobile-full" style="background-color: #1D4884; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +44 744 016 4792</a>
       </div>
     `),
   };
@@ -128,9 +128,9 @@ export const sendBookingCancellation = async (booking: IBooking) => {
   });
 
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"Tyreman24" <noreply@abdurrehman.com>',
+    from: process.env.SMTP_FROM || '"Arjun Car MOT Station" <noreply@arjuncarmotwembley.co.uk>',
     to: email,
-    subject: `Booking Cancelled: ${serviceType} - Tyreman24`,
+    subject: `Booking Cancelled: ${serviceType} - Arjun Car MOT Station`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -140,7 +140,7 @@ export const sendBookingCancellation = async (booking: IBooking) => {
         If you did not request this cancellation or would like to reschedule, please contact us immediately so we can assist you.
       </p>
       <div style="text-align: center; margin-top: 35px;">
-        <a href="tel:+447728738148" class="mobile-full" style="background-color: #EB0005; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +44 772 873 8148</a>
+        <a href="tel:+447440164792" class="mobile-full" style="background-color: #1D4884; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +44 744 016 4792</a>
       </div>
       <p style="color: #999; font-size: 14px; margin-top: 30px; text-align: center; font-style: italic;">
         We apologize for any inconvenience this may have caused.
@@ -165,9 +165,9 @@ export const sendBookingCompletion = async (booking: IBooking) => {
   const { customerName, email, serviceType } = booking;
 
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"Tyreman24" <noreply@abdurrehman.com>',
+    from: process.env.SMTP_FROM || '"Arjun Car MOT Station" <noreply@arjuncarmotwembley.co.uk>',
     to: email,
-    subject: `Service Completed: ${serviceType} - Tyreman24`,
+    subject: `Service Completed: ${serviceType} - Arjun Car MOT Station`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -184,7 +184,7 @@ export const sendBookingCompletion = async (booking: IBooking) => {
         </div>
       </div>
       <p style="color: #666; font-size: 16px;">
-        Thank you for choosing <strong>Tyreman24</strong>. We look forward to serving you again!
+        Thank you for choosing <strong>Arjun Car MOT Station</strong>. We look forward to serving you again!
       </p>
     `),
   };

@@ -6,11 +6,11 @@ export default function HelpPage() {
     <main className="p-4 lg:p-8 max-w-4xl mx-auto">
       <div className="mb-8 border-b border-gray-200 pb-6">
         <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
-          <BookOpen className="text-[#EB0005] w-8 h-8" />
+          <BookOpen className="text-[#1D4884] w-8 h-8" />
           Admin User Manual
         </h1>
         <p className="text-gray-500 mt-2">
-          Welcome to the Tyreman24 Admin Dashboard. This guide will help you understand how to manage your website effectively.
+          Welcome to the Arjun Car MOT Station Admin Dashboard. This guide will help you understand how to manage your website effectively.
         </p>
       </div>
 

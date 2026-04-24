@@ -15,7 +15,7 @@ interface ContactHeroBannerProps {
 
 export default function ContactHeroBanner({ title, breadcrumbs }: ContactHeroBannerProps) {
   return (
-    <section className="relative w-full min-h-[400px] pt-[110px] bg-gradient-to-r from-[#110E10] via-[#1B1B1B] to-[#110E10] flex items-center overflow-hidden border-b-2 border-[#D70006]">
+    <section className="relative w-full min-h-[400px] pt-[110px] bg-gradient-to-r from-[#110E10] via-[#1B1B1B] to-[#110E10] flex items-center overflow-hidden border-b-2 border-[#1D4884]">
       
       {/* Background Dot Grid Overlay */}
       <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#FFF_1px,transparent_1px)] [background-size:24px_24px]"></div>
@@ -35,11 +35,11 @@ export default function ContactHeroBanner({ title, breadcrumbs }: ContactHeroBan
           
           {/* Red Tag Component */}
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-[2px] bg-[#D70006]"></div>
-            <span className="text-[#D70006] text-xs font-black uppercase tracking-[0.3em] heading-font">
+            <div className="w-8 h-[2px] bg-[#1D4884]"></div>
+            <span className="text-[#1D4884] text-xs font-black uppercase tracking-[0.3em] heading-font">
               CONTACT US
             </span>
-            <div className="w-8 h-[2px] bg-[#D70006]"></div>
+            <div className="w-8 h-[2px] bg-[#1D4884]"></div>
           </div>
 
           <h1 className="text-white text-5xl md:text-6xl font-black uppercase heading-font mb-6 tracking-tight">
@@ -55,7 +55,7 @@ export default function ContactHeroBanner({ title, breadcrumbs }: ContactHeroBan
                   {crumb.href && !isLast ? (
                     <Link 
                       href={crumb.href}
-                      className="text-[#999] text-xs font-bold uppercase tracking-widest hover:text-[#D70006] transition-colors"
+                      className="text-[#999] text-xs font-bold uppercase tracking-widest hover:text-[#1D4884] transition-colors"
                     >
                       {crumb.label}
                     </Link>
@@ -67,7 +67,7 @@ export default function ContactHeroBanner({ title, breadcrumbs }: ContactHeroBan
                   
                   {!isLast && (
                     <div className="flex items-center opacity-40">
-                      <ChevronRight className="w-3 h-3 text-[#D70006]" />
+                      <ChevronRight className="w-3 h-3 text-[#1D4884]" />
                     </div>
                   )}
                 </div>

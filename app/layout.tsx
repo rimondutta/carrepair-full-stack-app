@@ -19,34 +19,34 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Tyreman24",
-    default: "Tyreman24 | Expert Tire & Wheel Services",
+    template: "%s | ARJUN CAR MOT STATION",
+    default: "ARJUN CAR MOT STATION Wembley | MOT, Car Repair & Servicing",
   },
-  description: "Tyreman24 is a premier tire shop in London offering expert tire change, wheel alignment, and maintenance services.",
-  keywords: ["Tire Shop London", "Tire Change", "Wheel Alignment", "Puncture Repair", "Car Maintenance"],
+  description: "ARJUN CAR MOT STATION in Wembley offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at UNIT 29, Abbey Industrial Estate, Wembley HA0 1ZD.",
+  keywords: ["MOT Wembley", "Car Repair Wembley", "Car Service Wembley", "MOT Station Wembley", "Auto Repair Wembley", "Car Maintenance Wembley", "Arjun Car MOT"],
   category: "Automotive",
-  metadataBase: new URL("https://tyreman24.vercel.app"),
+  metadataBase: new URL("https://arjuncarmotwembley.co.uk"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Tyreman24 | Premium Tire Services",
-    description: "Expert tire shop providing all types of premium wheel alignment and tire services in London.",
-    url: "https://tyreman24.vercel.app",
-    siteName: "Tyreman24",
+    title: "ARJUN CAR MOT STATION Wembley | MOT & Car Repair",
+    description: "Expert MOT testing, car servicing and repairs in Wembley. UNIT 29, Abbey Industrial Estate, Wembley HA0 1ZD.",
+    url: "https://arjuncarmotwembley.co.uk",
+    siteName: "ARJUN CAR MOT STATION",
     locale: "en_GB",
     type: "website",
     images: [{
-      url: "/logo/abdur-rehman-auto-garage.png",
+      url: "/logo/Auto-Repair-Website-logo.png",
       width: 800,
       height: 600,
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tyreman24 | Expert Car Services",
-    description: "High-end automobile maintenance and repair services for luxury and daily precision vehicles.",
-    images: ["/logo/abdur-rehman-auto-garage.png"],
+    title: "ARJUN CAR MOT STATION | MOT & Car Repair Wembley",
+    description: "Expert MOT testing, car servicing and repairs in Wembley, United Kingdom.",
+    images: ["/logo/Auto-Repair-Website-logo.png"],
   },
   robots: {
     index: true,
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo/abdur-rehman-auto-garage.png",
-    shortcut: "/logo/abdur-rehman-auto-garage.png",
-    apple: "/logo/abdur-rehman-auto-garage.png",
+    icon: "/logo/Auto-Repair-Website-logo.png",
+    shortcut: "/logo/Auto-Repair-Website-logo.png",
+    apple: "/logo/Auto-Repair-Website-logo.png",
   },
 };
 
@@ -91,24 +91,24 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "TireShop",
-              "name": "Tyreman24",
-              "image": "https://tyreman24.vercel.app/logo/abdur-rehman-auto-garage.png",
-              "@id": "https://tyreman24.vercel.app",
-              "url": "https://tyreman24.vercel.app",
-              "telephone": "+447728738148",
+              "@type": "AutoRepair",
+              "name": "ARJUN CAR MOT STATION",
+              "image": "https://arjuncarmotwembley.co.uk/logo/Auto-Repair-Website-logo.png",
+              "@id": "https://arjuncarmotwembley.co.uk",
+              "url": "https://arjuncarmotwembley.co.uk",
+              "telephone": "+447440164792",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "14 Brick Ln",
-                "addressLocality": "London",
-                "addressRegion": "London",
-                "postalCode": "E1 6RF",
-                "addressCountry": "UK"
+                "streetAddress": "UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant",
+                "addressLocality": "Wembley",
+                "addressRegion": "Greater London",
+                "postalCode": "HA0 1ZD",
+                "addressCountry": "GB"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 51.5186,
-                "longitude": -0.0717
+                "latitude": 51.5474,
+                "longitude": -0.3046
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

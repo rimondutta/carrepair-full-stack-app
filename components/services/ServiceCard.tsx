@@ -33,7 +33,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
     <article
       ref={ref}
       className={`group relative overflow-hidden bg-[#1B1B1B] 
-        border border-[#2e2e2e] hover:border-[#D70006]/50 
+        border border-[#2e2e2e] hover:border-[#1D4884]/50 
         transition-all duration-500 cursor-pointer flex flex-col h-full
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
       style={{ transitionDelay: `${(index % 3) * 100}ms` }}
@@ -55,15 +55,15 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
 
         {/* Icon badge — bottom right of image */}
         <div className="absolute bottom-4 right-4 
-          w-14 h-14 bg-[#D70006] flex items-center justify-center
-          group-hover:bg-[#110E10] group-hover:border group-hover:border-[#D70006]
+          w-14 h-14 bg-[#1D4884] flex items-center justify-center
+          group-hover:bg-[#110E10] group-hover:border group-hover:border-[#1D4884]
           transition-all duration-300 z-10">
           <IconComponent name={service.icon} />
         </div>
 
         {/* Category label — top left */}
         <span className="absolute top-4 left-0 
-          bg-[#D70006] text-white text-xs uppercase font-bold
+          bg-[#1D4884] text-white text-xs uppercase font-bold
           px-3 py-1 tracking-wider z-10">
           {categoryLabels[service.category] || service.category}
         </span>
@@ -72,7 +72,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
       {/* Content Area — bottom half */}
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-white heading-font font-bold text-xl mb-3
-          group-hover:text-[#D70006] transition-colors duration-300">
+          group-hover:text-[#1D4884] transition-colors duration-300">
           {service.title}
         </h3>
         <p className="text-[#999] text-sm leading-relaxed mb-8 flex-1 line-clamp-3">
@@ -83,11 +83,11 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
         <div className="mt-auto self-start relative inline-block">
           <Link href={`/services/${service.slug}`} 
             className="inline-flex items-center gap-2 relative
-              bg-transparent border border-[#D70006]/50 
+              bg-transparent border border-[#1D4884]/50 
               text-white text-xs font-semibold uppercase tracking-wider
               px-6 py-3 transition-all duration-300
               before:content-[''] before:absolute before:inset-0 
-              before:bg-[#D70006] before:scale-x-0 before:origin-left
+              before:bg-[#1D4884] before:scale-x-0 before:origin-left
               hover:before:scale-x-100 before:transition-transform before:duration-300
               overflow-hidden group/btn z-10"
             style={{ transform: 'skewX(-10deg)' }}>
@@ -99,7 +99,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
 
       {/* Active state: left red border accent */}
       {service.isActive && (
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D70006] z-20" />
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#1D4884] z-20" />
       )}
     </article>
   );

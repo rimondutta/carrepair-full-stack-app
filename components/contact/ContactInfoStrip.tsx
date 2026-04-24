@@ -24,7 +24,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
         showDivider ? "md:border-r" : ""
       } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
-      <div className="text-[#D70006] w-12 h-12 flex items-center justify-center flex-shrink-0">
+      <div className="text-[#1D4884] w-12 h-12 flex items-center justify-center flex-shrink-0">
         {icon}
       </div>
       <div className="flex flex-col">
@@ -32,7 +32,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
           {label}
         </span>
         {href ? (
-          <a href={href} className="text-white text-lg font-bold hover:text-[#D70006] transition-colors duration-300">
+          <a href={href} className="text-white text-lg font-bold hover:text-[#1D4884] transition-colors duration-300">
             {value}
           </a>
         ) : (
@@ -57,9 +57,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Phone className="w-8 h-8" />}
             label="CALL US ANYTIME"
-            value="+44 772 873 8148"
-            sub="Monâ€“Sat 9:00am â€“ 7:00pm"
-            href="tel:+447728738148"
+            value="+44 744 016 4792"
+            sub="Mon–Sat 9:00am – 7:00pm"
+            href="tel:+447440164792"
             delay={0}
             showDivider={true}
           />
@@ -67,9 +67,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Mail className="w-8 h-8" />}
             label="SEND US AN EMAIL"
-            value="info@tyreman24.co.uk"
+            value="info@arjuncarmotwembley.co.uk"
             sub="We reply within 24 hours"
-            href="mailto:info@tyreman24.co.uk"
+            href="mailto:info@arjuncarmotwembley.co.uk"
             delay={100}
             showDivider={true}
           />
@@ -77,8 +77,8 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<MapPin className="w-8 h-8" />}
             label="VISIT OUR LOCATION"
-            value="14 Brick Ln Ind.first"
-            sub="Al Quoz - London, United Kingdom"
+            value="UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End"
+            sub="Mount Pleasant, Wembley HA0 1ZD, United Kingdom"
             delay={200}
             showDivider={false}
           />

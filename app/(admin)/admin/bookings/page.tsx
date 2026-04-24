@@ -98,9 +98,9 @@ export default function BookingsPage() {
               placeholder="Search by name or email..."
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900 group-hover:border-gray-300 shadow-sm"
+              className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1D4884]/20 focus:border-[#1D4884] outline-none transition-all text-gray-900 group-hover:border-gray-300 shadow-sm"
             />
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#EB0005] transition-colors">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#1D4884] transition-colors">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -112,7 +112,7 @@ export default function BookingsPage() {
               setStatusFilter(e.target.value);
               setPage(1);
             }}
-            className="px-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#EB0005]/20 focus:border-[#EB0005] outline-none transition-all text-gray-900 shadow-sm cursor-pointer hover:border-gray-300"
+            className="px-4 py-2.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1D4884]/20 focus:border-[#1D4884] outline-none transition-all text-gray-900 shadow-sm cursor-pointer hover:border-gray-300"
           >
             <option value="all">All Status</option>
             <option value="pending">Pending</option>
@@ -130,7 +130,7 @@ export default function BookingsPage() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           {loading ? (
             <div className="flex items-center justify-center h-64">
-              <div className="animate-spin w-8 h-8 border-4 border-[#EB0005] border-t-transparent rounded-full" />
+              <div className="animate-spin w-8 h-8 border-4 border-[#1D4884] border-t-transparent rounded-full" />
             </div>
           ) : (
             <BookingTable

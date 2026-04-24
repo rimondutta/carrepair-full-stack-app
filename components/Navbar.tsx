@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex items-center gap-2 pr-6 border-r border-[#333]">
               <Mail className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">info@tyreman24.co.uk</span>
+              <span className="font-medium tracking-wider">info@arjuncarmotwembley.co.uk</span>
             </div>
             <div className="flex items-center gap-2 px-6 border-r border-[#333]">
               <Clock className="w-3.5 h-3.5 text-[var(--color-primary)]" />
@@ -58,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2 pl-6">
               <MapPin className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">14 Brick Ln, London E1 6RF, United Kingdom</span>
+              <span className="font-medium tracking-wider">UNIT 29 , ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant, London HA0 1ZD, United Kingdom</span>
             </div>
           </div>
 
@@ -87,8 +87,8 @@ export default function Navbar() {
             <div className="relative h-12 w-auto min-w-[200px] md:h-16 lg:h-20 transition-transform duration-300 group-hover:scale-105">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
-                src="/logo/abdur-rehman-auto-garage.png" 
-                alt="Tyreman24 Logo" 
+                src="/logo/Auto-Repair-Website-logo.png" 
+                alt="Arjun Car MOT Station Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
@@ -123,15 +123,15 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col justify-center leading-tight">
                 <span className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-0.5">Need Help?</span>
-                <a href="tel:+447728738148" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
-                  +44 772 873 8148
+                <a href="tel:+447440164792" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
+                  +44 744 016 4792
                 </a>
               </div>
             </div>
 
             {/* MOBILE HAMBURGER BLOCK */}
             <button
-              className="bg-[var(--color-primary)] hover:bg-[#b00005] transition-colors w-[70px] sm:w-[80px] lg:hidden h-full flex items-center justify-center text-white z-[110]"
+              className="bg-[var(--color-primary)] hover:bg-[#163a6e] transition-colors w-[70px] sm:w-[80px] lg:hidden h-full flex items-center justify-center text-white z-[110]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6 sm:w-8 sm:h-8" /> : <Menu className="w-6 h-6 sm:w-8 sm:h-8" />}
@@ -175,7 +175,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="text-white/40 text-[10px] uppercase font-bold tracking-widest">Call Now</span>
-                <span className="text-white font-bold text-xl">+44 772 873 8148</span>
+                <span className="text-white font-bold text-xl">+44 744 016 4792</span>
               </div>
             </div>
           </div>

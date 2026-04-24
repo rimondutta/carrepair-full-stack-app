@@ -12,8 +12,8 @@ const ContactMapSection = dynamic(() => import("@/components/contact/ContactMapS
 });
 
 export const metadata: Metadata = {
-  title: "Contact Us | Tyreman24",
-  description: "Get in touch with Tyreman24. Call us, email us, or visit our workshop at 14 Brick Ln, London E1 6RF, United Kingdom. Professional car maintenance services.",
+  title: "Contact Us | Arjun Car MOT Station",
+  description: "Get in touch with Arjun Car MOT Station. Call us, email us, or visit our workshop at UNIT 29 , ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant, London HA0 1ZD, United Kingdom. Professional car maintenance services.",
 };
 
 export default function ContactPage() {

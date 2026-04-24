@@ -57,7 +57,7 @@ export default function AdminLoginPage() {
               Admin Portal
             </h1>
             <p className="text-neutral-400 text-sm font-medium tracking-wide uppercase">
-              Tyreman24
+              Arjun Car MOT Station
             </p>
           </div>
 

@@ -9,7 +9,7 @@ export default function ContactCTABanner() {
   return (
     <section 
       ref={ref}
-      className="bg-[#D70006] py-12 relative overflow-hidden w-full flex items-center"
+      className="bg-[#1D4884] py-12 relative overflow-hidden w-full flex items-center"
     >
       {/* Diagonal Stripe Pattern Overlay */}
       <div 
@@ -37,7 +37,7 @@ export default function ContactCTABanner() {
               IF ANY CAR RELATED ISSUES ARE BOTHERING YOU
             </span>
             <h2 className="text-white heading-font text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight">
-              GIVE A CALL TO Tyreman24
+              GIVE A CALL TO Arjun Car MOT Station
             </h2>
           </div>
         </div>
@@ -49,16 +49,16 @@ export default function ContactCTABanner() {
           }`}
         >
           <div className="bg-white px-8 py-5 rounded-full shadow-2xl flex items-center gap-6 hover:scale-105 transition-transform group border-4 border-white/20">
-            <div className="bg-[#D70006] w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:animate-pulse">
+            <div className="bg-[#1D4884] w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:animate-pulse">
               <PhoneCall className="w-7 h-7 text-white" />
             </div>
             <div className="flex flex-col justify-center">
               <p className="text-[#110E10] font-black text-[10px] uppercase tracking-[0.2em] mb-0.5 heading-font opacity-70">Available 24x7</p>
               <a 
-                href="tel:+447728738148" 
-                className="text-xl md:text-2xl font-black text-[#D70006] heading-font tracking-wider leading-none"
+                href="tel:+447440164792" 
+                className="text-xl md:text-2xl font-black text-[#1D4884] heading-font tracking-wider leading-none"
               >
-                +44 772 873 8148
+                +44 744 016 4792
               </a>
             </div>
           </div>

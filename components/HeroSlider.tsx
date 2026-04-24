@@ -121,7 +121,7 @@ export default function HeroSlider() {
                   </Link>
 
                   <a 
-                    href="https://wa.me/447728738148" 
+                    href="https://wa.me/447440164792" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/50 text-white px-8 py-4 text-sm md:text-base font-bold uppercase tracking-wider hover:bg-white hover:text-black hover:border-white transition-all group shadow-lg"

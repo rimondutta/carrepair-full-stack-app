@@ -36,7 +36,7 @@ export default function BlogHero() {
           </h1>
 
           <p className="max-w-2xl text-[var(--color-textLight)] text-lg opacity-60 leading-relaxed font-medium">
-            Stay ahead with the latest automotive technology, maintenance tips, and luxury car care guides from Dubai&apos;s master technicians.
+            Stay ahead with the latest automotive technology, maintenance tips, and luxury car care guides from Wembley&apos;s master technicians.
           </p>
         </div>
       </div>
