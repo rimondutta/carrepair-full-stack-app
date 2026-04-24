@@ -48,7 +48,7 @@ const getEmailLayout = (content: string) => `
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; border: 1px solid #dddddd;">
       <!-- Header -->
       <div style="background-color: #EB0005; padding: 20px; text-align: center; color: #ffffff;">
-        <h1 style="margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 24px;">Abdur Rehman</h1>
+        <h1 style="margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 24px;">Tyreman24</h1>
         <p style="margin: 5px 0 0; font-size: 14px; opacity: 0.8;">Auto AC Electrical & Mechanical Repairing Garage</p>
       </div>
       
@@ -59,8 +59,8 @@ const getEmailLayout = (content: string) => `
       
       <!-- Footer -->
       <div style="background-color: #f9f9f9; padding: 20px; text-align: center; color: #999999; font-size: 12px; border-top: 1px solid #eeeeee;">
-        <p style="margin: 0;">24B Street - Al Qouz Ind.first - Al Quoz - Dubai - UAE</p>
-        <p style="margin: 5px 0 0;">© ${new Date().getFullYear()} Abdur Rehman Auto Garage. All rights reserved.</p>
+        <p style="margin: 0;">14 Brick Ln Ind.first - Al Quoz - Dubai - UAE</p>
+        <p style="margin: 5px 0 0;">© ${new Date().getFullYear()} Tyreman24. All rights reserved.</p>
       </div>
     </div>
   </div>
@@ -84,9 +84,9 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
   });
 
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"Abdur Rehman Auto Garage" <noreply@abdurrehman.com>',
+    from: process.env.SMTP_FROM || '"Tyreman24" <noreply@abdurrehman.com>',
     to: email,
-    subject: `Booking Confirmed: ${serviceType} - Abdur Rehman Auto Garage`,
+    subject: `Booking Confirmed: ${serviceType} - Tyreman24`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -101,7 +101,7 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
         Our team of expert mechanics is ready to provide top-notch care for your vehicle. If you have any questions or need to reschedule, please contact us immediately.
       </p>
       <div style="text-align: center; margin-top: 35px;">
-        <a href="tel:+971567253107" class="mobile-full" style="background-color: #EB0005; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +971 56 725 3107</a>
+        <a href="tel:+447728738148" class="mobile-full" style="background-color: #EB0005; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +44 772 873 8148</a>
       </div>
     `),
   };
@@ -128,9 +128,9 @@ export const sendBookingCancellation = async (booking: IBooking) => {
   });
 
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"Abdur Rehman Auto Garage" <noreply@abdurrehman.com>',
+    from: process.env.SMTP_FROM || '"Tyreman24" <noreply@abdurrehman.com>',
     to: email,
-    subject: `Booking Cancelled: ${serviceType} - Abdur Rehman Auto Garage`,
+    subject: `Booking Cancelled: ${serviceType} - Tyreman24`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -140,7 +140,7 @@ export const sendBookingCancellation = async (booking: IBooking) => {
         If you did not request this cancellation or would like to reschedule, please contact us immediately so we can assist you.
       </p>
       <div style="text-align: center; margin-top: 35px;">
-        <a href="tel:+971567253107" class="mobile-full" style="background-color: #EB0005; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +971 56 725 3107</a>
+        <a href="tel:+447728738148" class="mobile-full" style="background-color: #EB0005; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +44 772 873 8148</a>
       </div>
       <p style="color: #999; font-size: 14px; margin-top: 30px; text-align: center; font-style: italic;">
         We apologize for any inconvenience this may have caused.
@@ -165,9 +165,9 @@ export const sendBookingCompletion = async (booking: IBooking) => {
   const { customerName, email, serviceType } = booking;
 
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"Abdur Rehman Auto Garage" <noreply@abdurrehman.com>',
+    from: process.env.SMTP_FROM || '"Tyreman24" <noreply@abdurrehman.com>',
     to: email,
-    subject: `Service Completed: ${serviceType} - Abdur Rehman Auto Garage`,
+    subject: `Service Completed: ${serviceType} - Tyreman24`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -184,7 +184,7 @@ export const sendBookingCompletion = async (booking: IBooking) => {
         </div>
       </div>
       <p style="color: #666; font-size: 16px;">
-        Thank you for choosing <strong>Abdur Rehman Auto Garage</strong>. We look forward to serving you again!
+        Thank you for choosing <strong>Tyreman24</strong>. We look forward to serving you again!
       </p>
     `),
   };

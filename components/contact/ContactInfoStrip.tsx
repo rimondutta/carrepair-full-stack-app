@@ -57,9 +57,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Phone className="w-8 h-8" />}
             label="CALL US ANYTIME"
-            value="+971 56 725 3107"
+            value="+44 772 873 8148"
             sub="Monâ€“Sat 9:00am â€“ 7:00pm"
-            href="tel:+971567253107"
+            href="tel:+447728738148"
             delay={0}
             showDivider={true}
           />
@@ -67,9 +67,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Mail className="w-8 h-8" />}
             label="SEND US AN EMAIL"
-            value="info@careplus.com"
+            value="info@tyreman24.co.uk"
             sub="We reply within 24 hours"
-            href="mailto:info@careplus.com"
+            href="mailto:info@tyreman24.co.uk"
             delay={100}
             showDivider={true}
           />
@@ -77,8 +77,8 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<MapPin className="w-8 h-8" />}
             label="VISIT OUR LOCATION"
-            value="24B Street - Al Qouz Ind.first"
-            sub="Al Quoz - Dubai - United Arab Emirates"
+            value="14 Brick Ln Ind.first"
+            sub="Al Quoz - London, United Kingdom"
             delay={200}
             showDivider={false}
           />

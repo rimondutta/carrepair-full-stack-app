@@ -6,8 +6,8 @@ import Post from "@/models/Post";
 import { redisUtils } from "@/lib/redis";
 
 export const metadata: Metadata = {
-  title: "Inside Abdur Rehman | Automotive Blog & Expert Guides",
-  description: "Explore our collection of expert automotive repair guides, maintenance tips, and industry insights from the master technicians at Abdur Rehman Auto Garage.",
+  title: "Inside Tyreman24 | Automotive Blog & Expert Guides",
+  description: "Explore our collection of expert automotive repair guides, maintenance tips, and industry insights from the master technicians at Tyreman24.",
 };
 
 export const revalidate = 3600; // revalidate at most every hour

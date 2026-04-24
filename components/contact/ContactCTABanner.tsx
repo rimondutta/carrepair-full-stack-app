@@ -37,7 +37,7 @@ export default function ContactCTABanner() {
               IF ANY CAR RELATED ISSUES ARE BOTHERING YOU
             </span>
             <h2 className="text-white heading-font text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight">
-              GIVE A CALL TO Abdur Rehman Auto Garage
+              GIVE A CALL TO Tyreman24
             </h2>
           </div>
         </div>
@@ -55,10 +55,10 @@ export default function ContactCTABanner() {
             <div className="flex flex-col justify-center">
               <p className="text-[#110E10] font-black text-[10px] uppercase tracking-[0.2em] mb-0.5 heading-font opacity-70">Available 24x7</p>
               <a 
-                href="tel:+971567253107" 
+                href="tel:+447728738148" 
                 className="text-xl md:text-2xl font-black text-[#D70006] heading-font tracking-wider leading-none"
               >
-                +971 56 725 3107
+                +44 772 873 8148
               </a>
             </div>
           </div>

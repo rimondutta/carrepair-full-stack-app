@@ -10,7 +10,7 @@ export default function HelpPage() {
           Admin User Manual
         </h1>
         <p className="text-gray-500 mt-2">
-          Welcome to the Abdur Rehman Auto Garage Admin Dashboard. This guide will help you understand how to manage your website effectively.
+          Welcome to the Tyreman24 Admin Dashboard. This guide will help you understand how to manage your website effectively.
         </p>
       </div>
 

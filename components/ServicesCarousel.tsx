@@ -18,6 +18,7 @@ import {
   Aperture, 
   Sparkles, 
   Settings2,
+  AlertTriangle,
   LucideIcon 
 } from "lucide-react";
 import Link from "next/link";
@@ -39,6 +40,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Aperture,
   Sparkles,
   Settings2,
+  AlertTriangle,
 };
 
 export default function ServicesCarousel({ services = servicesData.slice(0, 8) }: { services?: any[] }) {
@@ -99,8 +101,8 @@ export default function ServicesCarousel({ services = servicesData.slice(0, 8) }
               OUR SERVICE LIST
             </span>
             <h2 className="text-white heading-font text-4xl md:text-5xl font-bold uppercase leading-tight">
-              Providing All Types of <br />
-              <span className="text-[var(--color-primary)] italic">Car Maintenance</span> Services
+              Providing Rapid Mobile <br />
+              <span className="text-[var(--color-primary)] italic">Emergency Tyre</span> Services
             </h2>
           </div>
           

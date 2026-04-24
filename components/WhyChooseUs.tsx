@@ -6,26 +6,26 @@ import { Play, ShieldCheck, Droplet, Settings2, Wind } from "lucide-react";
 const features = [
   {
     icon: <ShieldCheck className="w-8 h-8" />,
-    title: "Car Protection & Fitness",
-    desc: "We provide comprehensive protective ceramic coating services and structural fitness checks to ensure your vehicle remains in peak condition and retains its original aesthetic value.",
+    title: "Mobile Emergency Repairs",
+    desc: "We bring the tyre shop to you. No matter where you are stranded, our fully-equipped mobile vans are ready to repair or replace your tyres.",
     isActive: true,
   },
   {
     icon: <Droplet className="w-8 h-8" />,
-    title: "Complimentary Car Wash",
-    desc: "Every repair service includes a premium high-pressure car wash utilizing PH-balanced chemicals to protect your paint while removing stubborn road grime and contaminants.",
+    title: "Rapid Response Time",
+    desc: "Averaging a 40-minute response time across London, we pride ourselves on punctuality and getting you back on the road safely and quickly.",
     isActive: false,
   },
   {
     icon: <Settings2 className="w-8 h-8" />,
-    title: "Expert Engine & Balancing",
-    desc: "Our workshop uses laser-precision diagnostic equipment for engine tuning and wheel balancing, ensuring a smooth ride and optimal fuel efficiency for your vehicle.",
+    title: "Professional Tyre Fitting",
+    desc: "Our workshop uses laser-precision diagnostic equipment for wheel balancing, ensuring a smooth ride and optimal fuel efficiency.",
     isActive: false,
   },
   {
     icon: <Wind className="w-8 h-8" />,
-    title: "Windshield & Glass Repair",
-    desc: "We specialize in shatter-free resin restorations for windshield cracks and full glass replacements using OEM-standard materials for maximum visibility and safety.",
+    title: "24/7 Roadside Assistance",
+    desc: "Flat tyre in the middle of the night? Don't worry. We offer 24/7 emergency tyre replacement and locking nut removal.",
     isActive: true,
   },
 ];
@@ -70,10 +70,10 @@ export default function WhyChooseUs() {
               WHY CHOOSE US
             </span>
             <h2 className="text-white heading-font text-4xl lg:text-5xl font-bold uppercase leading-tight mb-4">
-              Best Garage For Your Car
+              Best Emergency Tyre Service
             </h2>
             <p className="text-[var(--color-textMuted)] leading-relaxed text-sm lg:text-base">
-              We stand apart through our commitment to technical precision and superior customer service. Your vehicle represents a significant investment, and our certified mechanics treat it accordingly.
+              We stand apart through our commitment to technical precision and superior punctuality. Your safety is a priority, and our certified technicians ensure a quick arrival to get you moving again.
             </p>
           </div>
 

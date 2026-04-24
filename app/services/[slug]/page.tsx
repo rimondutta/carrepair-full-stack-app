@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!service) {
     return {
-      title: "Service Not Found | Abdur Rehman Auto Garage",
+      title: "Service Not Found | Tyreman24",
     };
   }
 
   return {
-    title: `${service.title} | Abdur Rehman Auto Garage`,
+    title: `${service.title} | Tyreman24`,
     description: service.shortDescription,
   };
 }
@@ -88,7 +88,7 @@ export default async function DynamicServicePage({ params }: Props) {
             "description": serializedService.shortDescription || serializedService.description,
             "provider": {
               "@type": "AutoRepair",
-              "name": "Abdur Rehman Auto Garage",
+              "name": "Tyreman24",
               "url": "https://careplusauto.vercel.app",
               "address": {
                 "@type": "PostalAddress",
@@ -98,7 +98,7 @@ export default async function DynamicServicePage({ params }: Props) {
                 "addressCountry": "AE"
               }
             },
-            "areaServed": "Dubai, UAE",
+            "areaServed": "London, UK",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Automotive Repair Services",

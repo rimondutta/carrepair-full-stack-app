@@ -8,23 +8,23 @@ import Link from "next/link";
 const slides = [
   {
     id: 1,
-    subtitle: "BEST AUTOMOBILE MAINTENANCE WORKSHOP",
-    title: "Car Repair and Maintenance Services",
-    description: "We provide comprehensive diagnostic, repair, and maintenance services utilizing advanced workshop equipment to get you back on the road safely.",
+    subtitle: "BEST TIRE & WHEEL EXPERTS",
+    title: "Premium Tire Change and Wheel Services",
+    description: "We provide comprehensive tire fitting, balancing, and alignment services utilizing advanced workshop equipment to get you back on the road safely.",
     image: "/assets/asset 62.jpeg",
   },
   {
     id: 2,
-    subtitle: "PREMIUM CAR CARE EXPERTS",
-    title: "Professional Auto Service For Premium Performance",
-    description: "Our certified master mechanics deliver dealership-quality service at honest prices, from routine oil changes to complete engine overhauls.",
+    subtitle: "PREMIUM TIRE SHOP",
+    title: "Professional Tire Service For Premium Performance",
+    description: "Our certified tire experts deliver dealership-quality service at honest prices, from routine tire swaps to high-performance wheel mounting.",
     image: "/assets/asset 63.jpeg",
   },
   {
     id: 3,
-    subtitle: "CERTIFIED MECHANICS",
-    title: "Complete Car Checkup & Diagnostic Services",
-    description: "Don't let minor issues become major repairs. Schedule a comprehensive multipoint inspection with our advanced diagnostic tooling.",
+    subtitle: "CERTIFIED TIRE TECHNICIANS",
+    title: "Complete Wheel Checkup & Alignment Services",
+    description: "Don't let uneven wear ruin your tires. Schedule a comprehensive laser alignment with our advanced workshop tooling.",
     image: "/assets/asset 64.jpeg",
   },
 ];
@@ -121,7 +121,7 @@ export default function HeroSlider() {
                   </Link>
 
                   <a 
-                    href="https://wa.me/971528031110" 
+                    href="https://wa.me/447728738148" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/50 text-white px-8 py-4 text-sm md:text-base font-bold uppercase tracking-wider hover:bg-white hover:text-black hover:border-white transition-all group shadow-lg"

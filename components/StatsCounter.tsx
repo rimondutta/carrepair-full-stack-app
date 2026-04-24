@@ -10,20 +10,20 @@ export default function StatsCounter() {
   const stats = [
     {
       id: 1,
-      target: 600,
-      label: "Wheel Replacement",
+      target: 40,
+      label: "Avg Response Time (Mins)",
       icon: <Settings className="w-12 h-12 text-white/50" />,
     },
     {
       id: 2,
-      target: 250,
-      label: "Interior Remodeling",
+      target: 121,
+      label: "Tyres Changed This Month",
       icon: <Car className="w-12 h-12 text-white/50" />,
     },
     {
       id: 3,
-      target: 456,
-      label: "Color Correction",
+      target: 19,
+      label: "Mins Quickest Arrival",
       icon: <PaintBucket className="w-12 h-12 text-white/50" />,
     },
   ];

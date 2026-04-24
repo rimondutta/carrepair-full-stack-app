@@ -12,8 +12,8 @@ const ContactMapSection = dynamic(() => import("@/components/contact/ContactMapS
 });
 
 export const metadata: Metadata = {
-  title: "Contact Us | Abdur Rehman Auto Garage",
-  description: "Get in touch with Abdur Rehman Auto Garage. Call us, email us, or visit our workshop at 24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates. Professional car maintenance services.",
+  title: "Contact Us | Tyreman24",
+  description: "Get in touch with Tyreman24. Call us, email us, or visit our workshop at 14 Brick Ln, London E1 6RF, United Kingdom. Professional car maintenance services.",
 };
 
 export default function ContactPage() {

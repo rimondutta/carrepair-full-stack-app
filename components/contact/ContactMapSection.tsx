@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 export default function ContactMapSection() {
-  const address = "24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates";
+  const address = "14 Brick Ln, London E1 6RF, United Kingdom";
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
@@ -21,7 +21,7 @@ export default function ContactMapSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Abdur Rehman Auto Garage Location"
+          title="Tyreman24 Location"
           className="w-full h-full"
         />
       </div>
@@ -31,7 +31,7 @@ export default function ContactMapSection() {
         <div className="bg-[#1B1B1B] border border-[#2e2e2e] p-8 shadow-2xl relative animate-in slide-in-from-left duration-700">
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D70006]"></div>
           
-          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">Abdur Rehman Auto Garage</h3>
+          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">Tyreman24</h3>
           
           <div className="flex flex-col gap-4">
             <div className="flex items-start gap-4">
@@ -41,7 +41,7 @@ export default function ContactMapSection() {
             
             <div className="flex items-center gap-4">
               <Phone className="text-[#D70006] w-5 h-5" />
-              <p className="text-[#999] text-sm">+971 56 725 3107</p>
+              <p className="text-[#999] text-sm">+44 772 873 8148</p>
             </div>
             
             <div className="flex items-center gap-4">

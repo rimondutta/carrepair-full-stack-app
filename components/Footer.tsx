@@ -47,19 +47,19 @@ export default function Footer() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/logo/abdur-rehman-auto-garage.png" 
-                alt="Abdur Rehman Auto Garage Logo" 
+                alt="Tyreman24 Logo" 
                 className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </Link>
             <p className="text-[var(--color-textMuted)] mb-6 leading-relaxed text-sm">
-              We are a premium automotive repair & maintenance workshop dedicated to top-tier care and maintenance of your vehicle.
+              We are a premium tire shop dedicated to top-tier care and maintenance of your vehicle.
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <MapPin className="text-[var(--color-primary)] w-5 h-5 shrink-0 mt-1" />
                 <p className="text-[var(--color-textLight)] text-sm">
                   <strong className="block text-white mb-1">VISIT OUR LOCATION</strong>
-                  24B Street - Al Qouz Ind.first - Al Quoz - Dubai - United Arab Emirates
+                  14 Brick Ln, London E1 6RF, United Kingdom
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function Footer() {
             className="text-[var(--color-textMuted)] text-sm text-center md:text-left"
             suppressHydrationWarning
           >
-            &copy; {currentYear || '2026'} Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage. All Rights Reserved. | Developed by <a href="https://rimondutta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[var(--color-primary)] transition-colors underline underline-offset-4 decoration-[var(--color-primary)]/30">Rimon Dutta</a>
+            &copy; {currentYear || '2026'} Tyreman24. All Rights Reserved. | Developed by <a href="https://rimondutta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[var(--color-primary)] transition-colors underline underline-offset-4 decoration-[var(--color-primary)]/30">Rimon Dutta</a>
           </p>
           
           <div className="flex items-center gap-4">
@@ -169,7 +169,7 @@ export default function Footer() {
       {/* Floating Action Buttons */}
       <div className="fixed bottom-6 left-4 md:left-6 z-[100]">
         <a 
-          href="https://wa.me/971528031110" 
+          href="https://wa.me/447728738148" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group flex items-center bg-white/10 backdrop-blur-xl border border-white/20 p-1.5 md:p-2 pr-5 md:pr-6 rounded-[2rem] shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),_0_8px_32px_rgba(0,0,0,0.6)] hover:bg-white/20 hover:shadow-[0_8px_40px_rgba(37,211,102,0.4)] hover:-translate-y-1 transition-all duration-500 overflow-hidden relative"
@@ -192,7 +192,7 @@ export default function Footer() {
 
       <div className="fixed bottom-6 right-4 md:right-6 z-[100]">
         <a 
-          href="tel:+971567253107" 
+          href="tel:+447728738148" 
           className="group flex items-center flex-row-reverse bg-white/10 backdrop-blur-xl border border-white/20 p-1.5 md:p-2 pl-5 md:pl-6 rounded-[2rem] shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),_0_8px_32px_rgba(0,0,0,0.6)] hover:bg-white/20 hover:shadow-[0_8px_40px_rgba(215,0,6,0.4)] hover:-translate-y-1 transition-all duration-500 overflow-hidden relative"
           aria-label="Call Us Now"
         >

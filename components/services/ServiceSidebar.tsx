@@ -61,8 +61,8 @@ export default async function ServiceSidebar({ currentSlug }: ServiceSidebarProp
             Need Help? Call Us Now
           </span>
           
-          <a href="tel:+971567253107" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors">
-            +971 56 725 3107
+          <a href="tel:+447728738148" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors">
+            +44 772 873 8148
           </a>
         </div>
       </div>

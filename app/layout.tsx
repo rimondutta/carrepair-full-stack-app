@@ -19,22 +19,22 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Abdur Rehman Auto Garage",
-    default: "Abdur Rehman Auto Garage | Expert Car Repair & Maintenance",
+    template: "%s | Tyreman24",
+    default: "Tyreman24 | Expert Tire & Wheel Services",
   },
-  description: "Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage is a premier automobile maintenance workshop in Dubai offering expert car repair, engine tuning, etc.",
-  keywords: ["Car Repair Dubai", "Auto Repairing", "Engine Tuning", "Dent Removal", "Ceramic Coating", "Car Maintenance"],
+  description: "Tyreman24 is a premier tire shop in London offering expert tire change, wheel alignment, and maintenance services.",
+  keywords: ["Tire Shop London", "Tire Change", "Wheel Alignment", "Puncture Repair", "Car Maintenance"],
   category: "Automotive",
-  metadataBase: new URL("https://careplusauto.vercel.app"),
+  metadataBase: new URL("https://tyreman24.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Abdur Rehman Auto Garage | Premium Car Maintenance",
-    description: "Expert automobile maintenance workshop providing all types of premium car repair and restoration services in Dubai.",
-    url: "https://careplusauto.vercel.app",
-    siteName: "Abdur Rehman Auto Garage",
-    locale: "en_US",
+    title: "Tyreman24 | Premium Tire Services",
+    description: "Expert tire shop providing all types of premium wheel alignment and tire services in London.",
+    url: "https://tyreman24.vercel.app",
+    siteName: "Tyreman24",
+    locale: "en_GB",
     type: "website",
     images: [{
       url: "/logo/abdur-rehman-auto-garage.png",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdur Rehman Auto Garage | Expert Car Services",
+    title: "Tyreman24 | Expert Car Services",
     description: "High-end automobile maintenance and repair services for luxury and daily precision vehicles.",
     images: ["/logo/abdur-rehman-auto-garage.png"],
   },
@@ -91,23 +91,24 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "AutoRepair",
-              "name": "Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage",
-              "image": "https://careplusauto.vercel.app/logo/abdur-rehman-auto-garage.png",
-              "@id": "https://careplusauto.vercel.app",
-              "url": "https://careplusauto.vercel.app",
-              "telephone": "+971567253107",
+              "@type": "TireShop",
+              "name": "Tyreman24",
+              "image": "https://tyreman24.vercel.app/logo/abdur-rehman-auto-garage.png",
+              "@id": "https://tyreman24.vercel.app",
+              "url": "https://tyreman24.vercel.app",
+              "telephone": "+447728738148",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "24B Street - Al Qouz Ind.first - Al Quoz",
-                "addressLocality": "Dubai",
-                "addressRegion": "Dubai",
-                "addressCountry": "AE"
+                "streetAddress": "14 Brick Ln",
+                "addressLocality": "London",
+                "addressRegion": "London",
+                "postalCode": "E1 6RF",
+                "addressCountry": "UK"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 25.1384,
-                "longitude": 55.2343
+                "latitude": 51.5186,
+                "longitude": -0.0717
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

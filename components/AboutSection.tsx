@@ -66,7 +66,7 @@ export default function AboutSection() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
               }`}
             >
-              We Care For Your Car Just Like <span className="text-[var(--color-primary)] italic font-medium">You Do</span>
+              Emergency Tyre Services When You Need Them <span className="text-[var(--color-primary)] italic font-medium">Most</span>
             </h2>
 
             <div 
@@ -75,13 +75,13 @@ export default function AboutSection() {
               }`}
             >
               <p>
-                From simple maintenance to complete engine rebuilds, Abdur Rehman Auto AC Electrical & Mechanical Repairing Garage provides elite-level car servicing that prioritizes quality, precision, and longevity. We believe every vehicle deserves meticulous attention and premium parts. Our workshop is equipped with the latest automotive technology, allowing us to perform deep diagnostics and complex repairs with absolute accuracy.
+                From a simple puncture to complete tyre replacements on the roadside, Tyreman24 provides rapid emergency tyre services that prioritize your safety and punctuality. We believe every stranded motorist deserves immediate, professional attention and premium quality tyres. Our mobile units are equipped with the latest automotive technology, allowing us to perform quick and safe replacements wherever you are.
               </p>
               <p>
-                Our journey began with a simple mission: to provide transparent, reliable, and high-quality automotive care that vehicle owners can trust. Over the years, we have built a reputation for excellence by consistently delivering results that exceed expectations. Whether it’s a modern performance car or a reliable family SUV, we treat every machine with the respect it deserves.
+                Our journey began with a simple mission: to provide transparent, reliable, and high-quality 24/7 roadside assistance that London drivers can trust. Over the years, we have built a reputation for excellence by consistently delivering rapid response times and prioritizing tyre quality.
               </p>
               <p>
-                Our certified mechanics utilize state-of-the-art diagnostic equipment to pinpoint underlying issues that other shops miss. We don't just fix symptoms; we solve the root cause of the problem to ensure your safety and vehicle reliability. Experience true automotive performance care designed to extend the lifespan of your passion and keep you moving with confidence.
+                Our certified technicians utilize state-of-the-art mobile fitting equipment to ensure flawless balancing and fitting, guaranteeing a smooth ride. We don't just replace tyres; we ensure your complete safety so you can get back on the road with absolute confidence.
               </p>
             </div>
 
