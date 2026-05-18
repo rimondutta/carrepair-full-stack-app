@@ -24,7 +24,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
         showDivider ? "md:border-r" : ""
       } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
-      <div className="text-[#1D4884] w-12 h-12 flex items-center justify-center flex-shrink-0">
+      <div className="text-[#EAB308] w-12 h-12 flex items-center justify-center flex-shrink-0">
         {icon}
       </div>
       <div className="flex flex-col">
@@ -32,7 +32,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
           {label}
         </span>
         {href ? (
-          <a href={href} className="text-white text-lg font-bold hover:text-[#1D4884] transition-colors duration-300">
+          <a href={href} className="text-white text-lg font-bold hover:text-[#EAB308] transition-colors duration-300">
             {value}
           </a>
         ) : (
@@ -57,9 +57,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Phone className="w-8 h-8" />}
             label="CALL US ANYTIME"
-            value="+44 744 016 4792"
+            value="+1 (718) 481-9800"
             sub="Mon–Sat 9:00am – 7:00pm"
-            href="tel:+447440164792"
+            href="tel:+1 (718) 481-9800"
             delay={0}
             showDivider={true}
           />
@@ -67,9 +67,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Mail className="w-8 h-8" />}
             label="SEND US AN EMAIL"
-            value="info@arjuncarmotwembley.co.uk"
+            value="info@samsautomotiverepairs.com"
             sub="We reply within 24 hours"
-            href="mailto:info@arjuncarmotwembley.co.uk"
+            href="mailto:info@samsautomotiverepairs.com"
             delay={100}
             showDivider={true}
           />
@@ -77,8 +77,8 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<MapPin className="w-8 h-8" />}
             label="VISIT OUR LOCATION"
-            value="UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End"
-            sub="Mount Pleasant, Wembley HA0 1ZD, United Kingdom"
+            value="123-30 Merrick Blvd, Woodside End"
+            sub="Mount Pleasant, Jamaica, NY 11434, United States"
             delay={200}
             showDivider={false}
           />

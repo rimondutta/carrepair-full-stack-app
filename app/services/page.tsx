@@ -10,7 +10,7 @@ import Service from "@/models/Service";
 import { redisUtils } from "@/lib/redis";
 
 export const metadata: Metadata = {
-  title: "Our Services | Arjun Car MOT Station",
+  title: "Our Services | Sam's Automotive Repairs",
   description: "Expert car repair services including engine repair, tire change, denting repair, ceramic coating and more. Certified mechanics, 6-month guarantee.",
 };
 

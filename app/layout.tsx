@@ -19,21 +19,21 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | ARJUN CAR MOT STATION",
-    default: "ARJUN CAR MOT STATION Wembley | MOT, Car Repair & Servicing",
+    template: "%s | Sam's Automotive Repairs",
+    default: "Sam's Automotive Repairs | MOT, Car Repair & Servicing",
   },
-  description: "ARJUN CAR MOT STATION in Wembley offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at UNIT 29, Abbey Industrial Estate, Wembley HA0 1ZD.",
-  keywords: ["MOT Wembley", "Car Repair Wembley", "Car Service Wembley", "MOT Station Wembley", "Auto Repair Wembley", "Car Maintenance Wembley", "Arjun Car MOT"],
+  description: "Sam's Automotive Repairs in Jamaica offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at 123-30 Merrick Blvd, Jamaica, NY 11434.",
+  keywords: ["MOT Jamaica", "Car Repair Jamaica", "Car Service Jamaica", "MOT Station Jamaica", "Auto Repair Jamaica", "Car Maintenance Jamaica", "Sam's Automotive Repairs"],
   category: "Automotive",
-  metadataBase: new URL("https://arjuncarmotwembley.co.uk"),
+  metadataBase: new URL("https://samsautomotiverepairs.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "ARJUN CAR MOT STATION Wembley | MOT & Car Repair",
-    description: "Expert MOT testing, car servicing and repairs in Wembley. UNIT 29, Abbey Industrial Estate, Wembley HA0 1ZD.",
-    url: "https://arjuncarmotwembley.co.uk",
-    siteName: "ARJUN CAR MOT STATION",
+    title: "Sam's Automotive Repairs | MOT & Car Repair",
+    description: "Expert MOT testing, car servicing and repairs in Jamaica. 123-30 Merrick Blvd, Jamaica, NY 11434.",
+    url: "https://samsautomotiverepairs.com",
+    siteName: "Sam's Automotive Repairs",
     locale: "en_GB",
     type: "website",
     images: [{
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ARJUN CAR MOT STATION | MOT & Car Repair Wembley",
-    description: "Expert MOT testing, car servicing and repairs in Wembley, United Kingdom.",
+    title: "Sam's Automotive Repairs | MOT & Car Repair Jamaica",
+    description: "Expert MOT testing, car servicing and repairs in Jamaica, United Kingdom.",
     images: ["/logo/Auto-Repair-Website-logo.png"],
   },
   robots: {
@@ -92,23 +92,23 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
-              "name": "ARJUN CAR MOT STATION",
-              "image": "https://arjuncarmotwembley.co.uk/logo/Auto-Repair-Website-logo.png",
-              "@id": "https://arjuncarmotwembley.co.uk",
-              "url": "https://arjuncarmotwembley.co.uk",
-              "telephone": "+447440164792",
+              "name": "Sam's Automotive Repairs",
+              "image": "https://samsautomotiverepairs.com/logo/Auto-Repair-Website-logo.png",
+              "@id": "https://samsautomotiverepairs.com",
+              "url": "https://samsautomotiverepairs.com",
+              "telephone": "+1 (718) 481-9800",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant",
-                "addressLocality": "Wembley",
-                "addressRegion": "Greater London",
-                "postalCode": "HA0 1ZD",
-                "addressCountry": "GB"
+                "streetAddress": "123-30 Merrick Blvd",
+                "addressLocality": "Jamaica",
+                "addressRegion": "NY",
+                "postalCode": "11434",
+                "addressCountry": "US"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 51.5474,
-                "longitude": -0.3046
+                "latitude": 40.6912,
+                "longitude": -73.7762
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

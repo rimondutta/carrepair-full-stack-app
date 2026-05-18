@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!service) {
     return {
-      title: "Service Not Found | Arjun Car MOT Station",
+      title: "Service Not Found | Sam's Automotive Repairs",
     };
   }
 
   return {
-    title: `${service.title} | Arjun Car MOT Station`,
+    title: `${service.title} | Sam's Automotive Repairs`,
     description: service.shortDescription,
   };
 }
@@ -88,13 +88,13 @@ export default async function DynamicServicePage({ params }: Props) {
             "description": serializedService.shortDescription || serializedService.description,
             "provider": {
               "@type": "AutoRepair",
-              "name": "Arjun Car MOT Station",
+              "name": "Sam's Automotive Repairs",
               "url": "https://careplusauto.vercel.app",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "9 19dStreet - 3 St - Al Qouz Ind.third",
-                "addressLocality": "Wembley",
-                "addressRegion": "Wembley",
+                "addressLocality": "Jamaica",
+                "addressRegion": "Jamaica",
                 "addressCountry": "AE"
               }
             },

@@ -12,8 +12,8 @@ const ContactMapSection = dynamic(() => import("@/components/contact/ContactMapS
 });
 
 export const metadata: Metadata = {
-  title: "Contact Us | Arjun Car MOT Station",
-  description: "Get in touch with Arjun Car MOT Station. Call us, email us, or visit our workshop at UNIT 29 , ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant, London HA0 1ZD, United Kingdom. Professional car maintenance services.",
+  title: "Contact Us | Sam's Automotive Repairs",
+  description: "Get in touch with Sam's Automotive Repairs. Call us, email us, or visit our workshop at 123-30 Merrick Blvd, Jamaica, NY 11434, United States. Professional car maintenance services.",
 };
 
 export default function ContactPage() {

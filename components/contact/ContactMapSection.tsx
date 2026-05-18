@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 export default function ContactMapSection() {
-  const address = "UNIT 29, ABBEY INDUSTRIAL ESTATE, Woodside End, Mount Pleasant, Wembley HA0 1ZD, United Kingdom";
+  const address = "123-30 Merrick Blvd, Jamaica, NY 11434, United States";
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
@@ -21,7 +21,7 @@ export default function ContactMapSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="ARJUN CAR MOT STATION Location"
+          title="Sam's Automotive Repairs Location"
           className="w-full h-full"
         />
       </div>
@@ -29,23 +29,23 @@ export default function ContactMapSection() {
       {/* Floating Info Card (Desktop Only) */}
       <div className="hidden lg:block absolute bottom-10 left-10 z-20 w-80">
         <div className="bg-[#1B1B1B] border border-[#2e2e2e] p-8 shadow-2xl relative animate-in slide-in-from-left duration-700">
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#1D4884]"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#EAB308]"></div>
           
-          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">ARJUN CAR MOT STATION</h3>
+          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">Sam's Automotive Repairs</h3>
           
           <div className="flex flex-col gap-4">
             <div className="flex items-start gap-4">
-              <MapPin className="text-[#1D4884] w-5 h-5 flex-shrink-0 mt-1" />
+              <MapPin className="text-[#EAB308] w-5 h-5 flex-shrink-0 mt-1" />
               <p className="text-[#999] text-sm leading-snug">{address}</p>
             </div>
             
             <div className="flex items-center gap-4">
-              <Phone className="text-[#1D4884] w-5 h-5" />
-              <p className="text-[#999] text-sm">+44 744 016 4792</p>
+              <Phone className="text-[#EAB308] w-5 h-5" />
+              <p className="text-[#999] text-sm">+1 (718) 481-9800</p>
             </div>
             
             <div className="flex items-center gap-4">
-              <Clock className="text-[#1D4884] w-5 h-5" />
+              <Clock className="text-[#EAB308] w-5 h-5" />
               <p className="text-[#999] text-sm">Mon–Sat: 9am – 7pm</p>
             </div>
 
@@ -55,7 +55,7 @@ export default function ContactMapSection() {
               href={directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#1D4884] font-bold uppercase text-xs tracking-widest hover:translate-x-1 transition-transform"
+              className="flex items-center gap-2 text-[#EAB308] font-bold uppercase text-xs tracking-widest hover:translate-x-1 transition-transform"
             >
               Get Directions <ArrowUpRight size={14} />
             </a>
@@ -67,10 +67,10 @@ export default function ContactMapSection() {
       <div className="lg:hidden absolute bottom-4 left-4 right-4 z-20">
          <div className="bg-[#1B1B1B] p-4 border border-[#2e2e2e] flex items-center justify-between">
            <div className="flex items-center gap-3">
-             <MapPin className="text-[#1D4884] w-5 h-5" />
-             <span className="text-white text-xs font-bold uppercase tracking-widest">UNIT 29, Abbey Industrial Estate</span>
+             <MapPin className="text-[#EAB308] w-5 h-5" />
+             <span className="text-white text-xs font-bold uppercase tracking-widest">123-30 Merrick Blvd</span>
            </div>
-           <a href={directionsUrl} className="text-[#1D4884]"><ArrowUpRight size={18} /></a>
+           <a href={directionsUrl} className="text-[#EAB308]"><ArrowUpRight size={18} /></a>
          </div>
       </div>
 

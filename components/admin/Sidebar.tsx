@@ -72,7 +72,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Zap size={22} className="text-white fill-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-white tracking-tight leading-none">tire shop</h1>
+            <h1 className="text-lg font-bold text-white tracking-tight leading-none">Sam's Repairs</h1>
             <p className="text-[10px] uppercase font-black tracking-widest text-slate-500 mt-1">Admin Dashboard</p>
           </div>
         </Link>
@@ -96,17 +96,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               className={`
                 flex items-center justify-between group px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200
                 ${isActive
-                  ? 'bg-[#FFF0F0] text-[#1D4884] border-l-4 border-[#1D4884] rounded-r-xl rounded-l-none'
+                  ? 'bg-[#FFF0F0] text-[#EAB308] border-l-4 border-[#EAB308] rounded-r-xl rounded-l-none'
                   : 'hover:bg-slate-800/50 hover:text-white border-l-4 border-transparent'}
               `}
             >
               <div className="flex items-center gap-3.5">
-                <span className={`transition-colors ${isActive ? 'text-[#1D4884]' : 'group-hover:text-[#1D4884]'}`}>
+                <span className={`transition-colors ${isActive ? 'text-[#EAB308]' : 'group-hover:text-[#EAB308]'}`}>
                   {item.icon}
                 </span>
                 {item.label}
               </div>
-              {isActive && <ChevronRight size={14} className="text-[#1D4884]" />}
+              {isActive && <ChevronRight size={14} className="text-[#EAB308]" />}
             </Link>
           );
         })}
@@ -128,7 +128,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </button>
         <button
           onClick={() => signOut({ callbackUrl: '/admin/login' })}
-          className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-[#1D4884] hover:text-white transition-all duration-300 group"
+          className="flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-400 hover:bg-[#EAB308] hover:text-white transition-all duration-300 group"
         >
           <LogOut size={20} className="group-hover:rotate-12 transition-transform" />
           Logout Session

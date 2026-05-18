@@ -44,7 +44,7 @@ export default function AboutSection() {
             </div>
 
             {/* Dot pattern decor */}
-            <div className="absolute -top-8 -left-8 w-32 h-32 bg-[radial-gradient(#1D4884_2px,transparent_2px)] [background-size:16px_16px] opacity-20 -z-10"></div>
+            <div className="absolute -top-8 -left-8 w-32 h-32 bg-[radial-gradient(#EAB308_2px,transparent_2px)] [background-size:16px_16px] opacity-20 -z-10"></div>
           </div>
 
           {/* Right Column: Content */}
@@ -66,7 +66,7 @@ export default function AboutSection() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
               }`}
             >
-              Your Trusted MOT &amp; Car Repair Station in <span className="text-[var(--color-primary)] italic font-medium">Wembley</span>
+              Your Trusted MOT &amp; Car Repair Station in <span className="text-[var(--color-primary)] italic font-medium">Jamaica</span>
             </h2>
 
             <div 
@@ -75,13 +75,13 @@ export default function AboutSection() {
               }`}
             >
               <p>
-                ARJUN CAR MOT STATION is Wembley&apos;s trusted destination for MOT testing, car servicing, and all aspects of vehicle repair. Located at UNIT 29, Abbey Industrial Estate, we use the latest diagnostic equipment and quality parts to keep your vehicle roadworthy and safe.
+                Sam's Automotive Repairs is Jamaica&apos;s trusted destination for MOT testing, car servicing, and all aspects of vehicle repair. Located at 123-30 Merrick Blvd, we use the latest diagnostic equipment and quality parts to keep your vehicle roadworthy and safe.
               </p>
               <p>
                 Our fully qualified technicians are experienced across all makes and models. Whether you need a routine service, an MOT test, brake replacement, engine diagnostics, or any mechanical repair — we deliver quality workmanship at honest, competitive prices with no hidden charges.
               </p>
               <p>
-                We believe every driver in Wembley and the surrounding areas deserves a garage they can genuinely trust. That&apos;s why we keep you informed throughout the entire repair process and never carry out work without your approval. Your safety and satisfaction are always our top priority.
+                We believe every driver in Jamaica and the surrounding areas deserves a garage they can genuinely trust. That&apos;s why we keep you informed throughout the entire repair process and never carry out work without your approval. Your safety and satisfaction are always our top priority.
               </p>
             </div>
 
