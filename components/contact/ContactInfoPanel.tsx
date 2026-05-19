@@ -28,7 +28,7 @@ export default function ContactInfoPanel() {
 
   const contactRows = [
     { icon: <Phone size={18} />, label: "Phone", value: "+1 (862) 279-8403", href: "tel:+1 (862) 279-8403" },
-    { icon: <Mail size={18} />, label: "Email", value: "info@samsautomotiverepairs.com", href: "mailto:info@samsautomotiverepairs.com" },
+    { icon: <Mail size={18} />, label: "Email", value: "info@jsautorepair.com", href: "mailto:info@jsautorepair.com" },
     { icon: <MapPin size={18} />, label: "Address", value: "900 Mountain Ave, Mountainside, NJ 07092, United States", href: undefined },
   ];
 

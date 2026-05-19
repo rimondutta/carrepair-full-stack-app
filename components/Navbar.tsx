@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex items-center gap-2 pr-6 border-r border-[#333]">
               <Mail className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">info@samsautomotiverepairs.com</span>
+              <span className="font-medium tracking-wider">info@jsautorepair.com</span>
             </div>
             <div className="flex items-center gap-2 px-6 border-r border-[#333]">
               <Clock className="w-3.5 h-3.5 text-[var(--color-primary)]" />

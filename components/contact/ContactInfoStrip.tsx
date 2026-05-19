@@ -67,9 +67,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Mail className="w-8 h-8" />}
             label="SEND US AN EMAIL"
-            value="info@samsautomotiverepairs.com"
+            value="info@jsautorepair.com"
             sub="We reply within 24 hours"
-            href="mailto:info@samsautomotiverepairs.com"
+            href="mailto:info@jsautorepair.com"
             delay={100}
             showDivider={true}
           />
