@@ -65,12 +65,12 @@ export default function ContactMapSection() {
 
       {/* Mobile Location Badge */}
       <div className="lg:hidden absolute bottom-4 left-4 right-4 z-20">
-         <div className="bg-[#1B1B1B] p-4 border border-[#2e2e2e] flex items-center justify-between">
-           <div className="flex items-center gap-3">
-             <MapPin className="text-[#EAB308] w-5 h-5" />
-             <span className="text-white text-xs font-bold uppercase tracking-widest">123-30 Merrick Blvd</span>
+         <div className="bg-[#1B1B1B] p-4 border border-[#2e2e2e] flex items-center justify-between gap-3 min-w-0">
+           <div className="flex items-center gap-3 min-w-0">
+             <MapPin className="text-[#EAB308] w-5 h-5 flex-shrink-0" />
+             <span className="text-white text-xs font-bold uppercase tracking-widest truncate">123-30 Merrick Blvd</span>
            </div>
-           <a href={directionsUrl} className="text-[#EAB308]"><ArrowUpRight size={18} /></a>
+           <a href={directionsUrl} className="text-[#EAB308] flex-shrink-0"><ArrowUpRight size={18} /></a>
          </div>
       </div>
 

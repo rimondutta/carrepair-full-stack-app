@@ -17,7 +17,7 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="bg-[#1B1B1B] p-10 md:p-16 border border-[#2e2e2e] relative overflow-hidden flex flex-col items-center text-center animate-in fade-in zoom-in duration-500">
+      <div className="bg-[#1B1B1B] p-6 sm:p-10 md:p-16 border border-[#2e2e2e] relative overflow-hidden flex flex-col items-center text-center animate-in fade-in zoom-in duration-500">
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#EAB308]"></div>
         <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6">
           <CheckCircle className="text-green-500 w-12 h-12" />
@@ -39,7 +39,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-[#1B1B1B] p-8 md:p-10 border border-[#2e2e2e] relative overflow-hidden">
+    <div className="bg-[#1B1B1B] p-6 sm:p-8 md:p-10 border border-[#2e2e2e] relative overflow-hidden">
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#EAB308]"></div>
 
       <div className="flex flex-col mb-10">
@@ -67,7 +67,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={(e) => handleChange('name', e.target.value)}
               onBlur={() => handleBlur('name')}
-              className={`bg-[#110E10] border ${touched.name && errors.name ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
+              className={`w-full bg-[#110E10] border ${touched.name && errors.name ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
             />
             {touched.name && errors.name && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.name}</span>}
           </div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={(e) => handleChange('email', e.target.value)}
               onBlur={() => handleBlur('email')}
-              className={`bg-[#110E10] border ${touched.email && errors.email ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
+              className={`w-full bg-[#110E10] border ${touched.email && errors.email ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
             />
             {touched.email && errors.email && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.email}</span>}
           </div>
@@ -96,7 +96,7 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={(e) => handleChange('phone', e.target.value)}
               onBlur={() => handleBlur('phone')}
-              className={`bg-[#110E10] border ${touched.phone && errors.phone ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
+              className={`w-full bg-[#110E10] border ${touched.phone && errors.phone ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
             />
             {touched.phone && errors.phone && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.phone}</span>}
           </div>
@@ -109,7 +109,7 @@ export default function ContactForm() {
               value={formData.subject}
               onChange={(e) => handleChange('subject', e.target.value)}
               onBlur={() => handleBlur('subject')}
-              className={`bg-[#110E10] border ${touched.subject && errors.subject ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
+              className={`w-full bg-[#110E10] border ${touched.subject && errors.subject ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
             />
             {touched.subject && errors.subject && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.subject}</span>}
           </div>
@@ -145,7 +145,7 @@ export default function ContactForm() {
               onChange={(e) => handleChange('preferredDate', e.target.value)}
               onBlur={() => handleBlur('preferredDate')}
               min={new Date().toISOString().split('T')[0]}
-              className={`bg-[#110E10] border border-[#2e2e2e] focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all font-medium tracking-wide [color-scheme:dark]`}
+              className={`w-full bg-[#110E10] border border-[#2e2e2e] focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all font-medium tracking-wide [color-scheme:dark]`}
             />
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={(e) => handleChange('message', e.target.value)}
             onBlur={() => handleBlur('message')}
-            className={`bg-[#110E10] border ${touched.message && errors.message ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide resize-none`}
+            className={`w-full bg-[#110E10] border ${touched.message && errors.message ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide resize-none`}
           />
           {touched.message && errors.message && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.message}</span>}
         </div>

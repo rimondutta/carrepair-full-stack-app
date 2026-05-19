@@ -51,7 +51,7 @@ export default function ContactInfoPanel() {
           </span>
         </div>
 
-        <h2 className="text-white font-black text-3xl md:text-4xl heading-font uppercase mb-6 leading-tight">
+        <h2 className="text-white font-black text-2xl sm:text-3xl md:text-4xl heading-font uppercase mb-6 leading-tight">
           FEEL FREE TO ASK US ANYTHING
         </h2>
         
@@ -61,16 +61,16 @@ export default function ContactInfoPanel() {
 
         <div className="flex flex-col gap-6">
           {contactRows.map((row, idx) => (
-            <div key={idx} className="flex items-center gap-5 group">
-              <div className="w-12 h-12 rounded-full bg-[#EAB308]/10 border border-[#EAB308]/20 flex items-center justify-center text-[#EAB308] transition-all duration-300 group-hover:bg-[#EAB308] group-hover:text-white group-hover:scale-110">
+            <div key={idx} className="flex items-start gap-4 sm:gap-5 group">
+              <div className="w-12 h-12 rounded-full bg-[#EAB308]/10 border border-[#EAB308]/20 flex items-center justify-center text-[#EAB308] flex-shrink-0 transition-all duration-300 group-hover:bg-[#EAB308] group-hover:text-white group-hover:scale-110">
                 {row.icon}
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col min-w-0">
                 <span className="text-white/40 text-[10px] font-black uppercase tracking-widest heading-font">{row.label}</span>
                 {row.href ? (
-                  <a href={row.href} className="text-white text-lg font-bold hover:text-[#EAB308] transition-colors">{row.value}</a>
+                  <a href={row.href} className="text-white text-base sm:text-lg font-bold hover:text-[#EAB308] transition-colors break-words">{row.value}</a>
                 ) : (
-                  <span className="text-white text-lg font-bold">{row.value}</span>
+                  <span className="text-white text-base sm:text-lg font-bold break-words">{row.value}</span>
                 )}
               </div>
             </div>
