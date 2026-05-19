@@ -3,14 +3,21 @@
 import { useState } from 'react';
 import { ContactFormData, ContactFormErrors, FormStatus } from '@/types/contact';
 
-export function useContactForm() {
+interface UseContactFormOptions {
+  initialValues?: Partial<ContactFormData>;
+  requireDateTime?: boolean;
+}
+
+export function useContactForm(options?: UseContactFormOptions) {
+  const { initialValues, requireDateTime = false } = options || {};
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     phone: '',
     subject: '',
-    service: 'Select a Service',
+    service: initialValues?.service || 'Select a Service',
     preferredDate: '',
+    preferredTime: '',
     message: '',
   });
 
@@ -33,6 +40,16 @@ export function useContactForm() {
 
     if (data.phone && !/^\+?[0-9\s-]{7,15}$/.test(data.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    if (requireDateTime) {
+      if (!data.preferredDate.trim()) {
+        newErrors.preferredDate = 'Preferred date is required';
+      }
+
+      if (!data.preferredTime.trim()) {
+        newErrors.preferredTime = 'Preferred time is required';
+      }
     }
 
     return newErrors;
@@ -83,6 +100,7 @@ export function useContactForm() {
             phone: formData.phone || 'N/A',
             serviceType: formData.service !== 'Select a Service' ? formData.service : 'General Inquiry',
             preferredDate: formData.preferredDate || new Date().toISOString(),
+            preferredTime: formData.preferredTime,
             notes: `Subject: ${formData.subject || 'General Inquiry'}\n\nMessage: ${formData.message || 'No message provided.'}`
           }),
         });
@@ -105,8 +123,9 @@ export function useContactForm() {
       email: '',
       phone: '',
       subject: '',
-      service: 'Select a Service',
+      service: initialValues?.service || 'Select a Service',
       preferredDate: '',
+      preferredTime: '',
       message: '',
     });
     setErrors({});

@@ -2,12 +2,14 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import { connectDB } from "@/lib/mongodb";
 import Service from "@/models/Service";
+import ServiceBookingButton from "./ServiceBookingButton";
 
 interface ServiceSidebarProps {
   currentSlug: string;
+  serviceTitle: string;
 }
 
-export default async function ServiceSidebar({ currentSlug }: ServiceSidebarProps) {
+export default async function ServiceSidebar({ currentSlug, serviceTitle }: ServiceSidebarProps) {
   await connectDB();
   const servicesData = await Service.find({ isActive: true }).select("title slug").lean();
   return (
@@ -48,7 +50,7 @@ export default async function ServiceSidebar({ currentSlug }: ServiceSidebarProp
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 20px)" }}></div>
         
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-center w-full">
           <span className="text-white/80 text-sm font-semibold tracking-wider uppercase mb-6 drop-shadow-md">
             Get best Car Mechanics
           </span>
@@ -61,9 +63,11 @@ export default async function ServiceSidebar({ currentSlug }: ServiceSidebarProp
             Need Help? Call Us Now
           </span>
           
-          <a href="tel:+1 (718) 481-9800" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors">
+          <a href="tel:+1 (718) 481-9800" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors mb-2">
             +1 (718) 481-9800
           </a>
+
+          <ServiceBookingButton serviceTitle={serviceTitle} variant="sidebar" />
         </div>
       </div>
 

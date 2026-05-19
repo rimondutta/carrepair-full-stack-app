@@ -24,7 +24,7 @@ export class BookingService {
     // 1. Internal Notification
     try {
       await Notification.create({
-        title: isContactForm ? '✉️ New Contact Message' : '🚀 New Service Booking',
+        title: '🛒 New Order Received',
         message: `${booking.customerName} requested ${booking.serviceType}`,
         type: 'success',
         link: '/admin/bookings',
@@ -47,7 +47,7 @@ export class BookingService {
       const timeInfo = booking.preferredTime ? `\n<b>Time:</b> ${escapeHTML(booking.preferredTime)}` : '';
 
       const message = [
-        `<b>${isContactForm ? '✉️ New Contact' : '🚀 New Booking'} Received!</b>`,
+        `<b>🛒 New Order Received!</b>`,
         '',
         `<b>Customer:</b> ${safeName}`,
         `<b>Phone:</b> ${safePhone}`,

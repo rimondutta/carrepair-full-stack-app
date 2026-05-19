@@ -1,1 +1,1 @@
-ssh@
+ssh@root@[IP_ADDRESS]

@@ -7,6 +7,7 @@ export interface ContactFormData {
   subject: string;
   service: string;
   preferredDate: string;
+  preferredTime: string;
   message: string;
 }
 
@@ -15,6 +16,8 @@ export interface ContactFormErrors {
   email?: string;
   phone?: string;
   subject?: string;
+  preferredDate?: string;
+  preferredTime?: string;
   message?: string;
 }
 

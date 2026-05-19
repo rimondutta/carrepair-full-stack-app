@@ -22,6 +22,8 @@ import MechanicsGrid from "./MechanicsGrid";
 import ServiceTestimonials from "./ServiceTestimonials";
 import { Service } from "../../types/service";
 
+import ServiceBookingButton from "./ServiceBookingButton";
+
 // Icon mapping for dynamic rendering
 const ICON_MAP: Record<string, LucideIcon> = {
   Activity,
@@ -66,9 +68,14 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
       </div>
 
       {/* SERVICE TITLE & DESCRIPTION */}
-      <h2 className="text-white font-black heading-font text-3xl mb-4 uppercase">
-        {service.title}
-      </h2>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+        <h2 className="text-white font-black heading-font text-2xl sm:text-3xl uppercase">
+          {service.title}
+        </h2>
+        <div className="flex-shrink-0">
+          <ServiceBookingButton serviceTitle={service.title} />
+        </div>
+      </div>
       <div className="w-16 h-1 bg-[var(--color-primary)] mb-8"></div>
 
       {/* Render detailed content paragraphs */}

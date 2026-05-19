@@ -69,7 +69,7 @@ export default async function DynamicServicePage({ params }: Props) {
           <ServiceDetails service={serializedService} />
 
           {/* Right Column Component Layer */}
-          <ServiceSidebar currentSlug={slug} />
+          <ServiceSidebar currentSlug={slug} serviceTitle={serializedService.title} />
 
         </div>
       </main>
