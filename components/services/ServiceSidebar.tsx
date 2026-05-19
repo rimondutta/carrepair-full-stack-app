@@ -41,10 +41,10 @@ export default async function ServiceSidebar({ currentSlug, serviceTitle }: Serv
       </div>
 
       {/* Widget 2: Contact/CTA Box */}
-      <div className="rounded-xl overflow-hidden relative border border-[#EAB308]/50 p-10 flex flex-col items-center justify-center text-center">
+      <div className="rounded-xl overflow-hidden relative border border-[#79AD43]/50 p-10 flex flex-col items-center justify-center text-center">
         
         {/* Deep Red CSS Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#7A0004] to-[#EAB308]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7A0004] to-[#79AD43]"></div>
         
         {/* Diagonal Line Stripes Effect */}
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 20px)" }}></div>
@@ -63,8 +63,8 @@ export default async function ServiceSidebar({ currentSlug, serviceTitle }: Serv
             Need Help? Call Us Now
           </span>
           
-          <a href="tel:+1 (718) 481-9800" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors mb-2">
-            +1 (718) 481-9800
+          <a href="tel:+1 (862) 279-8403" className="text-white text-3xl font-black drop-shadow-xl hover:text-black transition-colors mb-2">
+            +1 (862) 279-8403
           </a>
 
           <ServiceBookingButton serviceTitle={serviceTitle} variant="sidebar" />

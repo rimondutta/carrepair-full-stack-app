@@ -24,7 +24,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
         showDivider ? "md:border-r" : ""
       } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
-      <div className="text-[#EAB308] w-12 h-12 flex items-center justify-center flex-shrink-0 mt-1">
+      <div className="text-[#79AD43] w-12 h-12 flex items-center justify-center flex-shrink-0 mt-1">
         {icon}
       </div>
       <div className="flex flex-col min-w-0">
@@ -32,7 +32,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
           {label}
         </span>
         {href ? (
-          <a href={href} className="text-white text-base sm:text-lg font-bold hover:text-[#EAB308] transition-colors duration-300 break-all md:break-normal">
+          <a href={href} className="text-white text-base sm:text-lg font-bold hover:text-[#79AD43] transition-colors duration-300 break-all md:break-normal">
             {value}
           </a>
         ) : (
@@ -57,9 +57,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Phone className="w-8 h-8" />}
             label="CALL US ANYTIME"
-            value="+1 (718) 481-9800"
+            value="+1 (862) 279-8403"
             sub="Mon–Sat 9:00am – 7:00pm"
-            href="tel:+1 (718) 481-9800"
+            href="tel:+1 (862) 279-8403"
             delay={0}
             showDivider={true}
           />
@@ -77,8 +77,8 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<MapPin className="w-8 h-8" />}
             label="VISIT OUR LOCATION"
-            value="123-30 Merrick Blvd, Woodside End"
-            sub="Mount Pleasant, Jamaica, NY 11434, United States"
+            value="900 Mountain Ave, Woodside End"
+            sub="Mount Pleasant, Mountainside, NJ 07092, United States"
             delay={200}
             showDivider={false}
           />

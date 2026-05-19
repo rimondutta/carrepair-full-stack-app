@@ -60,7 +60,7 @@ export default function BookingTable({ bookings, onStatusChange, onDelete, showA
                     <select
                       value={booking.status}
                       onChange={(e) => onStatusChange(booking._id, e.target.value)}
-                      className="text-xs border border-gray-300 rounded-lg px-2 py-1.5 bg-white text-slate-900 focus:ring-2 focus:ring-[#EAB308]/20 focus:border-[#EAB308] outline-none"
+                      className="text-xs border border-gray-300 rounded-lg px-2 py-1.5 bg-white text-slate-900 focus:ring-2 focus:ring-[#79AD43]/20 focus:border-[#79AD43] outline-none"
                     >
                       {statusOptions.map((s) => (
                         <option key={s} value={s}>
@@ -77,7 +77,7 @@ export default function BookingTable({ bookings, onStatusChange, onDelete, showA
                     {onDelete && (
                       <button
                         onClick={() => onDelete(booking._id)}
-                        className="text-[#EAB308] hover:text-[#A80003] text-xs font-medium transition-colors"
+                        className="text-[#79AD43] hover:text-[#A80003] text-xs font-medium transition-colors"
                       >
                         Delete
                       </button>

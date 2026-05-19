@@ -12,8 +12,8 @@ const ContactMapSection = dynamic(() => import("@/components/contact/ContactMapS
 });
 
 export const metadata: Metadata = {
-  title: "Contact Us | Sam's Automotive Repairs",
-  description: "Get in touch with Sam's Automotive Repairs. Call us, email us, or visit our workshop at 123-30 Merrick Blvd, Jamaica, NY 11434, United States. Professional car maintenance services.",
+  title: "Contact Us | J's Auto Repair Shop LLC",
+  description: "Get in touch with J's Auto Repair Shop LLC. Call us, email us, or visit our workshop at 900 Mountain Ave, Mountainside, NJ 07092, United States. Professional car maintenance services.",
 };
 
 export default function ContactPage() {

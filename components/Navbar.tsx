@@ -58,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2 pl-6">
               <MapPin className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">123-30 Merrick Blvd, Jamaica, NY 11434, United States</span>
+              <span className="font-medium tracking-wider">900 Mountain Ave, Mountainside, NJ 07092, United States</span>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export default function Navbar() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/logo/Auto-Repair-Website-logo.png" 
-                alt="Sam's Automotive Repairs Logo" 
+                alt="J's Auto Repair Shop LLC Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
@@ -123,8 +123,8 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col justify-center leading-tight">
                 <span className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-0.5">Need Help?</span>
-                <a href="tel:+1 (718) 481-9800" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
-                  +1 (718) 481-9800
+                <a href="tel:+1 (862) 279-8403" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
+                  +1 (862) 279-8403
                 </a>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="text-white/40 text-[10px] uppercase font-bold tracking-widest">Call Now</span>
-                <span className="text-white font-bold text-xl">+1 (718) 481-9800</span>
+                <span className="text-white font-bold text-xl">+1 (862) 279-8403</span>
               </div>
             </div>
           </div>

@@ -120,7 +120,7 @@ export default function ServicesPage() {
             </div>
             <button
               onClick={() => setShowForm(true)}
-              className="px-6 py-3 bg-[#EAB308] shadow-lg shadow-[#EAB308]/20 text-white rounded-xl font-bold hover:bg-[#A80003] hover:-translate-y-0.5 transition-all flex items-center gap-2"
+              className="px-6 py-3 bg-[#79AD43] shadow-lg shadow-[#79AD43]/20 text-white rounded-xl font-bold hover:bg-[#A80003] hover:-translate-y-0.5 transition-all flex items-center gap-2"
             >
               <Plus size={18} />
               Add Service
@@ -148,7 +148,7 @@ export default function ServicesPage() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           {loading ? (
             <div className="flex items-center justify-center h-64">
-              <div className="animate-spin w-8 h-8 border-4 border-[#EAB308] border-t-transparent rounded-full" />
+              <div className="animate-spin w-8 h-8 border-4 border-[#79AD43] border-t-transparent rounded-full" />
             </div>
           ) : (
             <div className="overflow-x-auto">
@@ -185,7 +185,7 @@ export default function ServicesPage() {
                           <button
                             onClick={() => handleToggleActive(service)}
                             className={`relative w-10 h-5 rounded-full transition-colors ${
-                              service.isActive ? 'bg-[#EAB308]' : 'bg-gray-300'
+                              service.isActive ? 'bg-[#79AD43]' : 'bg-gray-300'
                             }`}
                           >
                             <span
@@ -208,7 +208,7 @@ export default function ServicesPage() {
                             </button>
                             <button
                               onClick={() => setDeleteId(service._id)}
-                              className="text-[#EAB308] hover:text-[#A80003] text-xs font-medium transition-colors"
+                              className="text-[#79AD43] hover:text-[#A80003] text-xs font-medium transition-colors"
                             >
                               Delete
                             </button>

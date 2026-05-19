@@ -53,7 +53,7 @@ export default function FooterCTA() {
             <div>
               <p className="text-[var(--color-bgDark)] font-bold mb-0.5 md:mb-1 text-[10px] md:text-sm uppercase whitespace-nowrap">We are Available 24x7</p>
               <h3 className="text-xl md:text-3xl font-bold text-[var(--color-primary)] heading-font leading-none tracking-tight">
-                +1 (718) 481-9800
+                +1 (862) 279-8403
               </h3>
             </div>
           </div>

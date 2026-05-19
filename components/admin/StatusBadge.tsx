@@ -5,11 +5,11 @@ interface StatusBadgeProps {
 const statusColors: Record<string, string> = {
   pending: 'bg-yellow-100 text-yellow-800 border-yellow-200',
   confirmed: 'bg-green-100 text-green-800 border-green-200',
-  'in-progress': 'bg-[#EAB308]/10 text-[#A80003] border-[#EAB308]/20',
-  completed: 'bg-[#EAB308] text-white border-transparent',
+  'in-progress': 'bg-[#79AD43]/10 text-[#A80003] border-[#79AD43]/20',
+  completed: 'bg-[#79AD43] text-white border-transparent',
   cancelled: 'bg-red-100 text-red-800 border-red-200',
   draft: 'bg-slate-50 text-slate-700 border-slate-100',
-  published: 'bg-[#EAB308] text-white border-transparent',
+  published: 'bg-[#79AD43] text-white border-transparent',
 };
 
 export default function StatusBadge({ status }: StatusBadgeProps) {

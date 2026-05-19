@@ -9,7 +9,7 @@ export default function ContactCTABanner() {
   return (
     <section 
       ref={ref}
-      className="bg-[#EAB308] py-12 relative overflow-hidden w-full flex items-center"
+      className="bg-[#79AD43] py-12 relative overflow-hidden w-full flex items-center"
     >
       {/* Diagonal Stripe Pattern Overlay */}
       <div 
@@ -37,7 +37,7 @@ export default function ContactCTABanner() {
               IF ANY CAR RELATED ISSUES ARE BOTHERING YOU
             </span>
             <h2 className="text-white heading-font text-2xl sm:text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight">
-              GIVE A CALL TO Sam's Automotive Repairs
+              GIVE A CALL TO J's Auto Repair Shop LLC
             </h2>
           </div>
         </div>
@@ -49,16 +49,16 @@ export default function ContactCTABanner() {
           }`}
         >
           <div className="bg-white px-5 sm:px-8 py-4 sm:py-5 rounded-full shadow-2xl flex items-center gap-4 sm:gap-6 hover:scale-105 transition-transform group border-4 border-white/20 max-w-sm sm:max-w-none mx-auto">
-            <div className="bg-[#EAB308] w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:animate-pulse">
+            <div className="bg-[#79AD43] w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:animate-pulse">
               <PhoneCall className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
             </div>
             <div className="flex flex-col justify-center min-w-0">
               <p className="text-[#110E10] font-black text-[10px] uppercase tracking-[0.2em] mb-0.5 heading-font opacity-70">Available 24x7</p>
               <a 
-                href="tel:+1 (718) 481-9800" 
-                className="text-lg sm:text-xl md:text-2xl font-black text-[#EAB308] heading-font tracking-wider leading-none truncate"
+                href="tel:+1 (862) 279-8403" 
+                className="text-lg sm:text-xl md:text-2xl font-black text-[#79AD43] heading-font tracking-wider leading-none truncate"
               >
-                +1 (718) 481-9800
+                +1 (862) 279-8403
               </a>
             </div>
           </div>

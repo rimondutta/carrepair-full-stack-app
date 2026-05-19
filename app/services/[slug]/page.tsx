@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!service) {
     return {
-      title: "Service Not Found | Sam's Automotive Repairs",
+      title: "Service Not Found | J's Auto Repair Shop LLC",
     };
   }
 
   return {
-    title: `${service.title} | Sam's Automotive Repairs`,
+    title: `${service.title} | J's Auto Repair Shop LLC`,
     description: service.shortDescription,
   };
 }
@@ -88,13 +88,13 @@ export default async function DynamicServicePage({ params }: Props) {
             "description": serializedService.shortDescription || serializedService.description,
             "provider": {
               "@type": "AutoRepair",
-              "name": "Sam's Automotive Repairs",
+              "name": "J's Auto Repair Shop LLC",
               "url": "https://careplusauto.vercel.app",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "9 19dStreet - 3 St - Al Qouz Ind.third",
-                "addressLocality": "Jamaica",
-                "addressRegion": "Jamaica",
+                "addressLocality": "Mountainside",
+                "addressRegion": "Mountainside",
                 "addressCountry": "AE"
               }
             },

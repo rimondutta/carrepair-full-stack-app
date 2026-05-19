@@ -19,21 +19,21 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Sam's Automotive Repairs",
-    default: "Sam's Automotive Repairs | MOT, Car Repair & Servicing",
+    template: "%s | J's Auto Repair Shop LLC",
+    default: "J's Auto Repair Shop LLC | MOT, Car Repair & Servicing",
   },
-  description: "Sam's Automotive Repairs in Jamaica offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at 123-30 Merrick Blvd, Jamaica, NY 11434.",
-  keywords: ["MOT Jamaica", "Car Repair Jamaica", "Car Service Jamaica", "MOT Station Jamaica", "Auto Repair Jamaica", "Car Maintenance Jamaica", "Sam's Automotive Repairs"],
+  description: "J's Auto Repair Shop LLC in Mountainside offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at 900 Mountain Ave, Mountainside, NJ 07092.",
+  keywords: ["MOT Mountainside", "Car Repair Mountainside", "Car Service Mountainside", "MOT Station Mountainside", "Auto Repair Mountainside", "Car Maintenance Mountainside", "J's Auto Repair Shop LLC"],
   category: "Automotive",
   metadataBase: new URL("https://samsautomotiverepairs.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Sam's Automotive Repairs | MOT & Car Repair",
-    description: "Expert MOT testing, car servicing and repairs in Jamaica. 123-30 Merrick Blvd, Jamaica, NY 11434.",
+    title: "J's Auto Repair Shop LLC | MOT & Car Repair",
+    description: "Expert MOT testing, car servicing and repairs in Mountainside. 900 Mountain Ave, Mountainside, NJ 07092.",
     url: "https://samsautomotiverepairs.com",
-    siteName: "Sam's Automotive Repairs",
+    siteName: "J's Auto Repair Shop LLC",
     locale: "en_GB",
     type: "website",
     images: [{
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sam's Automotive Repairs | MOT & Car Repair Jamaica",
-    description: "Expert MOT testing, car servicing and repairs in Jamaica, United Kingdom.",
+    title: "J's Auto Repair Shop LLC | MOT & Car Repair Mountainside",
+    description: "Expert MOT testing, car servicing and repairs in Mountainside, United Kingdom.",
     images: ["/logo/Auto-Repair-Website-logo.png"],
   },
   robots: {
@@ -92,23 +92,23 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
-              "name": "Sam's Automotive Repairs",
+              "name": "J's Auto Repair Shop LLC",
               "image": "https://samsautomotiverepairs.com/logo/Auto-Repair-Website-logo.png",
               "@id": "https://samsautomotiverepairs.com",
               "url": "https://samsautomotiverepairs.com",
-              "telephone": "+1 (718) 481-9800",
+              "telephone": "+1 (862) 279-8403",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123-30 Merrick Blvd",
-                "addressLocality": "Jamaica",
-                "addressRegion": "NY",
-                "postalCode": "11434",
+                "streetAddress": "900 Mountain Ave",
+                "addressLocality": "Mountainside",
+                "addressRegion": "NJ",
+                "postalCode": "07092",
                 "addressCountry": "US"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 40.6912,
-                "longitude": -73.7762
+                "latitude": 40.6773,
+                "longitude": -74.3468
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

@@ -41,3 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 update-brand.js
+apply-new-brand.js

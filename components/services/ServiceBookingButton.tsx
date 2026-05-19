@@ -63,7 +63,7 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#EAB308] hover:bg-[#b00005] text-[#110E10] hover:text-white py-3.5 px-6 text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-lg flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[#EAB308]/10 hover:shadow-[#b00005]/20"
+          className="bg-[#79AD43] hover:bg-[#b00005] text-[#110E10] hover:text-white py-3.5 px-6 text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-lg flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[#79AD43]/10 hover:shadow-[#b00005]/20"
         >
           <Calendar className="w-4 h-4" />
           <span>Book This Service</span>
@@ -83,12 +83,12 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
           <div className="bg-[#1B1B1B] border border-[#2e2e2e] w-full max-w-lg rounded-2xl relative z-[10000] shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col my-auto max-h-[calc(100vh-2rem)]">
             
             {/* Top Indicator Strip */}
-            <div className="h-1.5 w-full bg-[#EAB308]"></div>
+            <div className="h-1.5 w-full bg-[#79AD43]"></div>
 
             {/* Header */}
             <div className="p-6 border-b border-[#2e2e2e] flex items-center justify-between">
               <div>
-                <span className="text-[#EAB308] text-[10px] font-black uppercase tracking-[0.2em] heading-font block mb-1">Book Appointment</span>
+                <span className="text-[#79AD43] text-[10px] font-black uppercase tracking-[0.2em] heading-font block mb-1">Book Appointment</span>
                 <h3 className="text-white text-xl font-black uppercase heading-font tracking-wide">
                   {serviceTitle}
                 </h3>
@@ -116,7 +116,7 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                   </p>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="bg-[#EAB308] hover:bg-[#b00005] text-[#110E10] hover:text-white px-8 py-3.5 font-bold uppercase tracking-widest text-xs transition-all duration-300 rounded-lg cursor-pointer"
+                    className="bg-[#79AD43] hover:bg-[#b00005] text-[#110E10] hover:text-white px-8 py-3.5 font-bold uppercase tracking-widest text-xs transition-all duration-300 rounded-lg cursor-pointer"
                   >
                     Close Window
                   </button>
@@ -134,10 +134,10 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                         value={formData.name}
                         onChange={(e) => handleChange('name', e.target.value)}
                         onBlur={() => handleBlur('name')}
-                        className={`w-full bg-[#110E10] border ${touched.name && errors.name ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-11 pr-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide rounded-lg text-sm`}
+                        className={`w-full bg-[#110E10] border ${touched.name && errors.name ? 'border-[#79AD43]' : 'border-[#2e2e2e]'} focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 pl-11 pr-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide rounded-lg text-sm`}
                       />
                     </div>
-                    {touched.name && errors.name && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.name}</span>}
+                    {touched.name && errors.name && <span className="text-[#79AD43] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.name}</span>}
                   </div>
 
                   {/* Email */}
@@ -151,10 +151,10 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                         value={formData.email}
                         onChange={(e) => handleChange('email', e.target.value)}
                         onBlur={() => handleBlur('email')}
-                        className={`w-full bg-[#110E10] border ${touched.email && errors.email ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-11 pr-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide rounded-lg text-sm`}
+                        className={`w-full bg-[#110E10] border ${touched.email && errors.email ? 'border-[#79AD43]' : 'border-[#2e2e2e]'} focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 pl-11 pr-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide rounded-lg text-sm`}
                       />
                     </div>
-                    {touched.email && errors.email && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.email}</span>}
+                    {touched.email && errors.email && <span className="text-[#79AD43] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.email}</span>}
                   </div>
 
                   {/* Phone */}
@@ -164,14 +164,14 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                       <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#444]" />
                       <input
                         type="tel"
-                        placeholder="+1 (718) 481-9800"
+                        placeholder="+1 (862) 279-8403"
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
                         onBlur={() => handleBlur('phone')}
-                        className={`w-full bg-[#110E10] border ${touched.phone && errors.phone ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-11 pr-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide rounded-lg text-sm`}
+                        className={`w-full bg-[#110E10] border ${touched.phone && errors.phone ? 'border-[#79AD43]' : 'border-[#2e2e2e]'} focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 pl-11 pr-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide rounded-lg text-sm`}
                       />
                     </div>
-                    {touched.phone && errors.phone && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.phone}</span>}
+                    {touched.phone && errors.phone && <span className="text-[#79AD43] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.phone}</span>}
                   </div>
 
                   {/* Service Type Selection */}
@@ -181,7 +181,7 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                       <select
                         value={formData.service}
                         onChange={(e) => handleChange('service', e.target.value)}
-                        className="w-full bg-[#110E10] border border-[#2e2e2e] focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-3.5 text-white outline-none appearance-none font-medium tracking-wide rounded-lg text-sm"
+                        className="w-full bg-[#110E10] border border-[#2e2e2e] focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 px-5 py-3.5 text-white outline-none appearance-none font-medium tracking-wide rounded-lg text-sm"
                       >
                         <option value="Select a Service" className="bg-[#1B1B1B]">Select a Service</option>
                         <option value="Engine Repair" className="bg-[#1B1B1B]">Engine Repair</option>
@@ -191,7 +191,7 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                         <option value="Ceramic Coating" className="bg-[#1B1B1B]">Ceramic Coating</option>
                         <option value="Other" className="bg-[#1B1B1B]">Other</option>
                       </select>
-                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-[#EAB308] pointer-events-none" />
+                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-[#79AD43] pointer-events-none" />
                     </div>
                   </div>
 
@@ -207,10 +207,10 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                           onChange={(e) => handleChange('preferredDate', e.target.value)}
                           onBlur={() => handleBlur('preferredDate')}
                           min={new Date().toISOString().split('T')[0]}
-                          className={`w-full bg-[#110E10] border ${touched.preferredDate && errors.preferredDate ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-11 pr-3 py-3.5 text-white outline-none transition-all font-medium tracking-wide rounded-lg text-sm [color-scheme:dark]`}
+                          className={`w-full bg-[#110E10] border ${touched.preferredDate && errors.preferredDate ? 'border-[#79AD43]' : 'border-[#2e2e2e]'} focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 pl-11 pr-3 py-3.5 text-white outline-none transition-all font-medium tracking-wide rounded-lg text-sm [color-scheme:dark]`}
                         />
                       </div>
-                      {touched.preferredDate && errors.preferredDate && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.preferredDate}</span>}
+                      {touched.preferredDate && errors.preferredDate && <span className="text-[#79AD43] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.preferredDate}</span>}
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Preferred Time*</label>
@@ -221,10 +221,10 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                           value={formData.preferredTime}
                           onChange={(e) => handleChange('preferredTime', e.target.value)}
                           onBlur={() => handleBlur('preferredTime')}
-                          className={`w-full bg-[#110E10] border ${touched.preferredTime && errors.preferredTime ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-11 pr-3 py-3.5 text-white outline-none transition-all font-medium tracking-wide rounded-lg text-sm [color-scheme:dark]`}
+                          className={`w-full bg-[#110E10] border ${touched.preferredTime && errors.preferredTime ? 'border-[#79AD43]' : 'border-[#2e2e2e]'} focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 pl-11 pr-3 py-3.5 text-white outline-none transition-all font-medium tracking-wide rounded-lg text-sm [color-scheme:dark]`}
                         />
                       </div>
-                      {touched.preferredTime && errors.preferredTime && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.preferredTime}</span>}
+                      {touched.preferredTime && errors.preferredTime && <span className="text-[#79AD43] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.preferredTime}</span>}
                     </div>
                   </div>
 
@@ -237,16 +237,16 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                       value={formData.message}
                       onChange={(e) => handleChange('message', e.target.value)}
                       onBlur={() => handleBlur('message')}
-                      className={`w-full bg-[#110E10] border ${touched.message && errors.message ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide resize-none rounded-lg text-sm`}
+                      className={`w-full bg-[#110E10] border ${touched.message && errors.message ? 'border-[#79AD43]' : 'border-[#2e2e2e]'} focus:border-[#79AD43] focus:ring-1 focus:ring-[#79AD43]/30 px-5 py-3.5 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide resize-none rounded-lg text-sm`}
                     />
-                    {touched.message && errors.message && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.message}</span>}
+                    {touched.message && errors.message && <span className="text-[#79AD43] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.message}</span>}
                   </div>
 
                   {/* Submit Button */}
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full bg-[#EAB308] hover:bg-[#b00005] text-[#110E10] hover:text-white py-4 px-8 font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-300 rounded-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer text-xs"
+                    className="w-full bg-[#79AD43] hover:bg-[#b00005] text-[#110E10] hover:text-white py-4 px-8 font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-300 rounded-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer text-xs"
                   >
                     {status === 'submitting' ? (
                       <>
@@ -262,7 +262,7 @@ export default function ServiceBookingButton({ serviceTitle, variant = "default"
                   </button>
 
                   {status === 'error' && (
-                    <div className="p-3 bg-red-500/10 border border-red-500/20 text-[#EAB308] text-[10px] font-bold uppercase tracking-widest text-center rounded-lg mt-2">
+                    <div className="p-3 bg-red-500/10 border border-red-500/20 text-[#79AD43] text-[10px] font-bold uppercase tracking-widest text-center rounded-lg mt-2">
                       Error sending booking request. Please try again.
                     </div>
                   )}

@@ -108,7 +108,7 @@ export default function DashboardPage() {
       <>
         <main className="p-8">
           <div className="flex items-center justify-center h-64">
-            <div className="animate-spin w-8 h-8 border-4 border-[#EAB308] border-t-transparent rounded-full" />
+            <div className="animate-spin w-8 h-8 border-4 border-[#79AD43] border-t-transparent rounded-full" />
           </div>
         </main>
       </>
@@ -160,7 +160,7 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
               <h2 className="text-lg font-semibold text-gray-900">Recent Bookings</h2>
-              <Link href="/admin/bookings" className="text-sm text-[#EAB308] hover:text-[#A80003] font-medium">View All</Link>
+              <Link href="/admin/bookings" className="text-sm text-[#79AD43] hover:text-[#A80003] font-medium">View All</Link>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -188,7 +188,7 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
               <h2 className="text-lg font-semibold text-gray-900">Latest Posts</h2>
-              <Link href="/admin/posts" className="text-sm text-[#EAB308] hover:text-[#A80003] font-medium">Manage</Link>
+              <Link href="/admin/posts" className="text-sm text-[#79AD43] hover:text-[#A80003] font-medium">Manage</Link>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -204,7 +204,7 @@ export default function DashboardPage() {
                       <td className="py-3 px-4 font-bold text-slate-900 truncate max-w-[200px]">{p.title}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
-                          p.status === 'published' ? 'bg-[#EAB308]/10 text-[#EAB308]' : 'bg-slate-100 text-slate-600'
+                          p.status === 'published' ? 'bg-[#79AD43]/10 text-[#79AD43]' : 'bg-slate-100 text-slate-600'
                         }`}>
                           {p.status}
                         </span>
@@ -220,7 +220,7 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden lg:col-span-2">
             <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
               <h2 className="text-lg font-semibold text-gray-900">Services Overview</h2>
-              <Link href="/admin/services" className="text-sm text-[#EAB308] hover:text-[#A80003] font-medium">Edit All</Link>
+              <Link href="/admin/services" className="text-sm text-[#79AD43] hover:text-[#A80003] font-medium">Edit All</Link>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -238,9 +238,9 @@ export default function DashboardPage() {
                       <td className="py-3 px-4 text-slate-600 font-bold">${s.price?.toString() || '0.00'}</td>
                       <td className="py-3 px-4">
                         <span className={`flex items-center gap-1.5 text-xs font-bold ${
-                          s.isActive ? 'text-[#EAB308]' : 'text-slate-400'
+                          s.isActive ? 'text-[#79AD43]' : 'text-slate-400'
                         }`}>
-                          <span className={`w-1.5 h-1.5 rounded-full ${s.isActive ? 'bg-[#EAB308]' : 'bg-slate-400'}`} />
+                          <span className={`w-1.5 h-1.5 rounded-full ${s.isActive ? 'bg-[#79AD43]' : 'bg-slate-400'}`} />
                           {s.isActive ? 'Active' : 'Hidden'}
                         </span>
                       </td>
