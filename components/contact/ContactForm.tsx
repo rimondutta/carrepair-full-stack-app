@@ -1,7 +1,7 @@
 "use client";
 
 import { useContactForm } from "@/hooks/useContactForm";
-import { Send, CheckCircle, Loader2, ChevronDown } from "lucide-react";
+import { Send, CheckCircle, Loader2, ChevronDown, Calendar, Clock } from "lucide-react";
 
 export default function ContactForm() {
   const {
@@ -13,7 +13,7 @@ export default function ContactForm() {
     handleBlur,
     handleSubmit,
     resetForm
-  } = useContactForm();
+  } = useContactForm({ requireDateTime: true });
 
   if (status === 'success') {
     return (
@@ -119,6 +119,40 @@ export default function ContactForm() {
               </select>
               <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-[#EAB308] pointer-events-none group-focus-within:rotate-180 transition-transform duration-300" />
             </div>
+          </div>
+        </div>
+
+        {/* Preferred Date & Time Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-1.5 relative">
+            <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Preferred Date*</label>
+            <div className="relative">
+              <Calendar className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#444] pointer-events-none" />
+              <input
+                type="date"
+                value={formData.preferredDate}
+                onChange={(e) => handleChange('preferredDate', e.target.value)}
+                onBlur={() => handleBlur('preferredDate')}
+                min={new Date().toISOString().split('T')[0]}
+                className={`w-full bg-[#110E10] border ${touched.preferredDate && errors.preferredDate ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-12 pr-5 py-4 text-white outline-none transition-all font-medium tracking-wide [color-scheme:dark]`}
+              />
+            </div>
+            {touched.preferredDate && errors.preferredDate && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.preferredDate}</span>}
+          </div>
+
+          <div className="flex flex-col gap-1.5 relative">
+            <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Preferred Time*</label>
+            <div className="relative">
+              <Clock className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#444] pointer-events-none" />
+              <input
+                type="time"
+                value={formData.preferredTime}
+                onChange={(e) => handleChange('preferredTime', e.target.value)}
+                onBlur={() => handleBlur('preferredTime')}
+                className={`w-full bg-[#110E10] border ${touched.preferredTime && errors.preferredTime ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 pl-12 pr-5 py-4 text-white outline-none transition-all font-medium tracking-wide [color-scheme:dark]`}
+              />
+            </div>
+            {touched.preferredTime && errors.preferredTime && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.preferredTime}</span>}
           </div>
         </div>
 
