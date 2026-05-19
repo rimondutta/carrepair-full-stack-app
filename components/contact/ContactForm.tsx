@@ -86,13 +86,13 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Phone & Subject Grid */}
+        {/* Phone & Service Type Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col gap-1.5">
             <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Phone Number</label>
             <input
               type="tel"
-              placeholder="+1 234 567 890"
+              placeholder="+1 (718) 481-9800"
               value={formData.phone}
               onChange={(e) => handleChange('phone', e.target.value)}
               onBlur={() => handleBlur('phone')}
@@ -101,22 +101,6 @@ export default function ContactForm() {
             {touched.phone && errors.phone && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.phone}</span>}
           </div>
 
-          <div className="flex flex-col gap-1.5">
-            <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Subject*</label>
-            <input
-              type="text"
-              placeholder="Service Inquiry"
-              value={formData.subject}
-              onChange={(e) => handleChange('subject', e.target.value)}
-              onBlur={() => handleBlur('subject')}
-              className={`w-full bg-[#110E10] border ${touched.subject && errors.subject ? 'border-[#EAB308]' : 'border-[#2e2e2e]'} focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all placeholder:text-[#333] font-medium tracking-wide`}
-            />
-            {touched.subject && errors.subject && <span className="text-[#EAB308] text-[10px] font-bold mt-1 uppercase tracking-wider">{errors.subject}</span>}
-          </div>
-        </div>
-
-        {/* Service & Date Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col gap-1.5 relative">
             <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Service Type</label>
             <div className="relative group">
@@ -136,23 +120,11 @@ export default function ContactForm() {
               <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-[#EAB308] pointer-events-none group-focus-within:rotate-180 transition-transform duration-300" />
             </div>
           </div>
-
-          <div className="flex flex-col gap-1.5">
-            <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Preferred Date*</label>
-            <input
-              type="date"
-              value={formData.preferredDate}
-              onChange={(e) => handleChange('preferredDate', e.target.value)}
-              onBlur={() => handleBlur('preferredDate')}
-              min={new Date().toISOString().split('T')[0]}
-              className={`w-full bg-[#110E10] border border-[#2e2e2e] focus:border-[#EAB308] focus:ring-1 focus:ring-[#EAB308]/30 px-5 py-4 text-white outline-none transition-all font-medium tracking-wide [color-scheme:dark]`}
-            />
-          </div>
         </div>
 
-        {/* Message */}
+        {/* Message (Optional) */}
         <div className="flex flex-col gap-1.5">
-          <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Message*</label>
+          <label className="text-[#999] text-[10px] font-black uppercase tracking-widest heading-font ml-1">Message</label>
           <textarea
             rows={5}
             placeholder="Write your message here..."
