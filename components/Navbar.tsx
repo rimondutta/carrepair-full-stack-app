@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex items-center gap-2 pr-6 border-r border-[#333]">
               <Mail className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">info@jsautorepair.com</span>
+              <span className="font-medium tracking-wider">info@samsautomotiverepairs.com</span>
             </div>
             <div className="flex items-center gap-2 px-6 border-r border-[#333]">
               <Clock className="w-3.5 h-3.5 text-[var(--color-primary)]" />
@@ -58,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2 pl-6">
               <MapPin className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-              <span className="font-medium tracking-wider">900 Mountain Ave, Mountainside, NJ 07092, United States</span>
+              <span className="font-medium tracking-wider">4410 Dell Ave, North Bergen, NJ 07047, United States</span>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export default function Navbar() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/logo/Auto-Repair-Website-logo.png" 
-                alt="J's Auto Repair Shop LLC Logo" 
+                alt="Sam's Automotive Repair Logo" 
                 className="h-full w-full object-contain"
               />
             </div>
@@ -123,8 +123,8 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col justify-center leading-tight">
                 <span className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-0.5">Need Help?</span>
-                <a href="tel:+1 (862) 279-8403" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
-                  +1 (862) 279-8403
+                <a href="tel:+1 (973) 868-4091" className="text-white font-black text-sm md:text-lg hover:text-[var(--color-primary)] transition-colors">
+                  +1 (973) 868-4091
                 </a>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="text-white/40 text-[10px] uppercase font-bold tracking-widest">Call Now</span>
-                <span className="text-white font-bold text-xl">+1 (862) 279-8403</span>
+                <span className="text-white font-bold text-xl">+1 (973) 868-4091</span>
               </div>
             </div>
           </div>

@@ -47,9 +47,9 @@ const getEmailLayout = (content: string) => `
   <div style="padding: 20px 10px; background-color: #f4f4f4;">
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; overflow: hidden; border: 1px solid #dddddd;">
       <!-- Header -->
-      <div style="background-color: #79AD43; padding: 20px; text-align: center; color: #ffffff;">
-        <h1 style="margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 24px;">J's Auto Repair Shop LLC</h1>
-        <p style="margin: 5px 0 0; font-size: 14px; opacity: 0.8;">MOT Testing & Car Repair - Mountainside, NY</p>
+      <div style="background-color: #D70006; padding: 20px; text-align: center; color: #ffffff;">
+        <h1 style="margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 24px;">Sam's Automotive Repair</h1>
+        <p style="margin: 5px 0 0; font-size: 14px; opacity: 0.8;">MOT Testing & Car Repair - North Bergen, NJ</p>
       </div>
       
       <!-- Body -->
@@ -59,8 +59,8 @@ const getEmailLayout = (content: string) => `
       
       <!-- Footer -->
       <div style="background-color: #f9f9f9; padding: 20px; text-align: center; color: #999999; font-size: 12px; border-top: 1px solid #eeeeee;">
-        <p style="margin: 0;">900 Mountain Ave, Mountainside, NJ 07092, United States</p>
-        <p style="margin: 5px 0 0;">© ${new Date().getFullYear()} J's Auto Repair Shop LLC. All rights reserved.</p>
+        <p style="margin: 0;">4410 Dell Ave, North Bergen, NJ 07047, United States</p>
+        <p style="margin: 5px 0 0;">© ${new Date().getFullYear()} Sam's Automotive Repair. All rights reserved.</p>
       </div>
     </div>
   </div>
@@ -86,13 +86,13 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
   const mailOptions = {
     from: process.env.SMTP_FROM || '"Sam\'s Automotive Repairs" <noreply@samsautomotiverepairs.com>',
     to: email,
-    subject: `Booking Confirmed: ${serviceType} - J's Auto Repair Shop LLC`,
+    subject: `Booking Confirmed: ${serviceType} - Sam's Automotive Repair`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
         Great news! Your booking request for <strong>${serviceType}</strong> has been <strong>confirmed</strong>.
       </p>
-      <div style="background-color: #f9f9f9; border-left: 4px solid #79AD43; padding: 15px; margin: 25px 0;">
+      <div style="background-color: #f9f9f9; border-left: 4px solid #D70006; padding: 15px; margin: 25px 0;">
         <p style="margin: 0; color: #333;"><strong>Service:</strong> ${serviceType}</p>
         <p style="margin: 5px 0 0; color: #333;"><strong>Date:</strong> ${formattedDate}</p>
         ${booking.preferredTime ? `<p style="margin: 5px 0 0; color: #333;"><strong>Time:</strong> ${booking.preferredTime}</p>` : ''}
@@ -101,7 +101,7 @@ export const sendBookingConfirmation = async (booking: IBooking) => {
         Our team of expert mechanics is ready to provide top-notch care for your vehicle. If you have any questions or need to reschedule, please contact us immediately.
       </p>
       <div style="text-align: center; margin-top: 35px;">
-        <a href="tel:+1 (862) 279-8403" class="mobile-full" style="background-color: #79AD43; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +1 (862) 279-8403</a>
+        <a href="tel:+1 (973) 868-4091" class="mobile-full" style="background-color: #D70006; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +1 (973) 868-4091</a>
       </div>
     `),
   };
@@ -130,7 +130,7 @@ export const sendBookingCancellation = async (booking: IBooking) => {
   const mailOptions = {
     from: process.env.SMTP_FROM || '"Sam\'s Automotive Repairs" <noreply@samsautomotiverepairs.com>',
     to: email,
-    subject: `Booking Cancelled: ${serviceType} - J's Auto Repair Shop LLC`,
+    subject: `Booking Cancelled: ${serviceType} - Sam's Automotive Repair`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -140,7 +140,7 @@ export const sendBookingCancellation = async (booking: IBooking) => {
         If you did not request this cancellation or would like to reschedule, please contact us immediately so we can assist you.
       </p>
       <div style="text-align: center; margin-top: 35px;">
-        <a href="tel:+1 (862) 279-8403" class="mobile-full" style="background-color: #79AD43; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +1 (862) 279-8403</a>
+        <a href="tel:+1 (973) 868-4091" class="mobile-full" style="background-color: #D70006; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 6px; text-transform: uppercase; font-size: 14px; display: inline-block;">Call Us: +1 (973) 868-4091</a>
       </div>
       <p style="color: #999; font-size: 14px; margin-top: 30px; text-align: center; font-style: italic;">
         We apologize for any inconvenience this may have caused.
@@ -167,7 +167,7 @@ export const sendBookingCompletion = async (booking: IBooking) => {
   const mailOptions = {
     from: process.env.SMTP_FROM || '"Sam\'s Automotive Repairs" <noreply@samsautomotiverepairs.com>',
     to: email,
-    subject: `Service Completed: ${serviceType} - J's Auto Repair Shop LLC`,
+    subject: `Service Completed: ${serviceType} - Sam's Automotive Repair`,
     html: getEmailLayout(`
       <h2 style="color: #333; margin-top: 0; font-size: 20px;">Hello ${customerName},</h2>
       <p style="color: #666; font-size: 16px;">
@@ -184,7 +184,7 @@ export const sendBookingCompletion = async (booking: IBooking) => {
         </div>
       </div>
       <p style="color: #666; font-size: 16px;">
-        Thank you for choosing <strong>J's Auto Repair Shop LLC</strong>. We look forward to serving you again!
+        Thank you for choosing <strong>Sam's Automotive Repair</strong>. We look forward to serving you again!
       </p>
     `),
   };

@@ -19,21 +19,21 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | J's Auto Repair Shop LLC",
-    default: "J's Auto Repair Shop LLC | MOT, Car Repair & Servicing",
+    template: "%s | Sam's Automotive Repair",
+    default: "Sam's Automotive Repair | MOT, Car Repair & Servicing",
   },
-  description: "J's Auto Repair Shop LLC in Mountainside offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at 900 Mountain Ave, Mountainside, NJ 07092.",
-  keywords: ["MOT Mountainside", "Car Repair Mountainside", "Car Service Mountainside", "MOT Station Mountainside", "Auto Repair Mountainside", "Car Maintenance Mountainside", "J's Auto Repair Shop LLC"],
+  description: "Sam's Automotive Repair in North Bergen offers expert MOT testing, car servicing, repairs, and maintenance. Visit us at 4410 Dell Ave, North Bergen, NJ 07047.",
+  keywords: ["MOT North Bergen", "Car Repair North Bergen", "Car Service North Bergen", "MOT Station North Bergen", "Auto Repair North Bergen", "Car Maintenance North Bergen", "Sam's Automotive Repair"],
   category: "Automotive",
   metadataBase: new URL("https://samsautomotiverepairs.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "J's Auto Repair Shop LLC | MOT & Car Repair",
-    description: "Expert MOT testing, car servicing and repairs in Mountainside. 900 Mountain Ave, Mountainside, NJ 07092.",
+    title: "Sam's Automotive Repair | MOT & Car Repair",
+    description: "Expert MOT testing, car servicing and repairs in North Bergen. 4410 Dell Ave, North Bergen, NJ 07047.",
     url: "https://samsautomotiverepairs.com",
-    siteName: "J's Auto Repair Shop LLC",
+    siteName: "Sam's Automotive Repair",
     locale: "en_GB",
     type: "website",
     images: [{
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "J's Auto Repair Shop LLC | MOT & Car Repair Mountainside",
-    description: "Expert MOT testing, car servicing and repairs in Mountainside, United Kingdom.",
+    title: "Sam's Automotive Repair | MOT & Car Repair North Bergen",
+    description: "Expert MOT testing, car servicing and repairs in North Bergen, United States.",
     images: ["/logo/Auto-Repair-Website-logo.png"],
   },
   robots: {
@@ -92,23 +92,23 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
-              "name": "J's Auto Repair Shop LLC",
+              "name": "Sam's Automotive Repair",
               "image": "https://samsautomotiverepairs.com/logo/Auto-Repair-Website-logo.png",
               "@id": "https://samsautomotiverepairs.com",
               "url": "https://samsautomotiverepairs.com",
-              "telephone": "+1 (862) 279-8403",
+              "telephone": "+1 (973) 868-4091",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "900 Mountain Ave",
-                "addressLocality": "Mountainside",
+                "streetAddress": "4410 Dell Ave",
+                "addressLocality": "North Bergen",
                 "addressRegion": "NJ",
-                "postalCode": "07092",
+                "postalCode": "07047",
                 "addressCountry": "US"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 40.6773,
-                "longitude": -74.3468
+                "latitude": 40.7847,
+                "longitude": -74.0355
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

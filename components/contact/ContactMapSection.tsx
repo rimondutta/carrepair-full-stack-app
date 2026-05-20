@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 export default function ContactMapSection() {
-  const address = "900 Mountain Ave, Mountainside, NJ 07092, United States";
+  const address = "4410 Dell Ave, North Bergen, NJ 07047, United States";
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
@@ -21,7 +21,7 @@ export default function ContactMapSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="J's Auto Repair Shop LLC Location"
+          title="Sam's Automotive Repair Location"
           className="w-full h-full"
         />
       </div>
@@ -29,23 +29,23 @@ export default function ContactMapSection() {
       {/* Floating Info Card (Desktop Only) */}
       <div className="hidden lg:block absolute bottom-10 left-10 z-20 w-80">
         <div className="bg-[#1B1B1B] border border-[#2e2e2e] p-8 shadow-2xl relative animate-in slide-in-from-left duration-700">
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#79AD43]"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#D70006]"></div>
           
-          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">J's Auto Repair Shop LLC</h3>
+          <h3 className="text-white text-xl font-bold uppercase heading-font mb-4 tracking-wider">Sam's Automotive Repair</h3>
           
           <div className="flex flex-col gap-4">
             <div className="flex items-start gap-4">
-              <MapPin className="text-[#79AD43] w-5 h-5 flex-shrink-0 mt-1" />
+              <MapPin className="text-[#D70006] w-5 h-5 flex-shrink-0 mt-1" />
               <p className="text-[#999] text-sm leading-snug">{address}</p>
             </div>
             
             <div className="flex items-center gap-4">
-              <Phone className="text-[#79AD43] w-5 h-5" />
-              <p className="text-[#999] text-sm">+1 (862) 279-8403</p>
+              <Phone className="text-[#D70006] w-5 h-5" />
+              <p className="text-[#999] text-sm">+1 (973) 868-4091</p>
             </div>
             
             <div className="flex items-center gap-4">
-              <Clock className="text-[#79AD43] w-5 h-5" />
+              <Clock className="text-[#D70006] w-5 h-5" />
               <p className="text-[#999] text-sm">Mon–Sat: 9am – 7pm</p>
             </div>
 
@@ -55,7 +55,7 @@ export default function ContactMapSection() {
               href={directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#79AD43] font-bold uppercase text-xs tracking-widest hover:translate-x-1 transition-transform"
+              className="flex items-center gap-2 text-[#D70006] font-bold uppercase text-xs tracking-widest hover:translate-x-1 transition-transform"
             >
               Get Directions <ArrowUpRight size={14} />
             </a>
@@ -67,10 +67,10 @@ export default function ContactMapSection() {
       <div className="lg:hidden absolute bottom-4 left-4 right-4 z-20">
          <div className="bg-[#1B1B1B] p-4 border border-[#2e2e2e] flex items-center justify-between gap-3 min-w-0">
            <div className="flex items-center gap-3 min-w-0">
-             <MapPin className="text-[#79AD43] w-5 h-5 flex-shrink-0" />
-             <span className="text-white text-xs font-bold uppercase tracking-widest truncate">900 Mountain Ave</span>
+             <MapPin className="text-[#D70006] w-5 h-5 flex-shrink-0" />
+             <span className="text-white text-xs font-bold uppercase tracking-widest truncate">4410 Dell Ave</span>
            </div>
-           <a href={directionsUrl} className="text-[#79AD43] flex-shrink-0"><ArrowUpRight size={18} /></a>
+           <a href={directionsUrl} className="text-[#D70006] flex-shrink-0"><ArrowUpRight size={18} /></a>
          </div>
       </div>
 

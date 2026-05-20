@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!service) {
     return {
-      title: "Service Not Found | J's Auto Repair Shop LLC",
+      title: "Service Not Found | Sam's Automotive Repair",
     };
   }
 
   return {
-    title: `${service.title} | J's Auto Repair Shop LLC`,
+    title: `${service.title} | Sam's Automotive Repair`,
     description: service.shortDescription,
   };
 }
@@ -88,13 +88,13 @@ export default async function DynamicServicePage({ params }: Props) {
             "description": serializedService.shortDescription || serializedService.description,
             "provider": {
               "@type": "AutoRepair",
-              "name": "J's Auto Repair Shop LLC",
+              "name": "Sam's Automotive Repair",
               "url": "https://careplusauto.vercel.app",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "9 19dStreet - 3 St - Al Qouz Ind.third",
-                "addressLocality": "Mountainside",
-                "addressRegion": "Mountainside",
+                "addressLocality": "North Bergen",
+                "addressRegion": "North Bergen",
                 "addressCountry": "AE"
               }
             },

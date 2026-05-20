@@ -7,24 +7,24 @@ interface StatsCardProps {
 }
 
 const colorMap = {
-  red: 'bg-[#79AD43] border-transparent text-white',
+  red: 'bg-[#D70006] border-transparent text-white',
   yellow: 'from-amber-50 to-amber-100/50 border-amber-200',
   blue: 'from-blue-50 to-blue-100/50 border-blue-200',
-  green: 'from-[#FFF0F0] to-[#FFF0F0] border-[#79AD43]/20',
+  green: 'from-[#FFF0F0] to-[#FFF0F0] border-[#D70006]/20',
 };
 
 const iconBgMap = {
-  red: 'bg-white text-[#79AD43]',
+  red: 'bg-white text-[#D70006]',
   yellow: 'bg-amber-500 text-white',
   blue: 'bg-blue-500 text-white',
-  green: 'bg-[#79AD43] text-white',
+  green: 'bg-[#D70006] text-white',
 };
 
 const textColorMap = {
   red: 'text-white',
   yellow: 'text-amber-600',
   blue: 'text-blue-600',
-  green: 'text-[#79AD43]',
+  green: 'text-[#D70006]',
 };
 
 export default function StatsCard({ title, value, description, color, icon }: StatsCardProps) {

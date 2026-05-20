@@ -53,7 +53,7 @@ export default function NotFound() {
 
         <div className="mt-16 pt-8 border-t border-[#222]">
           <p className="text-[#555] text-xs uppercase tracking-widest">
-            J's Auto Repair Shop LLC &copy; {new Date().getFullYear()}
+            Sam's Automotive Repair &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>

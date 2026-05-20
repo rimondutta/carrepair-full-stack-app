@@ -24,7 +24,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
         showDivider ? "md:border-r" : ""
       } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
-      <div className="text-[#79AD43] w-12 h-12 flex items-center justify-center flex-shrink-0 mt-1">
+      <div className="text-[#D70006] w-12 h-12 flex items-center justify-center flex-shrink-0 mt-1">
         {icon}
       </div>
       <div className="flex flex-col min-w-0">
@@ -32,7 +32,7 @@ function InfoBox({ icon, label, value, sub, href, delay = 0, showDivider = false
           {label}
         </span>
         {href ? (
-          <a href={href} className="text-white text-base sm:text-lg font-bold hover:text-[#79AD43] transition-colors duration-300 break-all md:break-normal">
+          <a href={href} className="text-white text-base sm:text-lg font-bold hover:text-[#D70006] transition-colors duration-300 break-all md:break-normal">
             {value}
           </a>
         ) : (
@@ -57,9 +57,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Phone className="w-8 h-8" />}
             label="CALL US ANYTIME"
-            value="+1 (862) 279-8403"
+            value="+1 (973) 868-4091"
             sub="Mon–Sat 9:00am – 7:00pm"
-            href="tel:+1 (862) 279-8403"
+            href="tel:+1 (973) 868-4091"
             delay={0}
             showDivider={true}
           />
@@ -67,9 +67,9 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<Mail className="w-8 h-8" />}
             label="SEND US AN EMAIL"
-            value="info@jsautorepair.com"
+            value="info@samsautomotiverepairs.com"
             sub="We reply within 24 hours"
-            href="mailto:info@jsautorepair.com"
+            href="mailto:info@samsautomotiverepairs.com"
             delay={100}
             showDivider={true}
           />
@@ -77,8 +77,8 @@ export default function ContactInfoStrip() {
           <InfoBox 
             icon={<MapPin className="w-8 h-8" />}
             label="VISIT OUR LOCATION"
-            value="900 Mountain Ave, Woodside End"
-            sub="Mount Pleasant, Mountainside, NJ 07092, United States"
+            value="4410 Dell Ave"
+            sub="North Bergen, NJ 07047, United States"
             delay={200}
             showDivider={false}
           />
