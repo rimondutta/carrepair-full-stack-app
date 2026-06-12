@@ -1,6 +1,6 @@
 import Booking, { IBooking } from '@/models/Booking';
 import Notification from '@/models/Notification';
-// import { sendTelegramMessage, escapeHTML } from '@/lib/telegram';
+import { sendTelegramMessage, escapeHTML } from '@/lib/telegram';
 import { logger } from '@/lib/logger';
 import { connectDB } from '@/lib/mongodb';
 
