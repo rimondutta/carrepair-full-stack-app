@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit } from './rateLimit';
+// import { checkRateLimit } from './rateLimit';
 import { logger } from './logger';
 
 /**
